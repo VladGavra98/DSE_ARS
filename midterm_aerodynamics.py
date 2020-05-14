@@ -84,7 +84,7 @@ max_power_req_VTOL_vert = max_thrust_req_VTOL_vert * (max_vert_vel + vel_thru_di
 max_thrust_req_VTOL_horz =  VTOL_tot_mass * horz_acc_req + Cd_VTOL_side * 0.5 * rho_air * max_horz_vel**2 * VTOL_side_area
 max_power_req_VTOL_horz = max_thrust_req_VTOL_horz  * (max_horz_vel + vel_thru_disk(ang_vel_disk, radius_disk, max_thrust_req_VTOL_horz, rho_air)) 
 
-Energy_per_trip_VTOL = max_power_req_VTOL_vert * 5 # the time req to reach operational height is 5seconds
+Energy_per_trip_VTOL = max_power_req_VTOL_vert * 20 # the time req to reach operational height is 5seconds
 Num_of_trips_VTOL = Battery_cap / Energy_per_trip_VTOL
 
 ########### Drone: critical motion = horizontal 
@@ -105,7 +105,7 @@ inc_angle = np.radians(35)  # rad
 max_thrust_req_Drone_horz =  Drone_tot_mass * horz_acc_req + Cd_Drone_side * 0.5 * rho_air * max_horz_vel**2 * Drone_side_area
 max_power_req_Drone_horz = max_thrust_req_Drone_horz  * (max_horz_vel + vel_thru_disk(ang_vel_disk, radius_disk, max_thrust_req_Drone_horz, rho_air)) / np.sin(inc_angle)
 
-Energy_per_trip_Drone = max_power_req_VTOL_vert * 5 + max_power_req_Drone_horz *3 # the time req to reach operational height is 5seconds, 3 seconds to reach max top horz speed
+Energy_per_trip_Drone = max_power_req_VTOL_vert * 20 + max_power_req_Drone_horz * 5 # the time req to reach operational height is 5seconds, 3 seconds to reach max top horz speed
 Num_of_trips_Drone = Battery_cap / Energy_per_trip_Drone
 
 ############ Airship: critical motion = horizontal
@@ -119,5 +119,5 @@ Airship_frontarea = 1.5**2
 max_thrust_req_Airship_horz =  Airship_tot_mass * horz_acc_req + Cd_Airship * 0.5 * rho_air * max_horz_vel**2 * Airship_frontarea
 max_power_req_Airship_horz = max_thrust_req_Airship_horz  * (max_horz_vel + vel_thru_disk(ang_vel_disk, radius_disk, max_thrust_req_Airship_horz, rho_air))
 
-Energy_per_trip_Airship = max_power_req_Airship_horz * 3
+Energy_per_trip_Airship = max_power_req_Airship_horz * 5
 Num_of_trips_Airhsip = Battery_cap / Energy_per_trip_Airship
