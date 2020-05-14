@@ -50,7 +50,7 @@ for i,order in enumerate(list(set(list(it.permutations([1,1,1,1,1,-1,-1,-1,-1,-1
     sec.append(names[np.argsort(grades)[1]])
     trd.append(names[np.argsort(grades)[0]])
     f.writelines("\n"+str(order)+"\n")
-    f.writelines(str(names[np.argsort(grades)[2]]+'  '+names[np.argsort(grades)[1]]+'  '+names[np.argsort(grades)[0]]+'\n'))
+    f.writelines(str(names[np.argsort(grades)[2]]+': '+str(round(grades[np.argsort(grades)[2]],2))+'  '+names[np.argsort(grades)[1]]+': '+str(round(grades[np.argsort(grades)[1]],2))+'  '+names[np.argsort(grades)[0]]+': '+str(round(grades[np.argsort(grades)[0]],2))+'\n'))
     #f.writelines(str(names[np.argsort(grades)[2]]))  uncomment for just first
 
 print('\ntotal combinations: '+str(len((list(set(list(it.permutations([1,1,1,1,1,-1,-1,-1,-1,-1,0,0,0,0,0],5))))))))
