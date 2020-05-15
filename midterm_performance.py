@@ -43,15 +43,14 @@ price 	= C_batt / (costpb / 1000) 			# [$] estimated battery costs
 # Mass breakdown
 m_PL 	= 3.7 								# [kg] payload mass
 m_batt 	= 1.0								# [kg] battery mass
-m_stru 	= 1.2 * 3.802						# [kg] structural mass - 3.802kg without contingency
+m_stru 	= 3.802								# [kg] structural mass - 3.802kg without contingency
 
 m 		= m_PL + m_batt + m_stru 			# [kg] maximum take-off mass
-m 		= 1.2 * m 							# [kg] add contingency of 20%
 
 # Hover calculations
 T_hover = m * g 	 						# [N] required thrust to hover
 P_hover = sqrt(T_hover ** 3 / (4*sigma*rho*A))	# [W] required power to hover
-P_hover = P_hover / eta * SF				# [W] corrected power requirement with safety factor and propulsive efficiency
+P_hover = P_hover / eta 					# [W] corrected power requirement with safety factor and propulsive efficiency
 t_hover = C_batt / P_hover * 60				# [s] maximum time hovering
 
 # Forward flight caluclations
@@ -65,8 +64,7 @@ Re 		= rho * V * MAC / mu 				# [-] estimated Reynolds number at max. speed
 CD0 	= 4.98 / sqrt(Re) 					# [-] estimated parasite drag coefficient (http://apmonitor.com/me575/uploads/Main/2013_Flying_Wing.pdf)
 e 		= 0.7 								# [-] estimated efficiency factor (https://www.grc.nasa.gov/www/k-12/airplane/induced.html)
 
-P_req 	= 0.5 * CD0 * rho * V **3 * S + 2 * m * g / (pi * e * A * rho * V * S)
-P_req 	= SF * P_req						# [W] required power with safety factor added
+P_req 	= 0.5 * CD0 * rho * V **3 * S + 2 * m * g / (pi * e * A * rho * V * S) # [W] required power
 t_req	= C_batt / P_req * 60				# [s] maximum time flying
 
 # Print important variables
@@ -89,15 +87,14 @@ A 		= 8 * (pi/4 * D_prop**2)			# [m^2] total propeller disk area - minimum of 8 
 # Mass breakdown
 m_PL 	= 3.84 								# [kg] payload mass
 m_batt 	= 1.0								# [kg] battery mass
-m_stru 	= 1.2 * 1.423						# [kg] structural mass - 1.423kg without contingency
+m_stru 	= 1.423								# [kg] structural mass
 
 m 		= m_PL + m_batt + m_stru 			# [kg] maximum take-off mass
-m 		= 1.2 * m 							# [kg] add contingency of 20%
 
 # Hover calculations
 T_hover = m * g 	 						# [N] required thrust to hover
 P_hover = sqrt(T_hover ** 3 / (2*rho*A))	# [W] required power to hover
-P_hover = P_hover / eta * SF				# [W] corrected power requirement with safety factor and propulsive efficiency
+P_hover = P_hover / eta						# [W] corrected power requirement with safety factor and propulsive efficiency
 t_hover = C_batt / P_hover * 60				# [s] maximum time hovering
 
 # Forward flight caluclations
@@ -110,7 +107,6 @@ D 		= 0.5 * rho * V**2 * S * CD 		# [N] experienced drag during horizontal fligh
 T_tot 	= T_req + D 						# [N] total thrust required
 
 P_req 	= sqrt(T_tot ** 3 / (2*rho*A))		# [W] required power during horizontal flight
-P_req 	= SF * P_req						# [W] required power during horizontal flight with safety factor
 t_req	= C_batt / P_req * 60				# [s] maximum time flying
 
 # Print important variables
