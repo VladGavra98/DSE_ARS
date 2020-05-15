@@ -83,7 +83,7 @@ print('Maximum estimated flight time =', round(t_req,1), 'min')
 # Drone 
 # ---------------------------------------------------------------------------------------------
 # Define constants
-D_prop 	= 0.406 							# [m] propeller diameter - equivalent to 16 inch propeller
+# D_prop 	= 0.406 							# [m] propeller diameter - equivalent to 16 inch propeller
 A 		= 8 * (pi/4 * D_prop**2)			# [m^2] total propeller disk area - minimum of 8 propellers required for static stability
 
 # Mass breakdown
