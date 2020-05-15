@@ -25,8 +25,9 @@ SF 		= 1.5  								# [-] safety factor for uncertainty
 g 		= 9.81 								# [m/s^2] gravitational acceleration
 rho 	= 1.225 							# [kg/m^3] sea-level density
 D_prop 	= 0.152 							# [m] propeller diameter - equivalent to 6 inch propeller
-A 		= 3 * (pi/4 * D_prop) 				# [m^2] total propeller disk area - minimum of 3 propellers required for static stability
+A 		= 3 * (pi/4 * D_prop**2)			# [m^2] total propeller disk area - minimum of 3 propellers required for static stability
 eta 	= 0.85 								# [-] preliminary estimation for propulsion efficiency
+sigma 	= 1.2 								# [-] expansion ratio of duct
 
 # Battery assumptions for Li-S technology
 costpb 	= 200 								# [$/kWh] estimated battery costs per capacity
@@ -40,7 +41,7 @@ C_batt 	= C_batt * V_batt 					# [Wh] battery capacity converted from Ah to Wh
 price 	= C_batt / (costpb / 1000) 			# [$] estimated battery costs
 
 # Mass breakdown
-m_PL 	= 3.84 								# [kg] payload mass
+m_PL 	= 3.7 								# [kg] payload mass
 m_batt 	= 1.0								# [kg] battery mass
 m_stru 	= 1.2 * 3.802						# [kg] structural mass - 3.802kg without contingency
 
@@ -49,7 +50,7 @@ m 		= 1.2 * m 							# [kg] add contingency of 20%
 
 # Hover calculations
 T_hover = m * g 	 						# [N] required thrust to hover
-P_hover = sqrt(T_hover ** 3 / (2*rho*A))	# [W] required power to hover
+P_hover = sqrt(T_hover ** 3 / (4*sigma*rho*A))	# [W] required power to hover
 P_hover = P_hover / eta * SF				# [W] corrected power requirement with safety factor and propulsive efficiency
 t_hover = C_batt / P_hover * 60				# [s] maximum time hovering
 
@@ -82,8 +83,8 @@ print('Maximum estimated flight time =', round(t_req,1), 'min')
 # Drone 
 # ---------------------------------------------------------------------------------------------
 # Define constants
-D_prop 	= 0.406 							# [m] propeller diameter - equivalent to 5 inch propeller
-A 		= 8 * (pi/4 * D_prop) 				# [m^2] total propeller disk area - minimum of 8 propellers required for static stability
+D_prop 	= 0.406 							# [m] propeller diameter - equivalent to 16 inch propeller
+A 		= 8 * (pi/4 * D_prop**2)			# [m^2] total propeller disk area - minimum of 8 propellers required for static stability
 
 # Mass breakdown
 m_PL 	= 3.84 								# [kg] payload mass
