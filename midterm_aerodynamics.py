@@ -38,7 +38,7 @@ vel_thru_disk = 50 # TBU
 
 # Masses [kg]
 noise_sensor_mass = 0.1
-airpol_sensor_mass = 10
+airpol_sensor_mass = 5
 Payload_mass = noise_sensor_mass + airpol_sensor_mass
 Battery_mass = 5 
 
@@ -64,8 +64,6 @@ def vel_thru_disk(angular_vel_disk, radius_disk, thrust, rho_air):
     vi = 0.5 * np.sqrt(thrust_coeff) * radius_disk * angular_vel_disk
     
     return vi
-
-
 
 
 ########### VTOL: critical Motion = vertical
