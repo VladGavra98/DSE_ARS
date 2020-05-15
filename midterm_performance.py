@@ -27,7 +27,6 @@ rho 	= 1.225 							# [kg/m^3] sea-level density
 D_prop 	= 0.152 							# [m] propeller diameter - equivalent to 6 inch propeller
 A 		= 3 * (pi/4 * D_prop**2)			# [m^2] total propeller disk area - minimum of 3 propellers required for static stability
 eta 	= 0.85 								# [-] preliminary estimation for propulsion efficiency
-sigma 	= 1.2 								# [-] expansion ratio of duct
 
 # Battery assumptions for Li-S technology
 costpb 	= 200 								# [$/kWh] estimated battery costs per capacity
@@ -49,7 +48,7 @@ m 		= m_PL + m_batt + m_stru 			# [kg] maximum take-off mass
 
 # Hover calculations
 T_hover = m * g 	 						# [N] required thrust to hover
-P_hover = sqrt(T_hover ** 3 / (4*sigma*rho*A))	# [W] required power to hover
+P_hover = sqrt(T_hover ** 3 / (2*rho*A))	# [W] required power to hover
 P_hover = P_hover / eta 					# [W] corrected power requirement with safety factor and propulsive efficiency
 t_hover = C_batt / P_hover * 60				# [s] maximum time hovering
 
