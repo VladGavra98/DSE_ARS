@@ -42,7 +42,7 @@ price 	= C_batt / (costpb / 1000) 			# [$] estimated battery costs
 
 # Mass breakdown
 m_PL 	= 3.7 								# [kg] payload mass
-m_batt 	= 1.0								# [kg] battery mass
+m_batt 	= n*0.141							# [kg] battery mass
 m_stru 	= 3.802								# [kg] structural mass - 3.802kg without contingency
 
 m 		= m_PL + m_batt + m_stru 			# [kg] maximum take-off mass
