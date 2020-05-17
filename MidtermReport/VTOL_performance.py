@@ -56,9 +56,8 @@ P_vert 	= 1/(eta_m * eta_p) * (f * W_TO / FoM * sqrt(f * (W_TO / A) / (2 * rho))
 P_hori	= 1/(eta_m * eta_p) * (W_TO * V / CLCD)																# [W] required power for horizontal flight
 P_hover = 1/(eta_m * eta_p) * sqrt(W_TO ** 3 / (4* sigma *rho * A))											# [W] required power to hover
 
-P_PL 	= 100
-
-P_total = P_hover + P_PL
+P_PL 	= 100										# [W] required power for payload
+P_hover = P_hover + P_PL 							# [W] required hover power with payload power included
 
 t_vert 	= C_batt / P_vert * 60						# [min] endurance time in pure vertical flight
 t_hori 	= C_batt / P_hori * 60						# [min] endurance time in pure horizontal flight
