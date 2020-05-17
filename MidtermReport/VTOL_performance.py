@@ -36,9 +36,8 @@ eta_p	= 0.8 										# [-] propeller efficiency
 # E 		= 10800										# [s] endurance
 # R 		= 1000 										# [m] range
 CLCD 	= 14 										# [-] lift-to-drag ratio (taken from https://pubs.acs.org/doi/abs/10.1021/acsenergylett.8b02195)
-W_PL	= 1.935										# [kg] payload mass
+W_PL	= 2.394										# [kg] payload mass
 W_B 	= n * 0.141 								# [kg] battery weight for 6S-configuration
-
 # f_batt 	= 1.3 * (g / (eta_p * E) * R / (CLCD)) 		# [-] battery weight fraction
 
 func	= lambda W_TO: -W_TO + W_PL * 2.20462 / (1 - (W_B * 2.20462 / W_TO) - (5.1E-6*W_TO + 0.42))
@@ -67,6 +66,7 @@ t_hover	= C_batt / P_hover * 60						# [s] endurance time in pure hover flight
 # Print important variables
 print('VTOL Flying Wing Caluclations')
 print('----------------------------------------------')
+print('Required payload weight =', W_PL, 'kg')
 print('Initial battery weight =', round(W_B,3), 'kg')
 print('Initial empty weight =', round(W_E,3), 'kg')
 print('Initial takeoff weight =', round(W_TO,3), 'kg')
