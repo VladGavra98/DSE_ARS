@@ -22,13 +22,10 @@ from scipy.optimize import fsolve
 # ---------------------------------------------------------------------------------------------
 # Co-axial Octocopter
 # ---------------------------------------------------------------------------------------------
-# Battery assumptions for Li-S technology
-n 		= 6											# [-] number of cells in series
-C_cell 	= 19 										# [Ah] cell capacity
-V_cell 	= 2.1 										# [V] nominal cell voltage
-C_batt  = n * C_cell 								# [Ah] battery capacity
-V_batt 	= n * V_cell 								# [V] battery voltage
-C_batt 	= C_batt * V_batt 							# [Wh] battery capacity converted from Ah to Wh
+# Battery assumptions for LiPo technology (https://www.beslist.nl/speelgoed_spelletjes/d1029505946/ZOP_Power_111_V_7500_mAh_35C_3S_Lipo_Batterij_XT60_Plug_voor_RC_Quadcopter_Auto.html)
+C_batt  = 10000E-3 									# [Ah] battery capacity
+V_batt 	= 11.1 										# [V] battery voltage
+C_batt 	= C_batt * V_batt							# [Wh] battery capacity converted from Ah to Wh
 
 # Mass breakdown
 g 		= 9.81 										# [m/s^2] gravitational acceleration
@@ -36,26 +33,25 @@ eta_p	= 0.8 										# [-] propeller efficiency
 # E 		= 10800										# [s] endurance
 # R 		= 1000 										# [m] range
 W_PL  	= 2.394										# [kg] payload mass
-W_B  	= n * 0.141 								# [kg] battery weight for 6S-configuration
+W_B 	= 0.448 									# [kg] battery weight
 
-
-func	    = lambda W_TO: -W_TO + W_PL * 2.20462 / (1 - (W_B * 2.20462 / W_TO) - (-4.6E-5*W_TO + 0.68)) # coefficients of quad copter is used as structurally more similar to quadcopter than an octocopter
+func	= lambda W_TO: -W_TO + W_PL * 2.20462 / (1 - (W_B * 2.20462 / W_TO) - (-4.6E-5*W_TO + 0.68)) # coefficients of quad copter is used as structurally more similar to quadcopter than an octocopter
 W_TO 	= float(0.453592 * fsolve(func, 10))		# [kg] take-off weight
 W_E  	= 0.453592 * W_TO * (-4.6E-5*W_TO + 0.68) 	# [kg] empty weight
 
 # Power calculation
-CD_top       = 1.05                                     # assumed as a cube
-CD_side  = 0.0613                                        # for i = 15. this is to be iterated
+CD_top   = 1.05                                     # assumed as a cube
+CD_side  = 0.0613                                   # for i = 15. this is to be iterated
 S_top    = 0.5**2                                   # [m2]
 S_side   = 0.5*0.04                                 # [m2] thickness of 5cm
 r_prop   = 0.49                                     # [m] maximum radius of propeller for quadcopter config with 2cm space between propellers
 A        = 8 * (pi * r_prop**2)                        # [m2] total area of the 8 propellers
-rho  	   = 1.225 									# [kg/m^3] sea-level density	
-V_climb	= 0.00508 * 500 							# [m/s] required minimum climb speed
-eta_m   	= 0.9 								 		# [-] electromechancial efficiency
-V 	     	= 25 		 								# [m/s] Cruise speed; minimum required max. speed equal to 50kts / 25m/s
-eta_prop  = 0.8
-eta_mech  = 0.9
+rho  	 = 1.225 									# [kg/m^3] sea-level density	
+V_climb	 = 0.00508 * 500 							# [m/s] required minimum climb speed
+eta_m    = 0.9 								 		# [-] electromechancial efficiency
+V 	     = 25 		 								# [m/s] Cruise speed; minimum required max. speed equal to 50kts / 25m/s
+eta_prop = 0.8
+eta_mech = 0.9
 eta_coaxial = 0.78125                               # efficiency of coaxial rotors
 
 # V_acc = V_climb / 1                                  # [m/s2] aim to reach V_climb in 1s. this is possible according to https://www.wired.com/story/calculate-thrust-force-on-a-drone/
@@ -66,19 +62,24 @@ P_hori 	= (CD_side * 0.5 * rho * V**2 * S_side) * V	/ eta_prop / eta_mech / eta_
 T_hover = W_TO * g 	 					             	# [N] required thrust to hover
 P_hover = sqrt(W_TO ** 3 / (2*rho*A)) / eta_prop / eta_mech / eta_coaxial	# [W] required power to hover											# [W] required power to hover
 
-t_vert 	= C_batt / P_vert * 60						# [s] endurance time in pure vertical flight
-t_hori 	= C_batt / P_hori * 60						# [s] endurance time in pure horizontal flight
-t_hover	= C_batt / P_hover * 60						# [s] endurance time in pure hover flight
+P_PL 	= 100										# [W] required power for payload
+P_hover = P_hover + P_PL 							# [W] required hover power with payload power included
+
+t_vert 	= C_batt / P_vert * 60						# [min] endurance time in pure vertical flight
+t_hori 	= C_batt / P_hori * 60						# [min] endurance time in pure horizontal flight
+t_hover	= C_batt / P_hover * 60						# [min] endurance time in pure hover flight
 
 # Print important variables
-print('Coaxial Octocopter Caluclations')
+print('Coaxial Octocopter Calculations')
 print('----------------------------------------------')
+print('Required payload weight =', W_PL, 'kg')
 print('Initial battery weight =', round(W_B,3), 'kg')
 print('Initial empty weight =', round(W_E,3), 'kg')
 print('Initial takeoff weight =', round(W_TO,3), 'kg')
+print('Initial battery capacity =', C_batt, 'Wh')
 print('Required power for vertical flight =', round(P_vert,3), 'W')
-print('Required power for cruise flight =', round(P_hori,3), 'W')
+print('Required power for horizontal flight =', round(P_hori,3), 'W')
 print('Required power for hover flight =', round(P_hover,3), 'W')
-print('Maximum time in vertical flight =', round(t_vert,3), 's')
-print('Maximum time in cruise flight =', round(t_hori,3), 's')
-print('Maximum time in hover flight =', round(t_hover,3), 's')
+print('Maximum time in vertical flight =', round(t_vert,3), 'min')
+print('Maximum time in horizontal flight =', round(t_hori,3), 'min')
+print('Maximum time in hover flight =', round(t_hover,3), 'min')

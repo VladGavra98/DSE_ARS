@@ -32,12 +32,12 @@ g 		= 9.81 										# [m/s^2] gravitational acceleration
 eta_p	= 0.8 										# [-] propeller efficiency
 # E 		= 10800										# [s] endurance
 # R 		= 1000 										# [m] range
-CLCD 	= 14 										# [-] lift-to-drag ratio (taken from https://pubs.acs.org/doi/abs/10.1021/acsenergylett.8b02195)
+CLCD 	= 23 										# [-] lift-to-drag ratio (taken from https://pubs.acs.org/doi/abs/10.1021/acsenergylett.8b02195)
 W_PL	= 2.394										# [kg] payload mass
-W_B 	= 0.448 									# [kg] battery weight for 6S-configuration
+W_B 	= 0.448 									# [kg] battery weight
 # f_batt 	= 1.3 * (g / (eta_p * E) * R / (CLCD)) 		# [-] battery weight fraction
 
-func	= lambda W_TO: -W_TO + W_PL * 2.20462 / (1 - (W_B * 2.20462 / W_TO) - (5.1E-6*W_TO + 0.42))
+func	= lambda W_TO: -W_TO + W_PL * 2.20462 / (1 - (W_B * 2.20462 / W_TO) - (-0.00296*W_TO + 0.87))
 W_TO 	= float(0.453592 * fsolve(func, 10))		# [kg] take-off weight
 W_E 	= 0.453592 * W_TO * (5.1E-6*W_TO + 0.42) 	# [kg] empty weight
 
@@ -53,8 +53,8 @@ V 		= 25 		 								# [m/s] Cruise speed; minimum required max. speed equal to 5
 sigma	= 1.0 										# [-] duct expansion ratio 
 
 P_vert 	= 1/(eta_m * eta_p) * (f * W_TO / FoM * sqrt(f * (W_TO / A) / (2 * rho)) + 0.5 * W_TO * V_climb)	# [W] required power for vertical flight
-P_hori	= 1/(eta_m * eta_p) * (W_TO * V / CLCD)																# [W] required power for horizontal flight
-P_hover = 1/(eta_m * eta_p) * sqrt(W_TO ** 3 / (4* sigma *rho * A))											# [W] required power to hover
+P_hori	= 1/eta_p * (W_TO * V / CLCD)																# [W] required power for horizontal flight
+P_hover = 1/(eta_m * eta_p) * sqrt(W_TO ** 3 / (4* sigma * rho * A))											# [W] required power to hover
 
 P_PL 	= 100										# [W] required power for payload
 P_hover = P_hover + P_PL 							# [W] required hover power with payload power included
