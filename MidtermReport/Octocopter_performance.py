@@ -53,17 +53,15 @@ V 	     = 25 		 								# [m/s] Cruise speed; minimum required max. speed equal 
 eta_prop = 0.8
 eta_mech = 0.9
 eta_coaxial = 0.78125                               # efficiency of coaxial rotors
+P_PL 	= 100	                                    # [W] required power for payload
 
 # V_acc = V_climb / 1                                  # [m/s2] aim to reach V_climb in 1s. this is possible according to https://www.wired.com/story/calculate-thrust-force-on-a-drone/
 P_vert 	= (W_TO * g + CD_top * 0.5 * rho * V_climb**2 * S_top) * V_climb / eta_prop / eta_mech / eta_coaxial		# [W] required power for vertical flight
 
 i       = atan(W_TO * g / (CD_side * 0.5 * rho * V**2 * S_side))
 P_hori 	= (CD_side * 0.5 * rho * V**2 * S_side) * V	/ eta_prop / eta_mech / eta_coaxial					# [W] required power for horizontal flight
-T_hover = W_TO * g 	 					             	# [N] required thrust to hover
-P_hover = sqrt(W_TO ** 3 / (2*rho*A)) / eta_prop / eta_mech / eta_coaxial	# [W] required power to hover											# [W] required power to hover
-
-P_PL 	= 100										# [W] required power for payload
-P_hover = P_hover + P_PL 							# [W] required hover power with payload power included
+# T_hover = W_TO * g 	 					             	# [N] required thrust to hover
+P_hover = sqrt(W_TO ** 3 / (2*rho*A)) / eta_prop / eta_mech / eta_coaxial + P_PL 	# [W] required power to hover with payload power included											# [W] required power to hover
 
 t_vert 	= C_batt / P_vert * 60						# [min] endurance time in pure vertical flight
 t_hori 	= C_batt / P_hori * 60						# [min] endurance time in pure horizontal flight
