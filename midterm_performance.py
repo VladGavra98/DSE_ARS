@@ -25,7 +25,8 @@ SF 		= 1.5  								# [-] safety factor for uncertainty
 g 		= 9.81 								# [m/s^2] gravitational acceleration
 rho 	= 1.225 							# [kg/m^3] sea-level density
 D_prop 	= 0.152 							# [m] propeller diameter - equivalent to 6 inch propeller
-A 		= 3 * (pi/4 * D_prop**2)			# [m^2] total propeller disk area - minimum of 3 propellers required for static stability
+# A 		= 3 * (pi/4 * D_prop**2)			# [m^2] total propeller disk area - minimum of 3 propellers required for static stability
+A = 1/4 * 2 * 2
 eta 	= 0.85 								# [-] preliminary estimation for propulsion efficiency
 
 # Battery assumptions for Li-S technology
@@ -81,7 +82,8 @@ print('Maximum estimated flight time =', round(t_req,1), 'min')
 # ---------------------------------------------------------------------------------------------
 # Define constants
 # D_prop 	= 0.406 							# [m] propeller diameter - equivalent to 16 inch propeller
-A 		= 8 * (pi/4 * D_prop**2)			# [m^2] total propeller disk area - minimum of 8 propellers required for static stability
+# A 		= 8 * (pi/4 * D_prop**2)			# [m^2] total propeller disk area - minimum of 8 propellers required for static stability
+A = 1/4 * 2 * 2
 
 # Mass breakdown
 m_PL 	= 3.84 								# [kg] payload mass
@@ -116,5 +118,41 @@ print('----------------------------------------------')
 print('Cost of Li-S battery =', round(price,1), '$')
 print('Required hovering power =', round(P_hover,1), 'W')
 print('Maximum estimated hover time =', round(t_hover,1), 'min')
+print('Required flight power =', round(P_req,1), 'W')
+print('Maximum estimated flight time =', round(t_req,1), 'min')
+
+# ---------------------------------------------------------------------------------------------
+# Airship 
+# ---------------------------------------------------------------------------------------------
+# Define constants
+D_prop 	= 0.4064 							# [m] propeller diameter - equivalent to 16 inch propeller
+# A 		= 4 * (pi * (D_prop/2)**2) 			# [m^2] total propeller disk area - minimum of 8 propellers required for static stability
+A = 1/4 * 2 * 2
+
+# Mass breakdown
+m_PL 	= 3.84 								# [kg] payload mass
+m_batt 	= 1.0								# [kg] battery mass
+m_stru 	= 1.0 * 40.7						# [kg] structural mass - 30kg without contingency
+
+m 		= m_PL + m_batt + m_stru 			# [kg] maximum take-off mass
+# m 		= 1.2 * m 							# [kg] add contingency of 20%
+
+# Forward flight caluclations
+CD 		= 0.1								# [rad] inclincation angle (https://aip.scitation.org/doi/pdf/10.1063/1.4981989)
+S 		= pi * 2.6**2 					    # [m^2] frontal area based on radius of 2.6 m
+
+D 		= 0.5 * rho * V**2 * S * CD 		# [N] experienced drag during horizontal flight
+T_tot 	= D 						        # [N] total thrust required
+
+P_req 	= sqrt(T_tot ** 3 / (2*rho*A))		# [W] required power during horizontal flight
+P_req 	= SF * P_req						# [W] required power during horizontal flight with safety factor
+t_req	= C_batt / P_req * 60				# [s] maximum time flying
+
+# Print important variables
+print()
+print()
+print('Airship Caluclations')
+print('----------------------------------------------')
+print('Cost of Li-S battery =', round(price,1), '$')
 print('Required flight power =', round(P_req,1), 'W')
 print('Maximum estimated flight time =', round(t_req,1), 'min')
