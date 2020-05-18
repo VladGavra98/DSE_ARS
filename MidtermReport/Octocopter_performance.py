@@ -43,9 +43,9 @@ W_E  	= 0.453592 * W_TO * (-4.6E-5*W_TO + 0.68) 	# [kg] empty weight
 CD_top   = 1.05                                     # assumed as a cube
 CD_side  = 0.0613                                   # for i = 15. this is to be iterated
 S_top    = 0.5**2                                   # [m2]
-S_side   = 0.5*0.04                                 # [m2] thickness of 5cm
+S_side   = 0.5*0.05                                 # [m2] thickness of 5cm
 r_prop   = 0.49                                     # [m] maximum radius of propeller for quadcopter config with 2cm space between propellers
-A        = 8 * (pi * r_prop**2)                        # [m2] total area of the 8 propellers
+A        = 8 * (pi * r_prop**2)                     # [m2] total area of the 8 propellers
 rho  	 = 1.225 									# [kg/m^3] sea-level density	
 V_climb	 = 0.00508 * 500 							# [m/s] required minimum climb speed
 eta_m    = 0.9 								 		# [-] electromechancial efficiency
