@@ -43,20 +43,21 @@ SIA = np.array([R1,R2,R2]) #Signal Isolation Ability
 #Risk
 RISK = np.array([8,7.6,6.5])
 #Sustainability
-SUST = np.array([0,0,0]) #ADD
+SUST = np.array([7,7,7]) #ADD---------------------------------------!!
 
 OpCost = (CFR + CC + CBM) / 3
-FlPerf = ((MVFT + MHFT + MHT) / 3 + Mo + St) / 3
+FlPerf1 = (MVFT + MHFT + MHT) / 3
+FlPerf =  (FlPerf1 + Mo + St) / 3
 PaAppl = (SC + SIA) / 2
 
 
 
-S = np.array([[6,6.33,6],
-              [6, 5.67, 6.33],
-              [9,5,4],
-              [8, 7.6, 6.5],
-              [7,6,5]])
-
+S = np.zeros([5,3])
+S[0,] = OpCost
+S[1,] = FlPerf
+S[2,] = PaAppl
+S[3,] = RISK
+S[4,] = SUST
 
 grades = np.zeros((concepts))
 top = []
