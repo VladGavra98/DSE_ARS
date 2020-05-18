@@ -14,7 +14,7 @@ names = ["Airship", "Drone", "E-VTOL"]
 #    Average weights and standard deviation
 w_avg = np.array([14,29,22,19,16])
 w_SD  = np.array([4.9	,5.83	,5.45	,4.84	,3.5])
-SDadj = 2 #adjustment of SD, =1 means examines one SD deviation
+percadj = 10 #adjustment of variations, =10 means 10%       #set to zero for no change
 #rankings:
 R1 = 10
 R2 = 7
@@ -67,25 +67,25 @@ trd = []
 f = open("sensitivity_scores.txt",'w')
 f.writelines("Scores with all possible 1*SD combinations\n\n\n")
 
-for i,order in enumerate(list(set(list(it.permutations([1,1,1,1,1,-1,-1,-1,-1,-1,0,0,0,0,0],5))))):
-    S2 = np.zeros([5, 3])
-    for l in range(3):
-        for q in range(5):
-            S2[q,l] = S2[q,l]+np.array(order)[q]
+for i,order in enumerate(list(set(list(it.permutations([1,1,1,-1,-1,-1,0,0,0],3))))):
+    S2 = S
+    for p in range(5): #runs through each row and tries the combination for each row (no combination of rows: too much)
+        S2[p,] = S2[p,]+(percadj/10)*np.array(order)
+        #print(S2)
 
-    #print(order)
-    for k in range(concepts):
-        grades[k] = np.dot(w_avg,S2[:,k])/100
-        # print(names[k],": ",grades[k])
-    #print(names[np.argsort(grades)[2]],names[np.argsort(grades)[1]],names[np.argsort(grades)[0]])
-    top.append(names[np.argsort(grades)[2]])
-    sec.append(names[np.argsort(grades)[1]])
-    trd.append(names[np.argsort(grades)[0]])
-    f.writelines("\n"+str(order)+"\n")
-    f.writelines(str(names[np.argsort(grades)[2]]+': '+str(round(grades[np.argsort(grades)[2]],2))+'  '+names[np.argsort(grades)[1]]+': '+str(round(grades[np.argsort(grades)[1]],2))+'  '+names[np.argsort(grades)[0]]+': '+str(round(grades[np.argsort(grades)[0]],2))+'\n'))
-    #f.writelines(str(names[np.argsort(grades)[2]]))  uncomment for just first
+        #print(order)
+        for k in range(concepts):
+            grades[k] = np.dot(w_avg,S2[:,k])/100
+            # print(names[k],": ",grades[k])
+        #print(names[np.argsort(grades)[2]],names[np.argsort(grades)[1]],names[np.argsort(grades)[0]])
+        top.append(names[np.argsort(grades)[2]])
+        sec.append(names[np.argsort(grades)[1]])
+        trd.append(names[np.argsort(grades)[0]])
+        f.writelines("\n"+str(order)+"\n")
+        f.writelines(str(names[np.argsort(grades)[2]]+': '+str(round(grades[np.argsort(grades)[2]],2))+'  '+names[np.argsort(grades)[1]]+': '+str(round(grades[np.argsort(grades)[1]],2))+'  '+names[np.argsort(grades)[0]]+': '+str(round(grades[np.argsort(grades)[0]],2))+'\n'))
+        #f.writelines(str(names[np.argsort(grades)[2]]))  uncomment for just first
 
-print('\ntotal combinations: '+str(len((list(set(list(it.permutations([1,1,1,1,1,-1,-1,-1,-1,-1,0,0,0,0,0],5))))))))
+print('\ntotal combinations: '+str(5*len((list(set(list(it.permutations([1,1,1,-1,-1,-1,0,0,0],3))))))))
 
 print('\nFirst Count:')
 print('Airship: '+str(top.count('Airship')))
