@@ -3,13 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="6b4580a3-03b8-4457-b88a-729be508e57a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sensitivity.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sensitivity.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sesitivity_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/sesitivity_analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TesterFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/TesterFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sensitivity_scores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sensitivity_scores.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sesitivity_analysis_Scores.py" beforeDir="false" afterPath="$PROJECT_DIR$/sesitivity_analysis_Scores.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -25,9 +33,29 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="Python.sesitivity_analysis">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.sesitivity_analysis_Scores">
+    <configuration name="TesterFile" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DSE_ARS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TesterFile.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sesitivity_analysis (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DSE_ARS" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -35,12 +63,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/sesitivity_analysis.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -53,6 +81,44 @@
       <module name="DSE_ARS" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sesitivity_analysis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sesitivity_analysis_Scores" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DSE_ARS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sesitivity_analysis_Scores.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sesitivity_analysis_Weights" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DSE_ARS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
@@ -62,7 +128,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sesitivity_analysis.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sesitivity_analysis_Weights.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -73,8 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.sesitivity_analysis" />
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python.sesitivity_analysis_Scores" />
+        <item itemvalue="Python.sesitivity_analysis_Weights" />
+        <item itemvalue="Python.TesterFile" />
+        <item itemvalue="Python.sesitivity_analysis_Scores" />
+        <item itemvalue="Python.TesterFile" />
       </list>
     </recent_temporary>
   </component>
@@ -88,7 +157,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589451838359</updated>
-      <workItem from="1589451840257" duration="1844000" />
+      <workItem from="1589451840257" duration="3835000" />
+      <workItem from="1589785070508" duration="1656000" />
+      <workItem from="1589786734568" duration="6246000" />
     </task>
     <servers />
   </component>
@@ -96,25 +167,40 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="305" key="GridCell.Tab.0.bottom" timestamp="1589453847005">
+    <state x="496" y="58" key="#sesitivity_analysis" timestamp="1589787083382">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="305" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589453847005" />
-    <state width="1493" height="305" key="GridCell.Tab.0.center" timestamp="1589453847005">
+    <state x="496" y="58" key="#sesitivity_analysis/0.0.1536.864@0.0.1536.864" timestamp="1589787083382" />
+    <state width="1493" height="305" key="GridCell.Tab.0.bottom" timestamp="1589799760877">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="305" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589453847005" />
-    <state width="1493" height="305" key="GridCell.Tab.0.left" timestamp="1589453847005">
+    <state width="1493" height="305" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589799760877" />
+    <state width="1493" height="305" key="GridCell.Tab.0.center" timestamp="1589799760877">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="305" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589453847005" />
-    <state width="1493" height="305" key="GridCell.Tab.0.right" timestamp="1589453847005">
+    <state width="1493" height="305" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589799760877" />
+    <state width="1493" height="305" key="GridCell.Tab.0.left" timestamp="1589799760877">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="305" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589453847005" />
+    <state width="1493" height="305" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589799760877" />
+    <state width="1493" height="305" key="GridCell.Tab.0.right" timestamp="1589799760877">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="305" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589799760877" />
+    <state x="277" y="74" key="SettingsEditor" timestamp="1589786820839">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="277" y="74" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1589786820839" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DSE_ARS$midterm_performance.coverage" NAME="midterm_performance Coverage Results" MODIFIED="1589786619225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DSE_ARS$midterm_aerodynamics.coverage" NAME="midterm_aerodynamics Coverage Results" MODIFIED="1589786624331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis__1_.coverage" NAME="sesitivity_analysis (1) Coverage Results" MODIFIED="1589786720895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop" />
+    <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_Weights.coverage" NAME="sesitivity_analysis_Weights Coverage Results" MODIFIED="1589799719805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DSE_ARS$main.coverage" NAME="main Coverage Results" MODIFIED="1589452194393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis.coverage" NAME="sesitivity_analysis Coverage Results" MODIFIED="1589453847001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DSE_ARS$money.coverage" NAME="money Coverage Results" MODIFIED="1589786778929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Documents/PYTHON/STUFF/Money" />
+    <SUITE FILE_PATH="coverage/DSE_ARS$TesterFile.coverage" NAME="TesterFile Coverage Results" MODIFIED="1589796257770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_Scores.coverage" NAME="sesitivity_analysis_Scores Coverage Results" MODIFIED="1589796505054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis.coverage" NAME="sesitivity_analysis Coverage Results" MODIFIED="1589787101978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
