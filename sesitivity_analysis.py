@@ -15,15 +15,48 @@ names = ["Airship", "Drone", "E-VTOL"]
 w_avg = np.array([14,29,22,19,16])
 w_SD  = np.array([4.9	,5.83	,5.45	,4.84	,3.5])
 SDadj = 2 #adjustment of SD, =1 means examines one SD deviation
+#rankings:
+R1 = 10
+R2 = 7
+R3 = 4
 
 #Scores given to each concept:
 #Concept order: Airship, Drone, E-VTOL (in this order)
 #only risks will stay like this!!
+
+#Operational Cost
+CFR = np.array([R2,R1,R3]) #Cost and Freq of Repair
+CC = np.array([R3,R2,R1]) #Cost of Consumables
+CBM = np.array([R3,R1,R2])  #Cost Between Mission
+
+#Flight Performance
+MVFT = np.array([5,7.4,10]) #max vertical flight time
+MHFT = np.array([0.7,8.57,10])  #max horizontal flight time
+MHT = np.array([10,9.81,4.38])  #max hover time
+Mo = np.array([R1,R2,R3])  #Mobility
+St = np.array([R3,R1,R2])  #Stability
+
+#Payload Application
+SC = np.array([R1,R2,R3])  #Sensing Capability
+SIA = np.array([R1,R2,R2]) #Signal Isolation Ability
+
+#Risk
+RISK = np.array([8,7.6,6.5])
+#Sustainability
+SUST = np.array([0,0,0]) #ADD
+
+OpCost = (CFR + CC + CBM) / 3
+FlPerf = ((MVFT + MHFT + MHT) / 3 + Mo + St) / 3
+PaAppl = (SC + SIA) / 2
+
+
+
 S = np.array([[6,6.33,6],
               [6, 5.67, 6.33],
               [9,5,4],
               [8, 7.6, 6.5],
               [7,6,5]])
+
 
 grades = np.zeros((concepts))
 top = []
@@ -41,11 +74,11 @@ for i,order in enumerate(list(set(list(it.permutations([1,1,1,1,1,-1,-1,-1,-1,-1
     aux = delta + w_avg
     aux = aux/sum(aux)*100
 
-    print(order)
+    #print(order)
     for k in range(concepts):
         grades[k] = np.dot(aux,S[:,k])/100
         # print(names[k],": ",grades[k])
-    print(names[np.argsort(grades)[2]],names[np.argsort(grades)[1]],names[np.argsort(grades)[0]])
+    #print(names[np.argsort(grades)[2]],names[np.argsort(grades)[1]],names[np.argsort(grades)[0]])
     top.append(names[np.argsort(grades)[2]])
     sec.append(names[np.argsort(grades)[1]])
     trd.append(names[np.argsort(grades)[0]])
