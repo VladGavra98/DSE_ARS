@@ -64,7 +64,7 @@ top = []
 sec = []
 trd = []
 
-f = open("sensitivity.txt",'w')
+f = open("sensitivity_weights.txt",'w')
 f.writelines("Scores with all possible 1*SD combinations\n\n\n")
 
 
