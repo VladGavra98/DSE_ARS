@@ -14,7 +14,7 @@ names = ["Airship", "Drone", "E-VTOL"]
 #    Average weights and standard deviation
 w_avg = np.array([14,29,22,19,16])
 w_SD  = np.array([4.9	,5.83	,5.45	,4.84	,3.5])
-SDadj = 2 #adjustment of SD, =1 means examines one SD deviation
+SDadj = 0.6 #adjustment of SD, =1 means examines one SD deviation
 #rankings:
 R1 = 10
 R2 = 7
@@ -32,9 +32,9 @@ CBM = np.array([R3,R1,R2])  #Cost Between Mission
 #Flight Performance
 MVFT = np.array([5,7.4,10]) #max vertical flight time
 MHFT = np.array([0.7,8.57,10])  #max horizontal flight time
-MHT = np.array([10,9.81,4.38])  #max hover time
-Mo = np.array([R1,R2,R3])  #Mobility
-St = np.array([R3,R1,R2])  #Stability
+MHT = np.array([10,8.91,4.38])  #max hover time
+Mo = np.array([R3,R1,R2])  #Mobility
+St = np.array([R1,R3,R2])  #Stability
 
 #Payload Application
 SC = np.array([R1,R2,R3])  #Sensing Capability
@@ -43,11 +43,11 @@ SIA = np.array([R1,R2,R2]) #Signal Isolation Ability
 #Risk
 RISK = np.array([8,7.6,6.5])
 #Sustainability
-SUST = np.array([7,7,7]) #ADD---------------------------------------!!
+SUST = np.array([6,7.71,6.57])
 
 OpCost = (CFR + CC + CBM) / 3
 FlPerf1 = (MVFT + MHFT + MHT) / 3
-FlPerf =  (FlPerf1 + Mo + St) / 3
+FlPerf =  (FlPerf1*0.5 + Mo*0.25 + St*0.25)
 PaAppl = (SC + SIA) / 2
 
 
@@ -63,6 +63,7 @@ grades = np.zeros((concepts))
 top = []
 sec = []
 trd = []
+
 
 f = open("sensitivity_weights.txt",'w')
 f.writelines("Scores with all possible 1*SD combinations\n\n\n")
@@ -104,7 +105,7 @@ print('Airship: '+str(trd.count('Airship')))
 print('Drone: '+str(trd.count('Drone')))
 print('E-VTOL: '+str(trd.count('E-VTOL')))
 
-
+f.close()
 print('\n\ndone')
 
 
