@@ -21,7 +21,7 @@ if des == 'drone':
 if des == 'VTOL':
     w_avg = np.array([12,28,10,24.5,10.5,15])
 
-scr = 100 #  adjustment score (abs mult) 1 = 100%, 1.50=50% increase
+scr = 90 #  adjustment score (abs mult) 1 = 100%, 1.50=50% increase
 
 
 

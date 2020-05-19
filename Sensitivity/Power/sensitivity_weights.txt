@@ -2,2189 +2,974 @@ Scores with all possible 1*SD combinations
 
 
 
-(0, 1, 1, 1, 0, 1)
-Li-ion: 8.03  Li-Po: 7.89  LiSu: 5.5  Solar: 4.43
+(-1, 0, 1, 1)
+LiSu: 17.19  Solar: 15.8  Li-ion: 7.3  Li-Po: -3.0
 
-(0, 1, -1, 1, 0, 1)
-Li-Po: 7.79  Li-ion: 6.07  LiSu: 4.0  Solar: 3.87
+(-1, 0, 1, 1)
+LiSu: 42.39  Solar: 41.0  Li-ion: 7.3  Li-Po: -28.2
 
-(-1, -1, 1, 0, 1, -1)
-Solar: 7.73  LiSu: 7.1  Li-ion: 2.94  Li-Po: 2.17
+(-1, 0, 1, 1)
+LiSu: 51.39  Solar: 50.0  Li-ion: 7.3  Li-Po: -37.2
 
-(-1, -1, 0, 1, -1, -1)
-LiSu: 11.37  Solar: 9.91  Li-Po: 6.39  Li-ion: 5.31
+(-1, 0, 1, 1)
+LiSu: 73.44  Solar: 72.05  Li-ion: 7.3  Li-Po: -59.25
 
-(-1, -1, 0, 1, 0, 0)
-LiSu: 19.11  Solar: 11.73  Li-Po: 4.17  Li-ion: 2.94
+(-1, 1, 1, -1)
+LiSu: 84.24  Solar: 61.25  Li-ion: 18.1  Li-Po: -70.05
 
-(0, 0, 1, -1, -1, 1)
-Solar: 8893.88  Li-ion: 4451.74  LiSu: 4450.83  Li-Po: -8881.08
+(-1, 1, 1, -1)
+LiSu: 109.44  Li-ion: 43.3  Solar: 36.05  Li-Po: -95.25
 
-(0, 0, 1, 0, 0, 1)
-Li-ion: 8.5  Li-Po: 7.0  Solar: 7.0  LiSu: 6.0
+(-1, 1, 1, -1)
+LiSu: 118.44  Li-ion: 52.3  Solar: 27.05  Li-Po: -104.25
 
-(-1, 0, 0, -1, -1, 1)
-Li-Po: 8.3  LiSu: 7.05  Li-ion: 6.9  Solar: 5.5
+(-1, 1, 1, -1)
+LiSu: 140.49  Li-ion: 74.35  Solar: 5.0  Li-Po: -126.3
 
-(0, -1, -1, -1, 0, 1)
-Li-Po: 9.79  Li-ion: 9.07  LiSu: 6.0  Solar: -0.14
+(0, 0, 1, -1)
+LiSu: 151.29  Li-ion: 74.35  Solar: -5.8  Li-Po: -126.3
 
-(1, 1, -1, -1, -1, 0)
-Li-ion: 13.06  Li-Po: 12.83  Solar: 2.27  LiSu: -2.1
+(0, 0, 1, -1)
+LiSu: 176.49  Li-ion: 74.35  Solar: -31.0  Li-Po: -126.3
 
-(-1, 0, 0, 0, 0, 0)
-Solar: 10.0  LiSu: 9.1  Li-ion: 5.8  Li-Po: 4.6
+(0, 0, 1, -1)
+LiSu: 185.49  Li-ion: 74.35  Solar: -40.0  Li-Po: -126.3
 
-(1, 0, 1, 1, 1, 1)
-Li-ion: 7.56  Li-Po: 7.32  Solar: 6.8  LiSu: 6.22
+(0, 0, 1, -1)
+LiSu: 207.54  Li-ion: 74.35  Solar: -62.05  Li-Po: -126.3
 
-(1, 1, 1, -1, -1, -1)
-LiSu: 24673.03  Li-ion: -126.03  Solar: -2817.22  Li-Po: -6281.08
+(0, -1, -1, 1)
+LiSu: 196.74  Li-ion: 63.55  Solar: -51.25  Li-Po: -126.3
 
-(1, 1, 1, -1, 0, 0)
-LiSu: 13.05  Solar: 8.36  Li-ion: 6.47  Li-Po: 6.09
+(0, -1, -1, 1)
+LiSu: 171.54  Li-ion: 38.35  Solar: -26.05  Li-Po: -126.3
 
-(1, 1, 1, 0, -1, 0)
-LiSu: 8.05  Li-ion: 7.97  Li-Po: 6.09  Solar: 4.37
+(0, -1, -1, 1)
+LiSu: 162.54  Li-ion: 29.35  Solar: -17.05  Li-Po: -126.3
 
-(1, 1, 1, 0, 0, -1)
-LiSu: 10.55  Li-Po: 7.59  Li-ion: 7.47  Solar: 4.37
+(0, -1, -1, 1)
+LiSu: 140.49  Li-ion: 7.3  Solar: 5.0  Li-Po: -126.3
 
-(1, -1, -1, 1, -1, 0)
-LiSu: 17.91  Li-Po: 11.97  Li-ion: 7.34  Solar: 5.73
+(-1, -1, -1, 0)
+LiSu: 129.69  Solar: 5.0  Li-ion: -3.5  Li-Po: -137.1
 
-(1, 0, 0, 1, -1, 0)
-Li-ion: 8.8  Li-Po: 4.6  Solar: 2.0  LiSu: -0.9
+(-1, -1, -1, 0)
+LiSu: 104.49  Solar: 5.0  Li-ion: -28.7  Li-Po: -162.3
 
-(1, 1, 1, 0, 1, 1)
-LiSu: 8.22  Li-Po: 7.23  Solar: 7.15  Li-ion: 6.99
+(-1, -1, -1, 0)
+LiSu: 95.49  Solar: 5.0  Li-ion: -37.7  Li-Po: -171.3
 
-(1, 0, 1, 0, -1, -1)
-Li-ion: 6229.52  LiSu: 2450.83  Li-Po: -5325.53  Solar: -6661.66
+(-1, -1, -1, 0)
+LiSu: 73.44  Solar: 5.0  Li-ion: -59.75  Li-Po: -193.35
 
-(1, 0, 1, 1, -1, 0)
-Li-ion: 9.4  Li-Po: 6.3  Solar: 3.5  LiSu: 3.05
+(0, 0, -1, -1)
+LiSu: 62.64  Solar: -5.8  Li-ion: -59.75  Li-Po: -193.35
 
-(1, 0, 1, 1, 0, -1)
-Li-ion: 8.9  Li-Po: 7.8  LiSu: 5.55  Solar: 3.5
+(0, 0, -1, -1)
+LiSu: 37.44  Solar: -31.0  Li-ion: -59.75  Li-Po: -193.35
 
-(-1, 0, 1, -1, 1, 0)
-LiSu: 17561.93  Li-Po: 7563.35  Solar: 6671.66  Li-ion: 2673.96
+(0, 0, -1, -1)
+LiSu: 28.44  Solar: -40.0  Li-ion: -59.75  Li-Po: -193.35
 
-(-1, 0, 1, 1, 0, -1)
-Li-Po: 14230.01  Li-ion: 13785.06  LiSu: -15771.37  Solar: -28883.86
+(0, 0, -1, -1)
+LiSu: 6.39  Li-ion: -59.75  Solar: -62.05  Li-Po: -193.35
 
-(1, 1, 1, 1, -1, -1)
-Li-ion: 8.97  Li-Po: 7.59  LiSu: 5.55  Solar: 0.37
+(-1, 1, -1, -1)
+LiSu: -4.41  Li-ion: -48.95  Solar: -72.85  Li-Po: -204.15
 
-(-1, 0, 0, -1, 1, 0)
-Li-ion: 8.8  Li-Po: 4.6  Solar: 2.0  LiSu: -0.9
+(-1, 1, -1, -1)
+Li-ion: -23.75  LiSu: -29.61  Solar: -98.05  Li-Po: -229.35
 
-(0, -1, -1, -1, 1, -1)
-Li-ion: 8.71  Li-Po: 7.52  LiSu: 4.0  Solar: 2.91
+(-1, 1, -1, -1)
+Li-ion: -14.75  LiSu: -38.61  Solar: -107.05  Li-Po: -238.35
 
-(0, -1, -1, 0, 1, 1)
-Solar: 22827.2  Li-Po: -3481.08  LiSu: -4438.05  Li-ion: -6970.47
+(-1, 1, -1, -1)
+Li-ion: 7.3  LiSu: -60.66  Solar: -129.1  Li-Po: -260.4
 
-(-1, 1, 1, 0, 0, -1)
-Li-Po: 13274.46  Li-ion: 7429.52  LiSu: 6450.83  Solar: -25039.42
+(-1, 1, 0, 0)
+Li-ion: 18.1  LiSu: -60.66  Solar: -129.1  Li-Po: -271.2
 
-(0, 0, -1, 1, 0, 1)
-Li-Po: 7.0  Li-ion: 6.0  Solar: 5.0  LiSu: -2.0
+(-1, 1, 0, 0)
+Li-ion: 43.3  LiSu: -60.66  Solar: -129.1  Li-Po: -296.4
 
-(0, 1, -1, 1, 1, -1)
-Li-Po: 12.57  LiSu: 8.0  Li-ion: 4.14  Solar: -1.27
+(-1, 1, 0, 0)
+Li-ion: 52.3  LiSu: -60.66  Solar: -129.1  Li-Po: -305.4
 
-(-1, -1, 0, 1, 1, 0)
-Li-Po: 10741.12  Li-ion: 6807.29  Solar: -6061.66  LiSu: -20215.81
+(-1, 1, 0, 0)
+Li-ion: 74.35  LiSu: -60.66  Solar: -129.1  Li-Po: -327.45
 
-(0, 1, 0, 1, 1, 1)
-Li-Po: 8.14  Li-ion: 7.04  LiSu: 6.25  Solar: 5.43
+(0, -1, 1, 0)
+Li-ion: 63.55  LiSu: -49.86  Solar: -129.1  Li-Po: -327.45
 
-(0, 1, -1, -1, -1, 1)
-Li-ion: 11.86  Li-Po: 11.43  Solar: 3.27  LiSu: 2.0
+(0, -1, 1, 0)
+Li-ion: 38.35  LiSu: -24.66  Solar: -129.1  Li-Po: -327.45
 
-(0, 1, -1, 0, 0, 1)
-LiSu: 8.0  Solar: 6.73  Li-Po: 6.57  Li-ion: 3.14
+(0, -1, 1, 0)
+Li-ion: 29.35  LiSu: -15.66  Solar: -129.1  Li-Po: -327.45
 
-(-1, -1, 0, -1, 0, -1)
-Li-Po: 7.04  Li-ion: 6.98  LiSu: 6.02  Solar: 5.68
+(0, -1, 1, 0)
+Li-ion: 7.3  LiSu: 6.39  Solar: -129.1  Li-Po: -327.45
 
-(-1, 1, 1, 1, 1, 1)
-Li-Po: 8.99  Li-ion: 8.08  LiSu: 5.73  Solar: 4.18
+(1, 0, 1, 0)
+LiSu: 17.19  Li-ion: 7.3  Solar: -129.1  Li-Po: -316.65
 
-(-1, -1, 0, -1, -1, -1)
-Li-Po: 7.43  LiSu: 6.82  Li-ion: 6.79  Solar: 6.35
+(1, 0, 1, 0)
+LiSu: 42.39  Li-ion: 7.3  Solar: -129.1  Li-Po: -291.45
 
-(-1, -1, 1, 1, 1, 0)
-Li-ion: 13.06  Li-Po: 12.83  Solar: 2.27  LiSu: -2.1
+(1, 0, 1, 0)
+LiSu: 51.39  Li-ion: 7.3  Solar: -129.1  Li-Po: -282.45
 
-(0, 1, 0, -1, 0, 1)
-LiSu: 15.0  Solar: 10.73  Li-Po: 5.57  Li-ion: 4.14
+(1, 0, 1, 0)
+LiSu: 73.44  Li-ion: 7.3  Solar: -129.1  Li-Po: -260.4
 
-(0, 1, 0, 0, -1, 1)
-Li-ion: 7.14  Li-Po: 5.57  LiSu: 5.0  Solar: 2.73
+(0, 0, 0, 1)
+LiSu: 73.44  Li-ion: 7.3  Solar: -118.3  Li-Po: -260.4
 
-(0, 0, -1, 0, 1, -1)
-Li-ion: 11.0  Solar: 5.0  Li-Po: 5.0  LiSu: 2.0
+(0, 0, 0, 1)
+LiSu: 73.44  Li-ion: 7.3  Solar: -93.1  Li-Po: -260.4
 
-(0, 0, -1, -1, 1, 1)
-Solar: 26671.64  LiSu: 17784.15  Li-Po: -4436.64  Li-ion: -13326.02
+(0, 0, 0, 1)
+LiSu: 73.44  Li-ion: 7.3  Solar: -84.1  Li-Po: -260.4
 
-(0, -1, -1, 1, -1, 1)
-LiSu: 22.01  Li-Po: 10.57  Solar: 6.73  Li-ion: 6.14
+(0, 0, 0, 1)
+LiSu: 73.44  Li-ion: 7.3  Solar: -62.05  Li-Po: -260.4
 
-(-1, 0, 1, 0, 1, 1)
-Li-Po: 9.2  Li-ion: 8.6  Solar: 6.5  LiSu: 6.45
+(0, 0, 0, -1)
+LiSu: 73.44  Li-ion: 7.3  Solar: -72.85  Li-Po: -260.4
 
-(-1, 1, 1, 0, -1, -1)
-Solar: 20.28  LiSu: 7.1  Li-Po: 3.03  Li-ion: 2.66
+(0, 0, 0, -1)
+LiSu: 73.44  Li-ion: 7.3  Solar: -98.05  Li-Po: -260.4
 
-(1, 1, 1, -1, 1, 0)
-LiSu: 12.03  Solar: 8.58  Li-Po: 7.06  Li-ion: 6.31
+(0, 0, 0, -1)
+LiSu: 73.44  Li-ion: 7.3  Solar: -107.05  Li-Po: -260.4
 
-(1, -1, -1, 1, 0, 1)
-Solar: 12.27  Li-ion: 5.66  Li-Po: 3.03  LiSu: -2.9
+(0, 0, 0, -1)
+LiSu: 73.44  Li-ion: 7.3  Solar: -129.1  Li-Po: -260.4
 
-(1, 0, 0, 1, 0, 1)
-Li-ion: 7.27  Solar: 6.67  Li-Po: 6.53  LiSu: 4.7
+(-1, 0, 0, 0)
+LiSu: 73.44  Li-ion: 7.3  Solar: -129.1  Li-Po: -271.2
 
-(1, 1, 1, 1, 0, -1)
-Li-Po: 8.06  Li-ion: 7.98  LiSu: 7.03  Solar: 3.24
+(-1, 0, 0, 0)
+LiSu: 73.44  Li-ion: 7.3  Solar: -129.1  Li-Po: -296.4
 
-(-1, 0, 1, 1, -1, -1)
-Solar: 22.01  LiSu: 17.1  Li-Po: 2.6  Li-ion: -0.2
+(-1, 0, 0, 0)
+LiSu: 73.44  Li-ion: 7.3  Solar: -129.1  Li-Po: -305.4
 
-(1, 1, 0, -1, 1, 0)
-LiSu: 14.55  Solar: 10.36  Li-Po: 6.59  Li-ion: 4.47
+(-1, 0, 0, 0)
+LiSu: 73.44  Li-ion: 7.3  Solar: -129.1  Li-Po: -327.45
 
-(-1, 0, 0, 0, -1, 1)
-LiSu: 14.1  Solar: 10.0  Li-Po: 7.6  Li-ion: 4.8
+(-1, 1, -1, 1)
+LiSu: 62.64  Li-ion: 18.1  Solar: -118.3  Li-Po: -338.25
 
-(1, 1, -1, -1, 0, 1)
-LiSu: 17.1  Solar: 15.73  Li-Po: 2.17  Li-ion: -0.06
+(-1, 1, -1, 1)
+Li-ion: 43.3  LiSu: 37.44  Solar: -93.1  Li-Po: -363.45
 
-(1, 0, 1, 0, 0, -1)
-LiSu: 11.1  Li-ion: 8.8  Li-Po: 6.6  Solar: 6.0
+(-1, 1, -1, 1)
+Li-ion: 52.3  LiSu: 28.44  Solar: -84.1  Li-Po: -372.45
 
-(-1, 0, 0, -1, 0, 0)
-Li-ion: 7.4  Li-Po: 6.8  Solar: 5.5  LiSu: 4.55
+(-1, 1, -1, 1)
+Li-ion: 74.35  LiSu: 6.39  Solar: -62.05  Li-Po: -394.5
 
-(0, -1, -1, -1, -1, 0)
-Li-Po: 8.64  Li-ion: 7.79  LiSu: 6.75  Solar: 4.43
+(1, 1, 1, 0)
+Li-ion: 85.15  LiSu: 17.19  Solar: -62.05  Li-Po: -383.7
 
-(1, -1, 1, 0, 1, 0)
-Solar: 10.63  LiSu: 8.05  Li-ion: 7.83  Li-Po: 6.52
+(1, 1, 1, 0)
+Li-ion: 110.35  LiSu: 42.39  Solar: -62.05  Li-Po: -358.5
 
-(-1, 0, 0, 1, 1, -1)
-Li-Po: 16452.23  Li-ion: 4896.18  LiSu: -9104.71  Solar: -19994.98
+(1, 1, 1, 0)
+Li-ion: 119.35  LiSu: 51.39  Solar: -62.05  Li-Po: -349.5
 
-(0, -1, 1, -1, -1, -1)
-Li-Po: 8.19  Li-ion: 6.05  LiSu: 6.0  Solar: 5.58
+(1, 1, 1, 0)
+Li-ion: 141.4  LiSu: 73.44  Solar: -62.05  Li-Po: -327.45
 
-(0, -1, 1, -1, 0, 0)
-Li-Po: 9.57  Li-ion: 5.14  LiSu: 3.0  Solar: -1.27
+(0, 0, -1, 1)
+Li-ion: 141.4  LiSu: 62.64  Solar: -51.25  Li-Po: -327.45
 
-(0, -1, 1, 0, -1, 0)
-LiSu: 13.0  Li-Po: 9.57  Solar: 6.73  Li-ion: 2.14
+(0, 0, -1, 1)
+Li-ion: 141.4  LiSu: 37.44  Solar: -26.05  Li-Po: -327.45
 
-(0, 1, -1, 1, -1, 0)
-Li-Po: 1274.47  Li-ion: -1903.81  LiSu: -15549.15  Solar: -22817.2
+(0, 0, -1, 1)
+Li-ion: 141.4  LiSu: 28.44  Solar: -17.05  Li-Po: -327.45
 
-(0, -1, 1, 0, 0, -1)
-LiSu: 8.0  Solar: 6.73  Li-Po: 6.57  Li-ion: 3.14
+(0, 0, -1, 1)
+Li-ion: 141.4  LiSu: 6.39  Solar: 5.0  Li-Po: -327.45
 
-(0, 0, 1, 1, 1, -1)
-Li-Po: 10.0  Li-ion: 9.0  LiSu: 6.0  Solar: 3.0
+(0, -1, -1, -1)
+Li-ion: 130.6  LiSu: -4.41  Solar: -5.8  Li-Po: -327.45
 
-(-1, -1, -1, 0, 0, 1)
-LiSu: 10.55  Li-Po: 7.58  Li-ion: 7.47  Solar: 4.36
+(0, -1, -1, -1)
+Li-ion: 105.4  LiSu: -29.61  Solar: -31.0  Li-Po: -327.45
 
-(0, 0, -1, 0, -1, 0)
-LiSu: 8.5  Li-Po: 8.5  Li-ion: 8.0  Solar: 7.0
+(0, -1, -1, -1)
+Li-ion: 96.4  LiSu: -38.61  Solar: -40.0  Li-Po: -327.45
 
-(0, 1, 1, 0, 1, -1)
-LiSu: 11.0  Li-Po: 9.78  Li-ion: 7.57  Solar: 3.87
+(0, -1, -1, -1)
+Li-ion: 74.35  LiSu: -60.66  Solar: -62.05  Li-Po: -327.45
 
-(-1, -1, 1, 1, 0, 0)
-Li-ion: 15696.17  Li-Po: 8518.9  Solar: -14950.54  LiSu: -26882.47
+(1, 1, -1, 0)
+Li-ion: 85.15  Solar: -62.05  LiSu: -71.46  Li-Po: -316.65
 
-(0, 1, 1, -1, 1, 1)
-LiSu: 10.67  Solar: 8.24  Li-Po: 7.52  Li-ion: 6.71
+(1, 1, -1, 0)
+Li-ion: 110.35  Solar: -62.05  LiSu: -96.66  Li-Po: -291.45
 
-(-1, -1, 1, -1, 1, -1)
-Li-ion: 5.97  Li-Po: 5.58  Solar: 4.36  LiSu: 3.55
+(1, 1, -1, 0)
+Li-ion: 119.35  Solar: -62.05  LiSu: -105.66  Li-Po: -282.45
 
-(-1, 1, 0, 1, 0, 1)
-Li-Po: 9.48  Li-ion: 8.17  LiSu: 2.95  Solar: 1.37
+(1, 1, -1, 0)
+Li-ion: 141.4  Solar: -62.05  LiSu: -127.71  Li-Po: -260.4
 
-(0, 0, 0, 1, -1, -1)
-Solar: 17.01  LiSu: 15.0  Li-Po: 6.0  Li-ion: 4.0
+(-1, 1, 1, 1)
+Li-ion: 152.2  Solar: -51.25  LiSu: -116.91  Li-Po: -271.2
 
-(0, 0, 0, 1, 0, 0)
-Li-Po: 9.0  Li-ion: 9.0  Solar: 1.0  LiSu: 0.0
+(-1, 1, 1, 1)
+Li-ion: 177.4  Solar: -26.05  LiSu: -91.71  Li-Po: -296.4
 
-(0, -1, 0, -1, 1, -1)
-Li-ion: 8.07  Li-Po: 7.28  LiSu: 2.5  Solar: 1.86
+(-1, 1, 1, 1)
+Li-ion: 186.4  Solar: -17.05  LiSu: -82.71  Li-Po: -305.4
 
-(1, 1, 0, 0, -1, 1)
-LiSu: 7.05  Li-ion: 6.47  Solar: 6.36  Li-Po: 5.09
+(-1, 1, 1, 1)
+Li-ion: 208.45  Solar: 5.0  LiSu: -60.66  Li-Po: -327.45
 
-(-1, 0, -1, -1, 0, 1)
-Li-ion: 8.9  Li-Po: 7.8  LiSu: 5.55  Solar: 3.5
+(0, 0, 1, 1)
+Li-ion: 208.45  Solar: 15.8  LiSu: -49.86  Li-Po: -327.45
 
-(0, -1, 0, 0, 1, 1)
-Solar: 15.27  Li-ion: 6.86  Li-Po: 6.43  LiSu: 5.0
+(0, 0, 1, 1)
+Li-ion: 208.45  Solar: 41.0  LiSu: -24.66  Li-Po: -327.45
 
-(1, 1, 0, -1, 0, 0)
-LiSu: 19.09  Solar: 11.73  Li-Po: 4.17  Li-ion: 2.94
+(0, 0, 1, 1)
+Li-ion: 208.45  Solar: 50.0  LiSu: -15.66  Li-Po: -327.45
 
-(1, 0, -1, 0, -1, 1)
-Solar: 11116.1  LiSu: -6438.05  Li-ion: -7103.8  Li-Po: -14214.41
+(0, 0, 1, 1)
+Li-ion: 208.45  Solar: 72.05  LiSu: 6.39  Li-Po: -327.45
 
-(1, 0, 0, -1, -1, 1)
-Solar: 20004.98  LiSu: 9117.49  Li-ion: -4881.58  Li-Po: -16436.63
+(-1, 0, 1, -1)
+Li-ion: 208.45  Solar: 61.25  LiSu: 17.19  Li-Po: -338.25
 
-(1, 0, 0, 0, 0, 1)
-Solar: 9.5  LiSu: 7.05  Li-ion: 6.4  Li-Po: 5.3
+(-1, 0, 1, -1)
+Li-ion: 208.45  LiSu: 42.39  Solar: 36.05  Li-Po: -363.45
 
-(1, -1, -1, -1, -1, 1)
-Li-Po: 11.99  Li-ion: 9.17  LiSu: 6.45  Solar: -0.64
+(-1, 0, 1, -1)
+Li-ion: 208.45  LiSu: 51.39  Solar: 27.05  Li-Po: -372.45
 
-(1, -1, -1, 0, 0, 1)
-Solar: 25049.42  LiSu: -6438.05  Li-ion: -7414.91  Li-Po: -13258.85
+(-1, 0, 1, -1)
+Li-ion: 208.45  LiSu: 73.44  Solar: 5.0  Li-Po: -394.5
 
-(1, -1, 0, -1, 0, 1)
-Solar: 33938.3  LiSu: 9117.49  Li-ion: -5192.69  Li-Po: -15481.07
+(0, -1, 0, 1)
+Li-ion: 197.65  LiSu: 73.44  Solar: 15.8  Li-Po: -394.5
 
-(1, -1, 0, 0, -1, 1)
-Solar: 16160.54  Li-ion: 1473.97  LiSu: -13104.71  Li-Po: -15481.07
+(0, -1, 0, 1)
+Li-ion: 172.45  LiSu: 73.44  Solar: 41.0  Li-Po: -394.5
 
-(1, 0, -1, -1, 0, 1)
-Solar: 28893.86  LiSu: 15784.15  Li-ion: -13770.46  Li-Po: -14214.41
+(0, -1, 0, 1)
+Li-ion: 163.45  LiSu: 73.44  Solar: 50.0  Li-Po: -394.5
 
-(1, -1, 1, -1, -1, 1)
-Solar: 25049.42  Li-ion: 3696.19  LiSu: 2450.83  Li-Po: -17703.29
+(0, -1, 0, 1)
+Li-ion: 141.4  LiSu: 73.44  Solar: 72.05  Li-Po: -394.5
 
-(1, 1, 0, 1, 1, -1)
-Li-Po: 8.39  LiSu: 8.03  Li-ion: 6.65  Solar: 4.58
+(1, 1, -1, -1)
+Li-ion: 152.2  LiSu: 62.64  Solar: 61.25  Li-Po: -383.7
 
-(1, 1, -1, 1, -1, 1)
-Li-ion: 5.97  Li-Po: 5.59  Solar: 4.37  LiSu: 3.55
+(1, 1, -1, -1)
+Li-ion: 177.4  LiSu: 37.44  Solar: 36.05  Li-Po: -358.5
 
-(1, -1, 1, 0, 0, 0)
-Solar: 12.27  Li-ion: 9.66  LiSu: 6.1  Li-Po: 4.03
+(1, 1, -1, -1)
+Li-ion: 186.4  LiSu: 28.44  Solar: 27.05  Li-Po: -349.5
 
-(-1, 0, -1, 1, 1, 1)
-Li-Po: 11.4  Li-ion: 6.2  Solar: 4.0  LiSu: -1.1
+(1, 1, -1, -1)
+Li-ion: 208.45  LiSu: 6.39  Solar: 5.0  Li-Po: -327.45
 
-(0, -1, 1, -1, 1, 0)
-Solar: 22827.2  LiSu: 15561.93  Li-ion: 1918.41  Li-Po: -1258.86
+(1, -1, -1, -1)
+Li-ion: 197.65  LiSu: -4.41  Solar: -5.8  Li-Po: -316.65
 
-(0, 0, 1, 1, -1, 0)
-Li-ion: 13.0  Li-Po: 8.0  LiSu: -3.0  Solar: -3.0
+(1, -1, -1, -1)
+Li-ion: 172.45  LiSu: -29.61  Solar: -31.0  Li-Po: -291.45
 
-(-1, 1, -1, 0, 1, 1)
-Li-Po: 10.97  LiSu: 8.9  Solar: 5.73  Li-ion: 3.34
+(1, -1, -1, -1)
+Li-ion: 163.45  LiSu: -38.61  Solar: -40.0  Li-Po: -282.45
 
-(-1, 1, 0, -1, 1, 1)
-LiSu: 15.9  Li-Po: 9.97  Solar: 9.73  Li-ion: 4.34
+(1, -1, -1, -1)
+Li-ion: 141.4  LiSu: -60.66  Solar: -62.05  Li-Po: -260.4
 
-(0, -1, 1, 1, 0, -1)
-Li-ion: 13029.51  Li-Po: 5407.8  Solar: -12728.32  LiSu: -17771.37
+(1, -1, 0, 0)
+Li-ion: 130.6  LiSu: -60.66  Solar: -62.05  Li-Po: -249.6
 
-(0, -1, 0, -1, 1, 0)
-Li-ion: 9.14  Li-Po: 8.57  LiSu: -0.0  Solar: -5.27
+(1, -1, 0, 0)
+Li-ion: 105.4  LiSu: -60.66  Solar: -62.05  Li-Po: -224.4
 
-(-1, 0, -1, 0, -1, -1)
-Solar: 8.25  LiSu: 7.78  Li-ion: 7.2  Li-Po: 6.9
+(1, -1, 0, 0)
+Li-ion: 96.4  LiSu: -60.66  Solar: -62.05  Li-Po: -215.4
 
-(0, 0, 0, 1, -1, 0)
-Li-ion: 6673.96  Li-Po: 7.8  Solar: -17772.76  LiSu: -22215.81
+(1, -1, 0, 0)
+Li-ion: 74.35  LiSu: -60.66  Solar: -62.05  Li-Po: -193.35
 
-(0, 0, 0, 1, 0, -1)
-Li-Po: 6674.46  Li-ion: 4451.74  LiSu: -11104.71  Solar: -17772.76
+(1, 0, -1, 0)
+Li-ion: 74.35  Solar: -62.05  LiSu: -71.46  Li-Po: -182.55
 
-(0, 1, 1, 0, -1, 0)
-Li-ion: 10.14  Li-Po: 7.57  LiSu: 7.0  Solar: -1.27
+(1, 0, -1, 0)
+Li-ion: 74.35  Solar: -62.05  LiSu: -96.66  Li-Po: -157.35
 
-(-1, -1, -1, 1, 0, 1)
-LiSu: 21.11  Solar: 7.73  Li-Po: 6.17  Li-ion: 5.94
+(1, 0, -1, 0)
+Li-ion: 74.35  Solar: -62.05  LiSu: -105.66  Li-Po: -148.35
 
-(-1, 1, -1, 1, -1, -1)
-Solar: 14.64  LiSu: 10.55  Li-ion: 6.83  Li-Po: 5.01
+(1, 0, -1, 0)
+Li-ion: 74.35  Solar: -62.05  Li-Po: -126.3  LiSu: -127.71
 
-(0, 1, 1, 0, 1, 0)
-LiSu: 9.0  Li-Po: 8.52  Li-ion: 7.38  Solar: 5.58
+(1, 0, 0, -1)
+Li-ion: 74.35  Solar: -72.85  Li-Po: -115.5  LiSu: -127.71
 
-(0, 0, 0, 1, 1, 0)
-Li-Po: 9.0  Li-ion: 7.5  LiSu: 5.0  Solar: 5.0
+(1, 0, 0, -1)
+Li-ion: 74.35  Li-Po: -90.3  Solar: -98.05  LiSu: -127.71
 
-(0, -1, 0, -1, -1, 0)
-Li-Po: 8.86  Li-ion: 7.05  LiSu: 6.67  Solar: 4.24
+(1, 0, 0, -1)
+Li-ion: 74.35  Li-Po: -81.3  Solar: -107.05  LiSu: -127.71
 
-(-1, 1, -1, -1, 0, 1)
-Li-ion: 11.66  Li-Po: 7.03  Solar: 4.27  LiSu: 1.1
+(1, 0, 0, -1)
+Li-ion: 74.35  Li-Po: -59.25  LiSu: -127.71  Solar: -129.1
 
-(-1, 1, -1, 0, -1, 1)
-Solar: 12.27  LiSu: 11.1  Li-ion: 8.66  Li-Po: 7.03
+(0, -1, -1, 0)
+Li-ion: 63.55  Li-Po: -59.25  Solar: -129.1  LiSu: -138.51
 
-(-1, 1, 0, -1, -1, 1)
-Solar: 8.27  Li-Po: 8.03  Li-ion: 7.66  LiSu: 4.1
+(0, -1, -1, 0)
+Li-ion: 38.35  Li-Po: -59.25  Solar: -129.1  LiSu: -163.71
 
-(-1, 1, 0, 0, 0, 1)
-Li-Po: 9.97  Li-ion: 7.34  LiSu: 5.9  Solar: 1.73
+(0, -1, -1, 0)
+Li-ion: 29.35  Li-Po: -59.25  Solar: -129.1  LiSu: -172.71
 
-(-1, -1, -1, -1, -1, -1)
-Li-Po: 7.53  Li-ion: 7.32  LiSu: 6.85  Solar: 6.12
+(0, -1, -1, 0)
+Li-ion: 7.3  Li-Po: -59.25  Solar: -129.1  LiSu: -194.76
 
-(0, 0, 1, 1, 1, 0)
-Li-Po: 8.67  Li-ion: 8.33  LiSu: 5.67  Solar: 5.0
+(1, 1, 0, 1)
+Li-ion: 18.1  Li-Po: -48.45  Solar: -118.3  LiSu: -194.76
 
-(0, 0, 0, -1, 0, -1)
-Li-ion: 8.0  Li-Po: 7.5  Solar: 5.0  LiSu: 2.5
+(1, 1, 0, 1)
+Li-ion: 43.3  Li-Po: -23.25  Solar: -93.1  LiSu: -194.76
 
-(0, -1, 1, -1, -1, 0)
-Li-Po: 9.29  LiSu: 6.5  Li-ion: 5.57  Solar: 3.86
+(1, 1, 0, 1)
+Li-ion: 52.3  Li-Po: -14.25  Solar: -84.1  LiSu: -194.76
 
-(0, -1, 1, -1, 0, -1)
-Li-Po: 7.78  Li-ion: 6.07  LiSu: 4.0  Solar: 3.86
+(1, 1, 0, 1)
+Li-ion: 74.35  Li-Po: 7.8  Solar: -62.05  LiSu: -194.76
 
-(0, -1, 1, 0, -1, -1)
-LiSu: 9.0  Solar: 7.87  Li-Po: 7.78  Li-ion: 4.57
+(0, 1, -1, -1)
+Li-ion: 85.15  Li-Po: 7.8  Solar: -72.85  LiSu: -205.56
 
-(0, -1, 1, 0, 0, 0)
-Li-ion: 8585.07  Solar: 5049.44  Li-Po: -1258.86  LiSu: -6660.27
+(0, 1, -1, -1)
+Li-ion: 110.35  Li-Po: 7.8  Solar: -98.05  LiSu: -230.76
 
-(-1, 0, -1, 1, -1, 1)
-LiSu: 21.11  Solar: 14.0  Li-Po: 6.6  Li-ion: 5.8
+(0, 1, -1, -1)
+Li-ion: 119.35  Li-Po: 7.8  Solar: -107.05  LiSu: -239.76
 
-(1, -1, 1, 0, 1, -1)
-Solar: 12.27  LiSu: 11.1  Li-ion: 8.66  Li-Po: 7.03
+(0, 1, -1, -1)
+Li-ion: 141.4  Li-Po: 7.8  Solar: -129.1  LiSu: -261.81
 
-(1, 1, -1, 1, 1, 1)
-Li-Po: 7.29  LiSu: 6.77  Solar: 6.68  Li-ion: 5.99
+(0, 1, 0, 0)
+Li-ion: 152.2  Li-Po: 7.8  Solar: -129.1  LiSu: -261.81
 
-(1, -1, 1, -1, 1, 1)
-Solar: 14.63  LiSu: 10.55  Li-ion: 6.83  Li-Po: 5.02
+(0, 1, 0, 0)
+Li-ion: 177.4  Li-Po: 7.8  Solar: -129.1  LiSu: -261.81
 
-(1, -1, -1, -1, 1, 1)
-Solar: 42827.18  LiSu: 15784.15  Li-Po: -13258.85  Li-ion: -14081.57
+(0, 1, 0, 0)
+Li-ion: 186.4  Li-Po: 7.8  Solar: -129.1  LiSu: -261.81
 
-(1, -1, 0, 0, 1, 1)
-Solar: 12.63  LiSu: 7.05  Li-ion: 6.33  Li-Po: 5.52
+(0, 1, 0, 0)
+Li-ion: 208.45  Li-Po: 7.8  Solar: -129.1  LiSu: -261.81
 
-(1, 1, 0, -1, 1, -1)
-LiSu: 24.09  Solar: 11.73  Li-Po: 7.17  Li-ion: 1.94
+(-1, -1, 1, 0)
+Li-ion: 197.65  Li-Po: -3.0  Solar: -129.1  LiSu: -251.01
 
-(1, 0, -1, 0, 1, 1)
-Solar: 11.5  LiSu: 8.55  Li-Po: 5.8  Li-ion: 4.4
+(-1, -1, 1, 0)
+Li-ion: 172.45  Li-Po: -28.2  Solar: -129.1  LiSu: -225.81
 
-(1, 0, 0, -1, 1, 1)
-Solar: 13.5  LiSu: 12.05  Li-Po: 5.3  Li-ion: 4.9
+(-1, -1, 1, 0)
+Li-ion: 163.45  Li-Po: -37.2  Solar: -129.1  LiSu: -216.81
 
-(1, 1, -1, 0, -1, -1)
-Li-ion: 11.06  Solar: 10.27  Li-Po: 9.83  LiSu: 2.9
+(-1, -1, 1, 0)
+Li-ion: 141.4  Li-Po: -59.25  Solar: -129.1  LiSu: -194.76
 
-(0, -1, 0, 0, -1, 1)
-LiSu: 15.0  Li-Po: 11.57  Li-ion: 5.14  Solar: 2.73
+(-1, 1, 0, 1)
+Li-ion: 152.2  Li-Po: -70.05  Solar: -118.3  LiSu: -194.76
 
-(1, 1, 0, 0, 1, 1)
-LiSu: 8.52  Solar: 7.68  Li-Po: 7.04  Li-ion: 6.24
+(-1, 1, 0, 1)
+Li-ion: 177.4  Solar: -93.1  Li-Po: -95.25  LiSu: -194.76
 
-(1, -1, 0, 1, -1, -1)
-LiSu: 15.9  Li-Po: 9.97  Solar: 9.73  Li-ion: 4.34
+(-1, 1, 0, 1)
+Li-ion: 186.4  Solar: -84.1  Li-Po: -104.25  LiSu: -194.76
 
-(1, 0, -1, 1, -1, -1)
-LiSu: 12.9  Solar: 12.0  Li-Po: 9.4  Li-ion: 8.2
+(-1, 1, 0, 1)
+Li-ion: 208.45  Solar: -62.05  Li-Po: -126.3  LiSu: -194.76
 
-(0, -1, 0, -1, 0, 0)
-Li-Po: 8.79  Li-ion: 7.57  LiSu: 5.0  Solar: 1.86
+(-1, 0, 0, -1)
+Li-ion: 208.45  Solar: -72.85  Li-Po: -137.1  LiSu: -194.76
 
-(-1, 1, 1, -1, 0, 1)
-LiSu: 12.9  Li-Po: 8.97  Li-ion: 8.34  Solar: 5.73
+(-1, 0, 0, -1)
+Li-ion: 208.45  Solar: -98.05  Li-Po: -162.3  LiSu: -194.76
 
-(0, 1, 1, -1, -1, 1)
-LiSu: 12.0  Li-ion: 8.14  Solar: 6.73  Li-Po: 4.57
+(-1, 0, 0, -1)
+Li-ion: 208.45  Solar: -107.05  Li-Po: -171.3  LiSu: -194.76
 
-(0, -1, 0, 1, 1, -1)
-Li-Po: 7630.02  Li-ion: 4140.63  Solar: -3839.44  LiSu: -11104.71
+(-1, 0, 0, -1)
+Li-ion: 208.45  Solar: -129.1  Li-Po: -193.35  LiSu: -194.76
 
-(0, 0, 0, 0, 0, -1)
-Solar: 9.0  Li-ion: 7.0  Li-Po: 6.0  LiSu: 5.0
+(0, -1, 1, 1)
+Li-ion: 197.65  Solar: -118.3  LiSu: -183.96  Li-Po: -193.35
 
-(-1, -1, 1, 1, 1, -1)
-Li-Po: 15185.56  Li-ion: 13473.95  Solar: -14950.54  LiSu: -15771.37
+(0, -1, 1, 1)
+Li-ion: 172.45  Solar: -93.1  LiSu: -158.76  Li-Po: -193.35
 
-(0, 1, 1, 0, 0, 0)
-LiSu: 8.5  Li-Po: 8.28  Li-ion: 8.07  Solar: 3.87
+(0, -1, 1, 1)
+Li-ion: 163.45  Solar: -84.1  LiSu: -149.76  Li-Po: -193.35
 
-(0, 0, -1, 0, 1, 0)
-Solar: 8893.88  LiSu: 6673.05  Li-Po: 2230.02  Li-ion: -8881.58
+(0, -1, 1, 1)
+Li-ion: 141.4  Solar: -62.05  LiSu: -127.71  Li-Po: -193.35
 
-(-1, -1, 0, 0, 0, 1)
-LiSu: 14.1  Li-Po: 7.17  Li-ion: 4.94  Solar: 3.73
+(0, 0, 0, 0)
+Li-ion: 141.4  Solar: -62.05  LiSu: -127.71  Li-Po: -193.35
 
-(0, 0, 1, 1, 0, 0)
-Li-ion: 9.5  Li-Po: 8.5  LiSu: 3.5  Solar: 3.0
+(0, 0, 0, 0)
+Li-ion: 141.4  Solar: -62.05  LiSu: -127.71  Li-Po: -193.35
 
-(0, 1, -1, 1, 1, 0)
-Li-Po: 9.28  LiSu: 6.5  Li-ion: 5.57  Solar: 3.87
+(0, 0, 0, 0)
+Li-ion: 141.4  Solar: -62.05  LiSu: -127.71  Li-Po: -193.35
 
-(0, -1, 1, 0, 1, 0)
-Solar: 11.27  Li-ion: 9.86  Li-Po: 8.43  LiSu: 7.0
+(0, 0, 0, 0)
+Li-ion: 141.4  Solar: -62.05  LiSu: -127.71  Li-Po: -193.35
 
-(0, 0, 1, -1, 1, -1)
-LiSu: 26673.03  Solar: 8893.88  Li-Po: 4452.24  Li-ion: 7.3
+(-1, 0, -1, 1)
+Li-ion: 141.4  Solar: -51.25  LiSu: -138.51  Li-Po: -204.15
 
-(1, -1, 1, 0, -1, 0)
-Li-ion: 8140.63  Solar: 7271.66  LiSu: -8660.27  Li-Po: -11036.63
+(-1, 0, -1, 1)
+Li-ion: 141.4  Solar: -26.05  LiSu: -163.71  Li-Po: -229.35
 
-(-1, 0, 0, -1, 1, -1)
-Li-ion: 7.9  Solar: 5.5  Li-Po: 5.3  LiSu: 2.05
+(-1, 0, -1, 1)
+Li-ion: 141.4  Solar: -17.05  LiSu: -172.71  Li-Po: -238.35
 
-(0, -1, -1, -1, 1, 0)
-Li-ion: 9.57  Li-Po: 8.29  LiSu: 3.5  Solar: -0.14
+(-1, 0, -1, 1)
+Li-ion: 141.4  Solar: 5.0  LiSu: -194.76  Li-Po: -260.4
 
-(-1, 0, 0, 0, 1, 1)
-Li-Po: 10.4  Solar: 8.0  Li-ion: 7.2  LiSu: 5.9
+(1, 0, 1, -1)
+Li-ion: 141.4  Solar: -5.8  LiSu: -183.96  Li-Po: -249.6
 
-(1, 0, 1, 1, -1, -1)
-Li-ion: 11.8  Li-Po: 6.6  LiSu: 1.1  Solar: -2.0
+(1, 0, 1, -1)
+Li-ion: 141.4  Solar: -31.0  LiSu: -158.76  Li-Po: -224.4
 
-(1, 0, 1, 1, 0, 0)
-Li-ion: 8.27  Li-Po: 7.2  LiSu: 5.37  Solar: 5.33
+(1, 0, 1, -1)
+Li-ion: 141.4  Solar: -40.0  LiSu: -149.76  Li-Po: -215.4
 
-(1, 1, 0, -1, -1, 0)
-LiSu: 20228.59  Solar: 6071.67  Li-ion: -6792.69  Li-Po: -10725.52
+(1, 0, 1, -1)
+Li-ion: 141.4  Solar: -62.05  LiSu: -127.71  Li-Po: -193.35
 
-(1, 0, 1, -1, 0, 1)
-Solar: 11.5  LiSu: 10.55  Li-ion: 6.9  Li-Po: 4.8
+(1, 1, 1, 1)
+Li-ion: 152.2  Solar: -51.25  LiSu: -116.91  Li-Po: -182.55
 
-(1, 1, 1, -1, -1, 0)
-LiSu: 16.1  Solar: 7.73  Li-ion: 6.94  Li-Po: 3.17
+(1, 1, 1, 1)
+Li-ion: 177.4  Solar: -26.05  LiSu: -91.71  Li-Po: -157.35
 
-(1, 1, 1, -1, 0, -1)
-LiSu: 21.09  Solar: 7.73  Li-Po: 6.17  Li-ion: 5.94
+(1, 1, 1, 1)
+Li-ion: 186.4  Solar: -17.05  LiSu: -82.71  Li-Po: -148.35
 
-(1, 1, 1, 0, -1, -1)
-LiSu: 11.1  Li-ion: 8.94  Li-Po: 6.17  Solar: -0.27
+(1, 1, 1, 1)
+Li-ion: 208.45  Solar: 5.0  LiSu: -60.66  Li-Po: -126.3
 
-(1, 1, 1, 0, 0, 0)
-LiSu: 8.7  Li-ion: 7.31  Li-Po: 7.06  Solar: 5.91
+(1, -1, 1, 1)
+Li-ion: 197.65  Solar: 15.8  LiSu: -49.86  Li-Po: -115.5
 
-(-1, 0, 1, -1, 0, 1)
-Solar: 6671.66  LiSu: 6450.83  Li-ion: 4896.18  Li-Po: 896.69
+(1, -1, 1, 1)
+Li-ion: 172.45  Solar: 41.0  LiSu: -24.66  Li-Po: -90.3
 
-(-1, 0, 1, 0, -1, 1)
-Li-ion: 11562.84  Li-Po: 896.69  Solar: -11106.1  LiSu: -15771.37
+(1, -1, 1, 1)
+Li-ion: 163.45  Solar: 50.0  LiSu: -15.66  Li-Po: -81.3
 
-(0, -1, -1, 1, 1, 1)
-Solar: 11.27  Li-Po: 7.43  Li-ion: 5.86  LiSu: -2.0
+(1, -1, 1, 1)
+Li-ion: 141.4  Solar: 72.05  LiSu: 6.39  Li-Po: -59.25
 
-(0, 0, -1, -1, -1, 1)
-Li-Po: 10.0  Li-ion: 9.0  LiSu: 6.0  Solar: 3.0
+(0, 0, -1, 0)
+Li-ion: 141.4  Solar: 72.05  LiSu: -4.41  Li-Po: -59.25
 
-(-1, -1, 1, 1, -1, 0)
-LiSu: 22.11  Solar: 15.73  Li-Po: 5.17  Li-ion: -1.06
+(0, 0, -1, 0)
+Li-ion: 141.4  Solar: 72.05  LiSu: -29.61  Li-Po: -59.25
 
-(-1, 1, 1, 1, -1, 1)
-Li-ion: 10.17  Li-Po: 8.98  LiSu: 1.45  Solar: -0.63
+(0, 0, -1, 0)
+Li-ion: 141.4  Solar: 72.05  LiSu: -38.61  Li-Po: -59.25
 
-(0, 0, -1, 0, 0, 0)
-Li-ion: 10.0  Li-Po: 8.0  LiSu: 7.0  Solar: 5.0
+(0, 0, -1, 0)
+Li-ion: 141.4  Solar: 72.05  Li-Po: -59.25  LiSu: -60.66
 
-(0, 1, -1, -1, 1, 1)
-LiSu: 17.99  Solar: 14.73  Li-Po: 6.57  Li-ion: 0.14
+(-1, -1, 1, -1)
+Li-ion: 130.6  Solar: 61.25  LiSu: -49.86  Li-Po: -70.05
 
-(0, 1, 0, 0, 1, 1)
-LiSu: 8.33  Li-Po: 7.86  Solar: 6.91  Li-ion: 6.38
+(-1, -1, 1, -1)
+Li-ion: 105.4  Solar: 36.05  LiSu: -24.66  Li-Po: -95.25
 
-(0, 1, 0, 1, -1, 1)
-Li-ion: 8.07  Li-Po: 7.29  LiSu: 2.5  Solar: 1.87
+(-1, -1, 1, -1)
+Li-ion: 96.4  Solar: 27.05  LiSu: -15.66  Li-Po: -104.25
 
-(0, -1, -1, 0, -1, -1)
-LiSu: 8.0  Li-Po: 7.89  Li-ion: 7.28  Solar: 6.43
+(-1, -1, 1, -1)
+Li-ion: 74.35  LiSu: 6.39  Solar: 5.0  Li-Po: -126.3
 
-(-1, -1, 0, 1, -1, 0)
-LiSu: 14.55  Solar: 10.37  Li-Po: 6.58  Li-ion: 4.47
+(-1, -1, -1, -1)
+Li-ion: 63.55  LiSu: -4.41  Solar: -5.8  Li-Po: -137.1
 
-(-1, -1, 0, 1, 0, -1)
-LiSu: 12.05  Solar: 10.37  Li-Po: 5.08  Li-ion: 4.97
+(-1, -1, -1, -1)
+Li-ion: 38.35  LiSu: -29.61  Solar: -31.0  Li-Po: -162.3
 
-(0, 1, -1, 1, 0, 0)
-Li-Po: 9.57  Li-ion: 5.14  LiSu: 3.0  Solar: -1.27
+(-1, -1, -1, -1)
+Li-ion: 29.35  LiSu: -38.61  Solar: -40.0  Li-Po: -171.3
 
-(-1, -1, 0, 1, 0, 1)
-Li-ion: 9029.51  Li-Po: 4074.46  Solar: -6061.66  LiSu: -31326.91
+(-1, -1, -1, -1)
+Li-ion: 7.3  LiSu: -60.66  Solar: -62.05  Li-Po: -193.35
 
-(0, -1, -1, 0, -1, 1)
-LiSu: 11.0  Li-Po: 9.79  Li-ion: 7.57  Solar: 3.86
+(0, 1, -1, 0)
+Li-ion: 18.1  Solar: -62.05  LiSu: -71.46  Li-Po: -193.35
 
-(0, 1, 0, 1, -1, -1)
-Li-Po: 5718.91  Li-ion: 4762.85  LiSu: -11104.71  Solar: -31706.08
+(0, 1, -1, 0)
+Li-ion: 43.3  Solar: -62.05  LiSu: -96.66  Li-Po: -193.35
 
-(0, 1, -1, -1, 1, -1)
-Li-ion: 13.86  Li-Po: 5.43  Solar: 3.27  LiSu: -8.01
+(0, 1, -1, 0)
+Li-ion: 52.3  Solar: -62.05  LiSu: -105.66  Li-Po: -193.35
 
-(0, 1, 0, 0, 1, -1)
-LiSu: 15.0  Li-Po: 11.57  Li-ion: 5.14  Solar: 2.73
+(0, 1, -1, 0)
+Li-ion: 74.35  Solar: -62.05  LiSu: -127.71  Li-Po: -193.35
 
-(-1, 1, 1, 1, -1, -1)
-Li-ion: 14096.18  Li-Po: 13274.46  LiSu: -15771.37  Solar: -42817.18
+(0, 1, 0, -1)
+Li-ion: 85.15  Solar: -72.85  LiSu: -127.71  Li-Po: -193.35
 
-(-1, 1, 1, 1, 0, 0)
-Li-Po: 10.48  Li-ion: 9.67  LiSu: 3.95  Solar: -0.63
+(0, 1, 0, -1)
+Li-ion: 110.35  Solar: -98.05  LiSu: -127.71  Li-Po: -193.35
 
-(-1, 0, 0, -1, -1, 0)
-Li-Po: 7.53  Li-ion: 6.93  Solar: 6.67  LiSu: 6.37
+(0, 1, 0, -1)
+Li-ion: 119.35  Solar: -107.05  LiSu: -127.71  Li-Po: -193.35
 
-(0, -1, -1, -1, 0, 0)
-Li-Po: 8.52  Li-ion: 8.38  LiSu: 5.67  Solar: 2.91
+(0, 1, 0, -1)
+Li-ion: 141.4  LiSu: -127.71  Solar: -129.1  Li-Po: -193.35
 
-(0, 0, -1, -1, -1, -1)
-Li-ion: 8.0  Li-Po: 8.0  Solar: 6.0  LiSu: 5.5
+(0, 1, 1, 1)
+Li-ion: 152.2  LiSu: -116.91  Solar: -118.3  Li-Po: -193.35
 
-(0, -1, -1, 1, 1, -1)
-LiSu: 12.0  Li-ion: 8.14  Solar: 6.73  Li-Po: 4.57
+(0, 1, 1, 1)
+Li-ion: 177.4  LiSu: -91.71  Solar: -93.1  Li-Po: -193.35
 
-(-1, 0, 1, -1, -1, 0)
-Solar: 7.5  Li-Po: 7.3  LiSu: 6.05  Li-ion: 5.4
+(0, 1, 1, 1)
+Li-ion: 186.4  LiSu: -82.71  Solar: -84.1  Li-Po: -193.35
 
-(1, 0, 1, 1, 1, 0)
-Li-ion: 7.7  Li-Po: 7.65  LiSu: 6.52  Solar: 6.25
+(0, 1, 1, 1)
+Li-ion: 208.45  LiSu: -60.66  Solar: -62.05  Li-Po: -193.35
 
-(-1, 0, 1, -1, 0, -1)
-Solar: 7.5  Li-ion: 5.9  Li-Po: 5.8  LiSu: 3.55
+(-1, -1, 0, 1)
+Li-ion: 197.65  Solar: -51.25  LiSu: -60.66  Li-Po: -204.15
 
-(-1, 0, 1, 0, -1, -1)
-Solar: 11.5  LiSu: 8.55  Li-Po: 5.8  Li-ion: 4.4
+(-1, -1, 0, 1)
+Li-ion: 172.45  Solar: -26.05  LiSu: -60.66  Li-Po: -229.35
 
-(-1, 0, 1, 0, 0, 0)
-Li-ion: 9340.62  Li-Po: 7563.35  LiSu: -4660.27  Solar: -11106.1
+(-1, -1, 0, 1)
+Li-ion: 163.45  Solar: -17.05  LiSu: -60.66  Li-Po: -238.35
 
-(1, 1, 1, -1, 0, 1)
-LiSu: 10.37  Solar: 8.58  Li-ion: 6.65  Li-Po: 6.06
+(-1, -1, 0, 1)
+Li-ion: 141.4  Solar: 5.0  LiSu: -60.66  Li-Po: -260.4
 
-(1, 1, 1, 0, -1, 1)
-Li-ion: 7.65  LiSu: 7.03  Li-Po: 6.06  Solar: 5.91
+(-1, 1, 1, 0)
+Li-ion: 152.2  Solar: 5.0  LiSu: -49.86  Li-Po: -271.2
 
-(1, 0, 1, -1, 0, -1)
-LiSu: 24673.03  Solar: 11116.1  Li-ion: -437.14  Li-Po: -5325.53
+(-1, 1, 1, 0)
+Li-ion: 177.4  Solar: 5.0  LiSu: -24.66  Li-Po: -296.4
 
-(1, -1, -1, 1, 1, 0)
-Solar: 12.27  Li-Po: 6.03  Li-ion: 4.66  LiSu: 2.1
+(-1, 1, 1, 0)
+Li-ion: 186.4  Solar: 5.0  LiSu: -15.66  Li-Po: -305.4
 
-(1, 0, 0, 1, 1, 0)
-Li-Po: 7.53  Li-ion: 6.93  Solar: 6.67  LiSu: 6.37
+(-1, 1, 1, 0)
+Li-ion: 208.45  LiSu: 6.39  Solar: 5.0  Li-Po: -327.45
 
-(1, 1, 1, 0, 1, 0)
-LiSu: 9.02  Li-Po: 7.54  Li-ion: 6.99  Solar: 6.68
+(1, -1, -1, 0)
+Li-ion: 197.65  Solar: 5.0  LiSu: -4.41  Li-Po: -316.65
 
-(1, 0, 1, 1, -1, 1)
-Li-ion: 8.6  Li-Po: 6.2  Solar: 5.33  LiSu: 3.7
+(1, -1, -1, 0)
+Li-ion: 172.45  Solar: 5.0  LiSu: -29.61  Li-Po: -291.45
 
-(-1, 0, 0, 0, 1, -1)
-Solar: 10.0  Li-ion: 6.8  LiSu: 4.1  Li-Po: 1.6
+(1, -1, -1, 0)
+Li-ion: 163.45  Solar: 5.0  LiSu: -38.61  Li-Po: -282.45
 
-(1, 1, -1, -1, 1, 0)
-LiSu: 22.09  Solar: 15.73  Li-Po: 5.17  Li-ion: -1.06
+(1, -1, -1, 0)
+Li-ion: 141.4  Solar: 5.0  LiSu: -60.66  Li-Po: -260.4
 
-(-1, 0, 0, -1, 1, 1)
-Solar: 15560.54  LiSu: 13117.49  Li-Po: 3118.91  Li-ion: -3992.7
+(1, -1, 0, -1)
+Li-ion: 130.6  Solar: -5.8  LiSu: -60.66  Li-Po: -249.6
 
-(0, 0, 1, -1, 1, 1)
-LiSu: 11.0  Solar: 11.0  Li-Po: 7.0  Li-ion: 7.0
+(1, -1, 0, -1)
+Li-ion: 105.4  Solar: -31.0  LiSu: -60.66  Li-Po: -224.4
 
-(-1, -1, 0, 0, 0, -1)
-LiSu: 8.03  Solar: 7.24  Li-Po: 6.39  Li-ion: 6.31
+(1, -1, 0, -1)
+Li-ion: 96.4  Solar: -40.0  LiSu: -60.66  Li-Po: -215.4
 
-(-1, -1, -1, 0, 1, 0)
-LiSu: 8.05  Li-ion: 7.97  Li-Po: 6.08  Solar: 4.36
+(1, -1, 0, -1)
+Li-ion: 74.35  LiSu: -60.66  Solar: -62.05  Li-Po: -193.35
 
-(-1, 1, 1, 1, 1, 0)
-Li-Po: 9.99  Li-ion: 8.45  LiSu: 5.97  Solar: 2.58
+(1, 0, -1, -1)
+Li-ion: 74.35  LiSu: -71.46  Solar: -72.85  Li-Po: -182.55
 
-(-1, -1, 1, 1, 1, 1)
-Li-ion: 10.03  Li-Po: 9.41  Solar: 5.63  LiSu: 1.45
+(1, 0, -1, -1)
+Li-ion: 74.35  LiSu: -96.66  Solar: -98.05  Li-Po: -157.35
 
-(0, 0, 0, 0, 0, 1)
-Solar: 9.0  Li-ion: 7.0  Li-Po: 6.0  LiSu: 5.0
+(1, 0, -1, -1)
+Li-ion: 74.35  LiSu: -105.66  Solar: -107.05  Li-Po: -148.35
 
-(0, -1, 0, 1, 1, 1)
-Solar: 8.13  Li-ion: 7.93  Li-Po: 7.72  LiSu: 2.5
+(1, 0, -1, -1)
+Li-ion: 74.35  Li-Po: -126.3  LiSu: -127.71  Solar: -129.1
 
-(-1, 1, 1, -1, 0, -1)
-Solar: 12.27  Li-ion: 5.66  Li-Po: 3.03  LiSu: -2.9
+(1, 0, 0, 0)
+Li-ion: 74.35  Li-Po: -115.5  LiSu: -127.71  Solar: -129.1
 
-(0, 1, 1, -1, -1, -1)
-Solar: 11.27  Li-Po: 7.43  Li-ion: 5.86  LiSu: -2.0
+(1, 0, 0, 0)
+Li-ion: 74.35  Li-Po: -90.3  LiSu: -127.71  Solar: -129.1
 
-(-1, 1, 0, 1, 1, 0)
-Li-Po: 10.98  Li-ion: 7.67  LiSu: 5.45  Solar: 1.37
+(1, 0, 0, 0)
+Li-ion: 74.35  Li-Po: -81.3  LiSu: -127.71  Solar: -129.1
 
-(-1, 0, 1, 0, 1, 0)
-Li-Po: 12.4  Li-ion: 10.2  LiSu: 7.9  Solar: 4.0
+(1, 0, 0, 0)
+Li-ion: 74.35  Li-Po: -59.25  LiSu: -127.71  Solar: -129.1
 
-(1, -1, 0, 1, -1, 1)
-Li-ion: 9.66  Solar: 8.27  Li-Po: 2.03  LiSu: -5.89
+(0, -1, 0, 0)
+Li-ion: 63.55  Li-Po: -59.25  LiSu: -127.71  Solar: -129.1
 
-(1, 0, -1, 1, -1, 1)
-Solar: 6.0  Li-ion: 5.8  Li-Po: 2.6  LiSu: -2.9
+(0, -1, 0, 0)
+Li-ion: 38.35  Li-Po: -59.25  LiSu: -127.71  Solar: -129.1
 
-(1, 1, 0, 0, 1, -1)
-LiSu: 12.05  Li-Po: 8.08  Solar: 6.36  Li-ion: 5.47
+(0, -1, 0, 0)
+Li-ion: 29.35  Li-Po: -59.25  LiSu: -127.71  Solar: -129.1
 
-(-1, 0, -1, -1, 1, 0)
-Li-ion: 9.4  Li-Po: 6.3  Solar: 3.5  LiSu: 3.05
+(0, -1, 0, 0)
+Li-ion: 7.3  Li-Po: -59.25  LiSu: -127.71  Solar: -129.1
 
-(1, -1, -1, 1, 0, 0)
-Solar: 7271.66  Li-ion: -2970.47  Li-Po: -6592.19  LiSu: -17549.15
+(1, -1, 0, 1)
+Li-ion: -3.5  Li-Po: -48.45  Solar: -118.3  LiSu: -127.71
 
-(1, 0, 0, 1, 0, 0)
-Li-ion: 7.4  Li-Po: 6.8  Solar: 5.5  LiSu: 4.55
+(1, -1, 0, 1)
+Li-Po: -23.25  Li-ion: -28.7  Solar: -93.1  LiSu: -127.71
 
-(0, -1, 0, 0, -1, -1)
-LiSu: 8.33  Li-Po: 7.86  Solar: 6.91  Li-ion: 6.38
+(1, -1, 0, 1)
+Li-Po: -14.25  Li-ion: -37.7  Solar: -84.1  LiSu: -127.71
 
-(1, 1, -1, 0, -1, 1)
-Solar: 7.73  LiSu: 7.1  Li-ion: 2.94  Li-Po: 2.17
+(1, -1, 0, 1)
+Li-Po: 7.8  Li-ion: -59.75  Solar: -62.05  LiSu: -127.71
 
-(1, 1, 0, -1, 1, 1)
-LiSu: 11.37  Solar: 9.91  Li-Po: 6.39  Li-ion: 5.31
+(1, 0, -1, 1)
+Li-Po: 18.6  Solar: -51.25  Li-ion: -59.75  LiSu: -138.51
 
-(1, -1, -1, -1, 1, -1)
-Li-ion: 10.17  Li-Po: 8.99  LiSu: 1.45  Solar: -0.64
+(1, 0, -1, 1)
+Li-Po: 43.8  Solar: -26.05  Li-ion: -59.75  LiSu: -163.71
 
-(1, -1, 0, 0, 1, -1)
-Solar: 16160.54  LiSu: 9117.49  Li-Po: -2147.75  Li-ion: -2970.47
+(1, 0, -1, 1)
+Li-Po: 52.8  Solar: -17.05  Li-ion: -59.75  LiSu: -172.71
 
-(1, 0, -1, 0, 1, -1)
-LiSu: 15784.15  Solar: 11116.1  Li-Po: -881.09  Li-ion: -11548.24
+(1, 0, -1, 1)
+Li-Po: 74.85  Solar: 5.0  Li-ion: -59.75  LiSu: -194.76
 
-(1, 0, 0, -1, 1, -1)
-LiSu: 31339.69  Solar: 20004.98  Li-Po: -3103.31  Li-ion: -9326.02
+(-1, 0, 1, 0)
+Li-Po: 64.05  Solar: 5.0  Li-ion: -59.75  LiSu: -183.96
 
-(-1, 0, 0, 0, -1, 0)
-LiSu: 9.55  Solar: 9.5  Li-Po: 6.8  Li-ion: 5.9
+(-1, 0, 1, 0)
+Li-Po: 38.85  Solar: 5.0  Li-ion: -59.75  LiSu: -158.76
 
-(1, 1, -1, -1, 0, 0)
-LiSu: 26895.25  Solar: 14960.54  Li-Po: -8503.3  Li-ion: -15681.57
+(-1, 0, 1, 0)
+Li-Po: 29.85  Solar: 5.0  Li-ion: -59.75  LiSu: -149.76
 
-(1, -1, 1, -1, 1, -1)
-Solar: 25049.42  LiSu: 24673.03  Li-ion: -748.25  Li-Po: -4369.97
+(-1, 0, 1, 0)
+Li-Po: 7.8  Solar: 5.0  Li-ion: -59.75  LiSu: -127.71
 
-(1, 1, -1, 1, 1, -1)
-Li-Po: 8.58  LiSu: 8.55  Li-ion: 4.97  Solar: 4.37
+(1, 1, 0, 0)
+Li-Po: 18.6  Solar: 5.0  Li-ion: -48.95  LiSu: -127.71
 
-(1, -1, 1, 0, 1, 1)
-Solar: 10.09  Li-ion: 7.55  LiSu: 7.03  Li-Po: 6.34
+(1, 1, 0, 0)
+Li-Po: 43.8  Solar: 5.0  Li-ion: -23.75  LiSu: -127.71
 
-(-1, 0, -1, 1, -1, -1)
-Solar: 10.67  LiSu: 10.37  Li-ion: 6.6  Li-Po: 6.2
+(1, 1, 0, 0)
+Li-Po: 52.8  Solar: 5.0  Li-ion: -14.75  LiSu: -127.71
 
-(-1, 0, -1, 1, 0, 0)
-LiSu: 16.1  Solar: 14.0  Li-ion: 6.8  Li-Po: 3.6
+(1, 1, 0, 0)
+Li-Po: 74.85  Li-ion: 7.3  Solar: 5.0  LiSu: -127.71
 
-(0, -1, 1, -1, 0, 1)
-Solar: 22827.2  LiSu: 4450.83  Li-ion: 4140.63  Li-Po: -7925.52
+(-1, -1, 0, -1)
+Li-Po: 64.05  Li-ion: -3.5  Solar: -5.8  LiSu: -127.71
 
-(0, -1, 1, 0, -1, 1)
-Li-ion: 10807.29  Solar: 5049.44  Li-Po: -7925.52  LiSu: -17771.37
+(-1, -1, 0, -1)
+Li-Po: 38.85  Li-ion: -28.7  Solar: -31.0  LiSu: -127.71
 
-(-1, -1, -1, -1, -1, 1)
-Li-Po: 8.29  LiSu: 7.78  Li-ion: 7.49  Solar: 4.68
+(-1, -1, 0, -1)
+Li-Po: 29.85  Li-ion: -37.7  Solar: -40.0  LiSu: -127.71
 
-(0, 0, 0, -1, 0, 1)
-Solar: 17782.76  LiSu: 11117.49  Li-ion: -4437.14  Li-Po: -6658.86
+(-1, -1, 0, -1)
+Li-Po: 7.8  Li-ion: -59.75  Solar: -62.05  LiSu: -127.71
 
-(-1, 1, -1, -1, -1, 0)
-Li-ion: 8.22  Solar: 7.42  Li-Po: 7.34  LiSu: 5.37
+(0, 1, 1, -1)
+Li-Po: 7.8  Li-ion: -48.95  Solar: -72.85  LiSu: -116.91
 
-(-1, 1, -1, -1, 0, -1)
-Li-ion: 8.55  Solar: 7.42  Li-Po: 6.34  LiSu: 3.7
+(0, 1, 1, -1)
+Li-Po: 7.8  Li-ion: -23.75  LiSu: -91.71  Solar: -98.05
 
-(-1, 1, -1, 0, -1, -1)
-Solar: 10.09  Li-ion: 7.55  LiSu: 7.03  Li-Po: 6.34
+(0, 1, 1, -1)
+Li-Po: 7.8  Li-ion: -14.75  LiSu: -82.71  Solar: -107.05
 
-(-1, 1, -1, 0, 0, 0)
-Solar: 12.27  Li-ion: 9.66  LiSu: 6.1  Li-Po: 4.03
+(0, 1, 1, -1)
+Li-Po: 7.8  Li-ion: 7.3  LiSu: -60.66  Solar: -129.1
 
-(-1, 1, 0, -1, -1, -1)
-Solar: 8.76  Li-ion: 7.22  Li-Po: 6.68  LiSu: 4.7
+(0, 1, 0, 1)
+Li-ion: 18.1  Li-Po: 7.8  LiSu: -60.66  Solar: -118.3
 
-(-1, 1, 0, -1, 0, 0)
-Li-ion: 8.66  Solar: 8.27  Li-Po: 5.03  LiSu: -0.9
+(0, 1, 0, 1)
+Li-ion: 43.3  Li-Po: 7.8  LiSu: -60.66  Solar: -93.1
 
-(-1, 1, 0, 0, -1, 0)
-Solar: 16.28  LiSu: 9.1  Li-ion: 5.66  Li-Po: 5.03
+(0, 1, 0, 1)
+Li-ion: 52.3  Li-Po: 7.8  LiSu: -60.66  Solar: -84.1
 
-(-1, 1, 0, 0, 0, -1)
-Solar: 16.28  Li-ion: 6.66  LiSu: 4.1  Li-Po: 2.03
+(0, 1, 0, 1)
+Li-ion: 74.35  Li-Po: 7.8  LiSu: -60.66  Solar: -62.05
 
-(-1, -1, -1, 0, 0, 0)
-LiSu: 8.7  Li-ion: 7.31  Li-Po: 7.06  Solar: 5.91
+(-1, -1, -1, 1)
+Li-ion: 63.55  Li-Po: -3.0  Solar: -51.25  LiSu: -71.46
 
-(-1, 1, -1, 1, -1, 1)
-Li-Po: 4385.58  Li-ion: 762.86  LiSu: -24660.25  Solar: -25039.42
+(-1, -1, -1, 1)
+Li-ion: 38.35  Solar: -26.05  Li-Po: -28.2  LiSu: -96.66
 
-(-1, -1, -1, 1, -1, 0)
-LiSu: 12.03  Solar: 8.58  Li-Po: 7.06  Li-ion: 6.31
+(-1, -1, -1, 1)
+Li-ion: 29.35  Solar: -17.05  Li-Po: -37.2  LiSu: -105.66
 
-(-1, -1, -1, 1, 0, -1)
-LiSu: 10.37  Solar: 8.58  Li-ion: 6.65  Li-Po: 6.06
+(-1, -1, -1, 1)
+Li-ion: 7.3  Solar: 5.0  Li-Po: -59.25  LiSu: -127.71
 
-(-1, 1, 0, 1, 0, 0)
-Li-Po: 12.97  Li-ion: 9.34  LiSu: 0.9  Solar: -6.26
+(-1, -1, 1, 1)
+Solar: 15.8  Li-ion: -3.5  Li-Po: -70.05  LiSu: -116.91
 
-(0, 0, 0, 1, 0, 1)
-Li-ion: 8.0  Li-Po: 7.5  Solar: 5.0  LiSu: 2.5
+(-1, -1, 1, 1)
+Solar: 41.0  Li-ion: -28.7  LiSu: -91.71  Li-Po: -95.25
 
-(-1, 0, -1, 0, -1, 1)
-LiSu: 10.55  Li-Po: 7.8  Solar: 7.5  Li-ion: 7.4
+(-1, -1, 1, 1)
+Solar: 50.0  Li-ion: -37.7  LiSu: -82.71  Li-Po: -104.25
 
-(0, -1, 1, 1, 0, 1)
-Li-ion: 9.93  Li-Po: 7.22  Solar: 6.13  LiSu: 1.0
+(-1, -1, 1, 1)
+Solar: 72.05  Li-ion: -59.75  LiSu: -60.66  Li-Po: -126.3
 
-(-1, 1, -1, 0, 1, -1)
-Solar: 12.27  Li-ion: 10.66  LiSu: 1.1  Li-Po: 1.03
+(1, -1, 1, -1)
+Solar: 61.25  LiSu: -49.86  Li-ion: -70.55  Li-Po: -115.5
 
-(-1, 1, 0, -1, 1, -1)
-Li-ion: 9.66  Solar: 8.27  Li-Po: 2.03  LiSu: -5.91
+(1, -1, 1, -1)
+Solar: 36.05  LiSu: -24.66  Li-Po: -90.3  Li-ion: -95.75
 
-(1, 1, 0, 0, -1, 0)
-LiSu: 9.1  Li-ion: 5.94  Li-Po: 4.17  Solar: 3.73
+(1, -1, 1, -1)
+Solar: 27.05  LiSu: -15.66  Li-Po: -81.3  Li-ion: -104.75
 
-(-1, 0, -1, -1, 0, 0)
-Li-ion: 8.27  Li-Po: 7.2  LiSu: 5.37  Solar: 5.33
+(1, -1, 1, -1)
+LiSu: 6.39  Solar: 5.0  Li-Po: -59.25  Li-ion: -126.8
 
-(-1, 0, -1, 1, 1, -1)
-Solar: 14.0  LiSu: 11.1  Li-ion: 7.8  Li-Po: 0.6
+(1, 1, 1, -1)
+LiSu: 17.19  Solar: -5.8  Li-Po: -48.45  Li-ion: -116.0
 
-(1, 1, -1, 1, -1, -1)
-Li-Po: -1836.64  Li-ion: -4570.47  LiSu: -6438.05  Solar: -20594.97
+(1, 1, 1, -1)
+LiSu: 42.39  Li-Po: -23.25  Solar: -31.0  Li-ion: -90.8
 
-(1, 1, -1, 1, 0, 0)
-Li-Po: 7.09  LiSu: 6.05  Li-ion: 5.47  Solar: 4.37
+(1, 1, 1, -1)
+LiSu: 51.39  Li-Po: -14.25  Solar: -40.0  Li-ion: -81.8
 
-(1, -1, 1, -1, -1, 0)
-Li-Po: 13.97  Li-ion: 5.34  LiSu: 3.9  Solar: -2.27
+(1, 1, 1, -1)
+LiSu: 73.44  Li-Po: 7.8  Li-ion: -59.75  Solar: -62.05
 
-(1, 1, 0, 1, 1, 1)
-Li-Po: 7.43  LiSu: 6.82  Li-ion: 6.79  Solar: 6.35
+(-1, 0, -1, 0)
+LiSu: 62.64  Li-Po: -3.0  Li-ion: -59.75  Solar: -62.05
 
-(1, -1, 1, -1, -1, -1)
-Li-Po: 9.99  Li-ion: 6.17  LiSu: 4.45  Solar: 3.36
+(-1, 0, -1, 0)
+LiSu: 37.44  Li-Po: -28.2  Li-ion: -59.75  Solar: -62.05
 
-(1, -1, 0, 0, -1, -1)
-Li-Po: 9.49  LiSu: 7.95  Li-ion: 6.67  Solar: 5.37
+(-1, 0, -1, 0)
+LiSu: 28.44  Li-Po: -37.2  Li-ion: -59.75  Solar: -62.05
 
-(1, -1, 0, 0, 0, 0)
-Solar: 16160.54  Li-ion: -748.25  LiSu: -1993.61  Li-Po: -8814.41
+(-1, 0, -1, 0)
+LiSu: 6.39  Li-Po: -59.25  Li-ion: -59.75  Solar: -62.05
 
-(1, 0, -1, -1, -1, 0)
-Li-Po: 10.7  Li-ion: 9.6  LiSu: 3.95  Solar: 2.5
+(1, 0, 1, 1)
+LiSu: 17.19  Li-Po: -48.45  Solar: -51.25  Li-ion: -59.75
 
-(1, 0, -1, -1, 0, -1)
-Li-ion: 10.1  Li-Po: 9.2  Solar: 2.5  LiSu: 1.45
+(1, 0, 1, 1)
+LiSu: 42.39  Li-Po: -23.25  Solar: -26.05  Li-ion: -59.75
 
-(1, 0, -1, 0, -1, -1)
-Li-Po: 9.2  Li-ion: 8.6  Solar: 6.5  LiSu: 6.45
+(1, 0, 1, 1)
+LiSu: 51.39  Li-Po: -14.25  Solar: -17.05  Li-ion: -59.75
 
-(1, 0, -1, 0, 0, 0)
-Solar: 11116.1  LiSu: 4673.05  Li-Po: -7547.75  Li-ion: -9326.02
+(1, 0, 1, 1)
+LiSu: 73.44  Li-Po: 7.8  Solar: 5.0  Li-ion: -59.75
 
-(1, -1, -1, -1, -1, -1)
-Li-Po: 8.99  Li-ion: 8.09  LiSu: 5.72  Solar: 4.18
+(-1, 0, -1, -1)
+LiSu: 62.64  Li-Po: -3.0  Solar: -5.8  Li-ion: -59.75
 
-(1, -1, -1, -1, 0, 0)
-Li-Po: 10.49  Li-ion: 9.67  LiSu: 3.95  Solar: -0.64
+(-1, 0, -1, -1)
+LiSu: 37.44  Li-Po: -28.2  Solar: -31.0  Li-ion: -59.75
 
-(1, -1, -1, 0, -1, 0)
-Li-Po: 10.49  LiSu: 8.95  Li-ion: 8.17  Solar: 3.36
+(-1, 0, -1, -1)
+LiSu: 28.44  Li-Po: -37.2  Solar: -40.0  Li-ion: -59.75
 
-(1, -1, -1, 0, 0, -1)
-Li-Po: 8.99  Li-ion: 8.67  LiSu: 6.45  Solar: 3.36
+(-1, 0, -1, -1)
+LiSu: 6.39  Li-Po: -59.25  Li-ion: -59.75  Solar: -62.05
 
-(-1, 0, -1, 1, 1, 0)
-Li-Po: 12007.79  Li-ion: -1770.48  Solar: -11106.1  LiSu: -13549.15
+(0, -1, 1, -1)
+LiSu: 17.19  Li-Po: -59.25  Li-ion: -70.55  Solar: -72.85
 
-(-1, 0, -1, -1, 0, -1)
-Li-ion: 7.95  Li-Po: 6.9  Solar: 6.25  LiSu: 5.27
+(0, -1, 1, -1)
+LiSu: 42.39  Li-Po: -59.25  Li-ion: -95.75  Solar: -98.05
 
-(0, -1, 0, 0, 1, -1)
-Li-ion: 7.14  Li-Po: 5.57  LiSu: 5.0  Solar: 2.73
+(0, -1, 1, -1)
+LiSu: 51.39  Li-Po: -59.25  Li-ion: -104.75  Solar: -107.05
 
-(1, 1, 0, 0, -1, -1)
-LiSu: 9117.49  Li-ion: -2348.25  Li-Po: -4058.86  Solar: -11706.1
+(0, -1, 1, -1)
+LiSu: 73.44  Li-Po: -59.25  Li-ion: -126.8  Solar: -129.1
 
-(-1, 1, -1, 0, 1, 0)
-Li-Po: 11052.23  LiSu: 8673.05  Solar: -7261.66  Li-ion: -8126.02
+(1, -1, 1, 0)
+LiSu: 84.24  Li-Po: -48.45  Solar: -129.1  Li-ion: -137.6
 
-(-1, 1, 0, -1, 1, 0)
-LiSu: 24228.59  Li-Po: 8830.02  Solar: 1627.22  Li-ion: -5903.81
+(1, -1, 1, 0)
+LiSu: 109.44  Li-Po: -23.25  Solar: -129.1  Li-ion: -162.8
 
-(0, -1, 0, -1, 1, 1)
-Solar: 31716.08  LiSu: 11117.49  Li-ion: -4748.25  Li-Po: -5703.3
+(1, -1, 1, 0)
+LiSu: 118.44  Li-Po: -14.25  Solar: -129.1  Li-ion: -171.8
 
-(0, 0, 0, 1, -1, 1)
-Li-ion: 10.0  Li-Po: 6.0  Solar: 1.0  LiSu: -4.99
+(1, -1, 1, 0)
+LiSu: 140.49  Li-Po: 7.8  Solar: -129.1  Li-ion: -193.85
 
-(-1, 1, 0, 1, 0, -1)
-Li-Po: 15496.68  Li-ion: 5207.3  LiSu: -9104.71  Solar: -33928.3
+(-1, 0, 0, 1)
+LiSu: 140.49  Li-Po: -3.0  Solar: -118.3  Li-ion: -193.85
 
-(-1, -1, 1, -1, 1, 1)
-Solar: 20604.98  LiSu: 6450.83  Li-ion: 4585.07  Li-Po: 1852.24
+(-1, 0, 0, 1)
+LiSu: 140.49  Li-Po: -28.2  Solar: -93.1  Li-ion: -193.85
 
-(-1, 1, 1, -1, 1, 0)
-LiSu: 17.89  Li-Po: 11.97  Li-ion: 7.34  Solar: 5.73
+(-1, 0, 0, 1)
+LiSu: 140.49  Li-Po: -37.2  Solar: -84.1  Li-ion: -193.85
 
-(0, 1, 1, -1, 1, -1)
-LiSu: 21.99  Li-Po: 10.57  Solar: 6.73  Li-ion: 6.14
+(-1, 0, 0, 1)
+LiSu: 140.49  Li-Po: -59.25  Solar: -62.05  Li-ion: -193.85
 
-(0, 1, 1, 0, 1, 1)
-LiSu: 8.0  Li-Po: 7.89  Li-ion: 7.29  Solar: 6.43
+(-1, 1, -1, 0)
+LiSu: 129.69  Solar: -62.05  Li-Po: -70.05  Li-ion: -183.05
 
-(-1, -1, -1, 0, 0, -1)
-LiSu: 7.78  Li-ion: 7.23  Li-Po: 6.79  Solar: 6.68
+(-1, 1, -1, 0)
+LiSu: 104.49  Solar: -62.05  Li-Po: -95.25  Li-ion: -157.85
 
-(-1, -1, 0, 0, 1, 0)
-LiSu: 9.1  Li-ion: 5.94  Li-Po: 4.17  Solar: 3.73
+(-1, 1, -1, 0)
+LiSu: 95.49  Solar: -62.05  Li-Po: -104.25  Li-ion: -148.85
 
-(0, 0, 1, 1, 1, 1)
-Li-Po: 8.0  Li-ion: 8.0  Solar: 6.0  LiSu: 5.5
+(-1, 1, -1, 0)
+LiSu: 73.44  Solar: -62.05  Li-Po: -126.3  Li-ion: -126.8
 
-(0, -1, 1, -1, -1, 1)
-Li-Po: 12.57  LiSu: 8.0  Li-ion: 4.14  Solar: -1.27
+(-1, 1, 0, -1)
+LiSu: 73.44  Solar: -72.85  Li-ion: -116.0  Li-Po: -137.1
 
-(0, -1, 1, 0, 0, 1)
-Solar: 11.27  Li-ion: 10.86  Li-Po: 5.43  LiSu: 2.0
+(-1, 1, 0, -1)
+LiSu: 73.44  Li-ion: -90.8  Solar: -98.05  Li-Po: -162.3
 
-(-1, 0, 0, 1, 1, 1)
-Li-Po: 9.7  Li-ion: 8.1  Solar: 4.5  LiSu: 2.95
+(-1, 1, 0, -1)
+LiSu: 73.44  Li-ion: -81.8  Solar: -107.05  Li-Po: -171.3
 
-(1, 1, -1, 1, 1, 0)
-Li-Po: 7.72  LiSu: 7.37  Solar: 5.91  Li-ion: 5.65
+(-1, 1, 0, -1)
+LiSu: 73.44  Li-ion: -59.75  Solar: -129.1  Li-Po: -193.35
 
-(1, 0, 1, 0, 0, 1)
-Solar: 8.0  Li-ion: 7.6  LiSu: 7.03  Li-Po: 6.2
+(0, 1, -1, 1)
+LiSu: 62.64  Li-ion: -48.95  Solar: -118.3  Li-Po: -193.35
 
-(1, 1, -1, -1, 0, -1)
-Li-ion: 14.06  Li-Po: 9.83  Solar: 2.27  LiSu: -7.11
+(0, 1, -1, 1)
+LiSu: 37.44  Li-ion: -23.75  Solar: -93.1  Li-Po: -193.35
 
-(-1, 0, 0, 0, -1, -1)
-Solar: 9.33  LiSu: 8.03  Li-Po: 6.53  Li-ion: 6.27
+(0, 1, -1, 1)
+LiSu: 28.44  Li-ion: -14.75  Solar: -84.1  Li-Po: -193.35
 
-(1, -1, -1, -1, 1, 0)
-Li-ion: 13.34  Li-Po: 11.97  LiSu: -2.1  Solar: -10.28
+(0, 1, -1, 1)
+Li-ion: 7.3  LiSu: 6.39  Solar: -62.05  Li-Po: -193.35
 
-(1, -1, 0, 0, 1, 0)
-Solar: 16.26  LiSu: 9.1  Li-ion: 5.66  Li-Po: 5.03
+(0, 1, 1, 0)
+Li-ion: 18.1  LiSu: 17.19  Solar: -62.05  Li-Po: -193.35
 
-(1, 0, -1, 0, 1, 0)
-Solar: 14.0  LiSu: 12.1  Li-Po: 5.6  Li-ion: 1.8
+(0, 1, 1, 0)
+Li-ion: 43.3  LiSu: 42.39  Solar: -62.05  Li-Po: -193.35
 
-(1, 0, 0, -1, 1, 0)
-LiSu: 19.09  Solar: 17.99  Li-Po: 4.6  Li-ion: 2.8
+(0, 1, 1, 0)
+Li-ion: 52.3  LiSu: 51.39  Solar: -62.05  Li-Po: -193.35
 
-(-1, 0, 1, 1, -1, 1)
-Li-ion: 14.2  Li-Po: 9.4  Solar: -4.0  LiSu: -7.09
+(0, 1, 1, 0)
+Li-ion: 74.35  LiSu: 73.44  Solar: -62.05  Li-Po: -193.35
 
-(1, 1, 1, 1, 0, 1)
-Li-ion: 7.59  Li-Po: 7.23  LiSu: 6.22  Solar: 5.55
+(1, 1, 0, -1)
+Li-ion: 85.15  LiSu: 73.44  Solar: -72.85  Li-Po: -182.55
 
-(1, -1, -1, 1, 0, -1)
-LiSu: 12.9  Li-Po: 8.97  Li-ion: 8.34  Solar: 5.73
+(1, 1, 0, -1)
+Li-ion: 110.35  LiSu: 73.44  Solar: -98.05  Li-Po: -157.35
 
-(1, 0, 0, 1, 0, -1)
-Li-ion: 7.8  Li-Po: 7.6  LiSu: 4.1  Solar: 2.0
+(1, 1, 0, -1)
+Li-ion: 119.35  LiSu: 73.44  Solar: -107.05  Li-Po: -148.35
 
-(0, -1, 0, 0, -1, 0)
-LiSu: 10.0  Li-Po: 8.79  Li-ion: 6.07  Solar: 5.87
+(1, 1, 0, -1)
+Li-ion: 141.4  LiSu: 73.44  Li-Po: -126.3  Solar: -129.1
 
-(1, 0, 1, -1, 1, 0)
-LiSu: 13.05  Solar: 11.5  Li-ion: 6.4  Li-Po: 6.3
+(-1, -1, 0, 0)
+Li-ion: 130.6  LiSu: 73.44  Solar: -129.1  Li-Po: -137.1
 
-(-1, 1, 1, 0, -1, 1)
-Li-ion: 11.34  Li-Po: 8.97  LiSu: 2.9  Solar: -2.27
+(-1, -1, 0, 0)
+Li-ion: 105.4  LiSu: 73.44  Solar: -129.1  Li-Po: -162.3
 
-(-1, 0, 1, 0, 1, -1)
-Li-Po: 14230.01  Li-ion: 7118.4  LiSu: 6450.83  Solar: -11106.1
+(-1, -1, 0, 0)
+Li-ion: 96.4  LiSu: 73.44  Solar: -129.1  Li-Po: -171.3
 
-(0, -1, -1, 1, -1, -1)
-LiSu: 10.67  Solar: 8.24  Li-Po: 7.52  Li-ion: 6.71
+(-1, -1, 0, 0)
+Li-ion: 74.35  LiSu: 73.44  Solar: -129.1  Li-Po: -193.35
 
-(0, -1, -1, 1, 0, 0)
-LiSu: 17.0  Li-Po: 7.57  Li-ion: 7.14  Solar: 6.73
+(1, -1, -1, 1)
+Li-ion: 63.55  LiSu: 62.64  Solar: -118.3  Li-Po: -182.55
 
-(-1, 1, 1, -1, 0, 0)
-LiSu: 17561.93  Li-Po: 6607.8  Li-ion: 2985.08  Solar: -7261.65
+(1, -1, -1, 1)
+Li-ion: 38.35  LiSu: 37.44  Solar: -93.1  Li-Po: -157.35
 
-(0, 1, 1, -1, -1, 0)
-LiSu: 15561.93  Li-ion: 2540.63  Li-Po: -3169.97  Solar: -5039.43
+(1, -1, -1, 1)
+Li-ion: 29.35  LiSu: 28.44  Solar: -84.1  Li-Po: -148.35
 
-(0, 0, -1, -1, 1, -1)
-Li-ion: 10.0  Li-Po: 7.0  Solar: 3.0  LiSu: 1.0
+(1, -1, -1, 1)
+Li-ion: 7.3  LiSu: 6.39  Solar: -62.05  Li-Po: -126.3
 
-(-1, -1, 0, -1, -1, 1)
-Li-Po: 8.39  LiSu: 8.03  Li-ion: 6.65  Solar: 4.58
+(1, 1, -1, 1)
+Li-ion: 18.1  LiSu: -4.41  Solar: -51.25  Li-Po: -115.5
 
-(-1, 1, 1, 1, 1, -1)
-Li-Po: 11.98  Li-ion: 9.17  LiSu: 6.45  Solar: -0.63
+(1, 1, -1, 1)
+Li-ion: 43.3  Solar: -26.05  LiSu: -29.61  Li-Po: -90.3
 
-(-1, -1, 0, -1, 0, 1)
-Li-Po: 8.09  LiSu: 7.05  Li-ion: 6.97  Solar: 2.36
+(1, 1, -1, 1)
+Li-ion: 52.3  Solar: -17.05  LiSu: -38.61  Li-Po: -81.3
 
-(0, 0, -1, 0, 1, 1)
-Solar: 13.0  LiSu: 8.0  Li-Po: 7.0  Li-ion: 3.0
+(1, 1, -1, 1)
+Li-ion: 74.35  Solar: 5.0  Li-Po: -59.25  LiSu: -60.66
 
-(0, 1, -1, -1, -1, -1)
-Li-ion: 8.62  Li-Po: 7.81  Solar: 7.09  LiSu: 4.0
+(1, 0, 0, 1)
+Li-ion: 74.35  Solar: 15.8  Li-Po: -48.45  LiSu: -60.66
 
-(0, 1, -1, -1, 0, 0)
-Li-ion: 12.86  Li-Po: 8.43  Solar: 3.27  LiSu: -3.0
+(1, 0, 0, 1)
+Li-ion: 74.35  Solar: 41.0  Li-Po: -23.25  LiSu: -60.66
 
-(0, 1, -1, 0, -1, 0)
-Solar: 11.27  Li-ion: 9.86  Li-Po: 8.43  LiSu: 7.0
+(1, 0, 0, 1)
+Li-ion: 74.35  Solar: 50.0  Li-Po: -14.25  LiSu: -60.66
 
-(0, 1, -1, 0, 0, -1)
-Solar: 11.27  Li-ion: 10.86  Li-Po: 5.43  LiSu: 2.0
+(1, 0, 0, 1)
+Li-ion: 74.35  Solar: 72.05  Li-Po: 7.8  LiSu: -60.66
 
-(0, 1, 0, 1, 1, -1)
-Li-Po: 10.28  LiSu: 7.5  Li-ion: 7.07  Solar: 1.87
+(0, 0, 1, 0)
+Li-ion: 74.35  Solar: 72.05  Li-Po: 7.8  LiSu: -49.86
 
-(0, 1, 0, -1, -1, 0)
-Li-Po: 9.43  Li-ion: 8.86  Solar: 7.27  LiSu: -0.0
+(0, 0, 1, 0)
+Li-ion: 74.35  Solar: 72.05  Li-Po: 7.8  LiSu: -24.66
 
-(0, 1, 0, -1, 0, -1)
-Li-ion: 9.86  Solar: 7.27  Li-Po: 6.43  LiSu: -5.01
+(0, 0, 1, 0)
+Li-ion: 74.35  Solar: 72.05  Li-Po: 7.8  LiSu: -15.66
 
-(-1, -1, 0, 0, 0, 0)
-LiSu: 9.55  Li-Po: 6.58  Solar: 6.37  Li-ion: 5.97
+(0, 0, 1, 0)
+Li-ion: 74.35  Solar: 72.05  Li-Po: 7.8  LiSu: 6.39
 
-(0, 1, 0, 0, -1, -1)
-Solar: 15.27  Li-ion: 6.86  Li-Po: 6.43  LiSu: 5.0
+(0, -1, 0, -1)
+Li-ion: 63.55  Solar: 61.25  Li-Po: 7.8  LiSu: 6.39
 
-(0, 1, 0, 0, 0, 0)
-LiSu: 10.0  Li-Po: 8.57  Li-ion: 6.14  Solar: 2.73
+(0, -1, 0, -1)
+Li-ion: 38.35  Solar: 36.05  Li-Po: 7.8  LiSu: 6.39
 
-(0, 1, -1, 1, 1, 1)
-Li-Po: 8.19  Li-ion: 6.05  LiSu: 6.0  Solar: 5.58
+(0, -1, 0, -1)
+Li-ion: 29.35  Solar: 27.05  Li-Po: 7.8  LiSu: 6.39
 
-(0, 0, -1, 1, -1, 0)
-LiSu: 17.0  Solar: 13.0  Li-Po: 8.0  Li-ion: 7.0
-
-(0, 0, -1, 1, 0, -1)
-Solar: 13.0  LiSu: 12.0  Li-ion: 8.0  Li-Po: 5.0
-
-(-1, 1, 1, 0, 0, 1)
-Li-Po: 8.98  Li-ion: 8.67  LiSu: 6.45  Solar: 3.37
-
-(0, -1, -1, 0, 1, -1)
-Li-ion: 8.57  Li-Po: 6.78  LiSu: 6.0  Solar: 3.86
-
-(0, -1, -1, -1, 1, 1)
-Li-ion: 12.14  Li-Po: 10.57  LiSu: 2.0  Solar: -9.28
-
-(1, 1, 1, 1, -1, 1)
-Li-ion: 7.98  Li-Po: 6.79  LiSu: 5.28  Solar: 4.68
-
-(-1, 0, 1, 1, 0, 1)
-Li-ion: 10.1  Li-Po: 9.2  Solar: 2.5  LiSu: 1.45
-
-(1, 0, 1, 1, 0, 1)
-Li-ion: 7.95  Li-Po: 6.9  Solar: 6.25  LiSu: 5.28
-
-(1, 0, 1, 0, -1, 1)
-Li-ion: 8.4  Solar: 7.5  LiSu: 5.55  Li-Po: 4.8
-
-(1, 1, 1, 0, 1, -1)
-LiSu: 10.37  Li-Po: 8.06  Li-ion: 6.98  Solar: 5.91
-
-(1, 0, 1, -1, 0, 0)
-LiSu: 16.1  Solar: 14.0  Li-ion: 6.8  Li-Po: 3.6
-
-(1, 1, 1, -1, -1, 1)
-LiSu: 10.55  Solar: 8.36  Li-ion: 6.97  Li-Po: 4.59
-
-(1, 1, 1, 0, 0, 1)
-LiSu: 7.77  Li-ion: 7.24  Li-Po: 6.79  Solar: 6.68
-
-(1, 0, 1, 1, 1, -1)
-Li-Po: 8.2  Li-ion: 7.93  LiSu: 7.03  Solar: 5.33
-
-(0, -1, -1, 1, 1, 0)
-Solar: 5049.44  Li-Po: 3185.58  Li-ion: -2526.03  LiSu: -15549.15
-
-(0, 0, -1, -1, -1, 0)
-Li-Po: 8.67  Li-ion: 8.33  LiSu: 5.67  Solar: 5.0
-
-(-1, 0, 0, -1, -1, -1)
-Solar: 7.25  Li-Po: 7.15  Li-ion: 6.95  LiSu: 6.02
-
-(0, -1, -1, -1, 0, -1)
-Li-ion: 8.04  Li-Po: 7.89  LiSu: 5.5  Solar: 4.43
-
-(0, 1, -1, -1, 1, 0)
-LiSu: 28895.25  Solar: 12738.32  Li-Po: 1274.47  Li-ion: -15237.13
-
-(0, 1, 0, 0, 1, 0)
-LiSu: 10.0  Li-Po: 8.78  Li-ion: 6.07  Solar: 5.86
-
-(0, 0, 1, -1, -1, -1)
-Li-Po: 8.0  Solar: 7.0  Li-ion: 6.0  LiSu: 4.0
-
-(0, 0, 1, -1, 0, 0)
-LiSu: 15561.93  Solar: 8893.88  Li-ion: 2229.52  Li-Po: -2214.42
-
-(0, 1, 0, 1, -1, 0)
-Li-ion: 9.14  Li-Po: 8.57  LiSu: 0.0  Solar: -5.27
-
-(0, 0, 1, 0, -1, 0)
-Li-ion: 8896.18  Li-Po: -2214.42  LiSu: -6660.27  Solar: -8883.88
-
-(0, 0, 1, 0, 0, -1)
-Li-ion: 6673.96  Li-Po: 4452.24  LiSu: 4450.83  Solar: -8883.88
-
-(-1, -1, 0, 1, -1, 1)
-LiSu: 24.11  Solar: 11.73  Li-Po: 7.17  Li-ion: 1.94
-
-(-1, -1, 1, 0, 1, 1)
-Li-ion: 11.06  Solar: 10.27  Li-Po: 9.83  LiSu: 2.9
-
-(0, 1, -1, 1, 0, -1)
-Li-Po: 7941.13  Li-ion: -4126.03  LiSu: -4438.05  Solar: -22817.2
-
-(0, 1, 1, 1, -1, 0)
-Li-ion: 9.57  Li-Po: 8.28  LiSu: 3.5  Solar: -0.13
-
-(0, 1, 1, 1, 0, -1)
-Li-Po: 9.78  Li-ion: 9.07  LiSu: 6.0  Solar: -0.13
-
-(0, -1, -1, 0, -1, 0)
-LiSu: 9.0  Li-Po: 8.52  Li-ion: 7.38  Solar: 5.58
-
-(0, 0, -1, 0, 0, -1)
-Li-ion: 8.5  Solar: 7.0  Li-Po: 7.0  LiSu: 6.0
-
-(-1, 1, 1, 1, 0, 1)
-Li-Po: 8.99  Li-ion: 8.78  LiSu: 4.3  Solar: 2.58
-
-(-1, -1, 1, 1, -1, -1)
-LiSu: 13.55  Solar: 12.37  Li-Po: 5.58  Li-ion: 2.97
-
-(0, 0, 0, 0, 1, 0)
-LiSu: 10.0  Li-Po: 9.0  Solar: 9.0  Li-ion: 6.0
-
-(0, -1, 0, 1, -1, -1)
-LiSu: 12.5  Solar: 9.87  Li-Po: 7.28  Li-ion: 5.07
-
-(0, -1, 0, 1, 0, 0)
-Li-ion: 6362.85  Li-Po: 963.36  Solar: -3839.44  LiSu: -22215.81
-
-(-1, 0, 1, -1, -1, 1)
-Li-Po: 8.6  LiSu: 7.1  Solar: 6.0  Li-ion: 3.8
-
-(-1, 0, 1, 0, 0, 1)
-Li-ion: 11.2  Li-Po: 9.4  Solar: 4.0  LiSu: 2.9
-
-(1, 0, -1, 1, 1, -1)
-Li-Po: 8.6  LiSu: 7.1  Solar: 6.0  Li-ion: 3.8
-
-(1, -1, 0, 1, 1, -1)
-Solar: 8.27  Li-Po: 8.03  Li-ion: 7.66  LiSu: 4.1
-
-(1, -1, -1, 1, 1, 1)
-Solar: 10.63  Li-Po: 6.02  Li-ion: 5.83  LiSu: 3.55
-
-(1, 0, 0, 1, 1, 1)
-Solar: 7.25  Li-Po: 7.15  Li-ion: 6.95  LiSu: 6.03
-
-(1, 1, -1, 0, 1, -1)
-LiSu: 17.1  Li-Po: 8.17  Solar: 7.73  Li-ion: 0.94
-
-(1, -1, 1, 1, 1, 1)
-Li-ion: 7.91  Solar: 7.82  Li-Po: 7.01  LiSu: 5.28
-
-(1, 1, 0, -1, -1, -1)
-Li-Po: 10.83  Li-ion: 10.06  Solar: 6.27  LiSu: -4.1
-
-(1, 1, -1, -1, 1, 1)
-LiSu: 13.55  Solar: 12.36  Li-Po: 5.59  Li-ion: 2.97
-
-(0, -1, 1, 1, -1, 1)
-Li-ion: 13.86  Li-Po: 5.43  Solar: 3.27  LiSu: -7.99
-
-(-1, 0, -1, 0, 0, 1)
-LiSu: 11.1  Li-ion: 8.8  Li-Po: 6.6  Solar: 6.0
-
-(1, -1, 1, 0, -1, -1)
-Li-Po: 10.97  LiSu: 8.9  Solar: 5.73  Li-ion: 3.34
-
-(0, 0, 1, -1, 1, 0)
-LiSu: 17.0  Solar: 13.0  Li-Po: 8.0  Li-ion: 7.0
-
-(-1, 1, -1, 1, 0, 1)
-Li-Po: 10.97  Li-ion: 6.34  LiSu: -1.1  Solar: -2.27
-
-(0, -1, 1, 0, 1, -1)
-Li-ion: 6362.85  Li-Po: 5407.8  Solar: 5049.44  LiSu: 4450.83
-
-(0, 0, 1, 1, 0, -1)
-Li-ion: 12.0  Li-Po: 11.0  LiSu: 2.0  Solar: -3.0
-
-(-1, -1, -1, -1, 1, -1)
-Li-ion: 7.99  Li-Po: 6.79  LiSu: 5.27  Solar: 4.68
-
-(0, 0, 0, -1, 1, 0)
-LiSu: 22228.59  Solar: 17782.76  Li-Po: 7.8  Li-ion: -6659.36
-
-(-1, -1, -1, -1, 0, 1)
-Li-Po: 8.06  Li-ion: 7.98  LiSu: 7.03  Solar: 3.24
-
-(0, 0, 0, -1, -1, 1)
-Li-Po: 12.0  Li-ion: 8.0  LiSu: 5.0  Solar: 1.0
-
-(-1, -1, -1, 0, 1, 1)
-LiSu: 11.1  Li-ion: 8.94  Li-Po: 6.17  Solar: -0.27
-
-(0, 1, 1, 0, 0, -1)
-LiSu: 12.0  Li-Po: 10.57  Li-ion: 9.14  Solar: -1.27
-
-(-1, 1, -1, 1, 1, -1)
-Li-Po: 17718.89  LiSu: -2438.05  Li-ion: -3681.58  Solar: -25039.42
-
-(0, 0, 0, 0, 0, 0)
+(0, -1, 0, -1)
 Li-Po: 7.8  Li-ion: 7.3  LiSu: 6.39  Solar: 5.0
-
-(0, -1, 0, 1, 1, 0)
-Li-Po: 9.43  Li-ion: 8.86  Solar: 7.27  LiSu: 0.0
-
-(-1, 1, 0, 1, 1, 1)
-Li-Po: 9.32  Li-ion: 7.45  LiSu: 5.3  Solar: 3.91
-
-(-1, 0, -1, 0, 1, -1)
-Li-ion: 8.4  Solar: 7.5  LiSu: 5.55  Li-Po: 4.8
-
-(1, -1, 0, 1, -1, 0)
-Li-ion: 5918.41  Solar: -1617.22  Li-Po: -8814.41  LiSu: -24215.81
-
-(1, 0, -1, 1, -1, 0)
-Li-ion: -2659.36  Solar: -6661.66  Li-Po: -7547.75  LiSu: -17549.15
-
-(0, -1, 0, -1, 0, -1)
-Li-Po: 7.86  Li-ion: 7.38  LiSu: 5.0  Solar: 4.24
-
-(0, -1, 1, 1, 1, 0)
-Li-ion: 9.43  Li-Po: 8.71  Solar: 6.13  LiSu: 3.5
-
-(-1, 0, -1, -1, 1, 1)
-Li-ion: 11.8  Li-Po: 6.6  LiSu: 1.1  Solar: -2.0
-
-(1, -1, 1, 1, -1, 0)
-Li-ion: 12.66  Solar: 4.27  Li-Po: 4.03  LiSu: -3.9
-
-(1, -1, 1, 1, 0, -1)
-Li-ion: 11.66  Li-Po: 7.03  Solar: 4.27  LiSu: 1.1
-
-(1, 1, -1, 0, 0, 1)
-LiSu: 8.55  Solar: 8.36  Li-Po: 5.59  Li-ion: 4.47
-
-(1, 1, -1, 0, -1, 0)
-LiSu: 4673.05  Solar: -2817.21  Li-Po: -8503.3  Li-ion: -9014.91
-
-(1, -1, 0, 1, 0, 1)
-Solar: 8.63  Li-ion: 7.83  Li-Po: 5.52  LiSu: 2.05
-
-(1, 0, -1, 1, 0, 1)
-Solar: 7.5  Li-ion: 5.9  Li-Po: 5.8  LiSu: 3.55
-
-(1, 1, 0, 1, -1, -1)
-Li-ion: 7.94  Li-Po: 7.17  LiSu: 4.1  Solar: -4.27
-
-(1, 1, 0, 1, 0, 0)
-Li-Po: 7.39  Li-ion: 6.98  LiSu: 6.37  Solar: 4.58
-
-(1, -1, 0, -1, -1, 0)
-Li-Po: 10.99  Li-ion: 7.67  LiSu: 5.45  Solar: 1.36
-
-(1, -1, 0, -1, 0, -1)
-Li-Po: 9.49  Li-ion: 8.17  LiSu: 2.95  Solar: 1.36
-
-(1, 0, 0, -1, -1, -1)
-Li-Po: 9.7  Li-ion: 8.1  Solar: 4.5  LiSu: 2.95
-
-(1, 0, 0, -1, 0, 0)
-LiSu: 20228.59  Solar: 20004.98  Li-ion: -7103.8  Li-Po: -9769.97
-
-(1, 0, 0, 0, -1, 0)
-Solar: 2227.22  Li-ion: -437.14  LiSu: -1993.61  Li-Po: -9769.97
-
-(1, 0, 0, 0, 0, -1)
-LiSu: 9117.49  Solar: 2227.22  Li-ion: -2659.36  Li-Po: -3103.31
-
-(-1, 0, -1, 1, 0, 1)
-Li-Po: 5341.13  Li-ion: 451.74  Solar: -11106.1  LiSu: -24660.25
-
-(0, 0, 0, 0, -1, 1)
-Li-ion: 2229.52  Solar: 5.0  Li-Po: -6658.86  LiSu: -11104.71
-
-(-1, -1, -1, -1, -1, 0)
-Li-Po: 7.83  Li-ion: 7.39  LiSu: 7.22  Solar: 5.55
-
-(0, 0, 0, -1, 0, 0)
-Li-ion: 9.0  Li-Po: 9.0  Solar: 1.0  LiSu: -0.0
-
-(-1, 1, -1, -1, -1, 1)
-Li-ion: 8.83  Li-Po: 8.02  Solar: 6.64  LiSu: 5.55
-
-(-1, 1, -1, 0, 0, 1)
-Li-Po: 4385.58  LiSu: -2438.05  Li-ion: -5903.8  Solar: -7261.66
-
-(-1, 1, 0, -1, 0, 1)
-LiSu: 13117.49  Li-Po: 2163.36  Solar: 1627.22  Li-ion: -3681.58
-
-(-1, 1, 0, 0, -1, 1)
-Li-ion: 2985.08  Li-Po: 2163.36  LiSu: -9104.71  Solar: -16150.54
-
-(0, 1, 1, 1, 1, 1)
-Li-Po: 8.11  Li-ion: 7.63  LiSu: 6.4  Solar: 5.35
-
-(0, -1, 0, -1, -1, -1)
-Li-Po: 8.14  Li-ion: 7.03  LiSu: 6.25  Solar: 5.43
-
-(0, 0, 0, 1, 1, -1)
-Li-Po: 12.0  Li-ion: 8.0  LiSu: 5.0  Solar: 1.0
-
-(-1, -1, 1, -1, -1, -1)
-Li-Po: 7.29  LiSu: 6.78  Solar: 6.68  Li-ion: 5.98
-
-(-1, -1, 1, -1, 0, 0)
-Li-Po: 7.08  LiSu: 6.05  Li-ion: 5.47  Solar: 4.36
-
-(-1, -1, 1, 0, -1, 0)
-LiSu: 11.05  Solar: 8.37  Li-Po: 7.08  Li-ion: 3.97
-
-(-1, 1, -1, 1, -1, 0)
-Solar: 20.28  LiSu: 16.1  Li-ion: 6.66  Li-Po: 4.03
-
-(-1, -1, 1, 0, 0, -1)
-LiSu: 8.55  Solar: 8.37  Li-Po: 5.58  Li-ion: 4.47
-
-(-1, -1, -1, 1, -1, 1)
-LiSu: 15.55  Solar: 8.37  Li-Po: 7.58  Li-ion: 5.97
-
-(0, 0, 1, 0, 1, 1)
-Li-Po: 7.67  Li-ion: 7.67  Solar: 7.67  LiSu: 7.33
-
-(0, 1, 1, 0, -1, -1)
-Li-ion: 6985.07  LiSu: 4450.83  Li-Po: 3496.69  Solar: -22817.2
-
-(-1, 0, -1, 0, -1, 0)
-LiSu: 8.7  Solar: 8.0  Li-ion: 7.27  Li-Po: 7.2
-
-(0, -1, 1, 1, 0, 0)
-Li-ion: 12.86  Li-Po: 8.43  Solar: 3.27  LiSu: -3.0
-
-(0, 0, 1, 1, -1, -1)
-Li-ion: 13340.62  Li-Po: 4452.24  LiSu: -17771.37  Solar: -26661.64
-
-(0, -1, 1, -1, 1, -1)
-Li-Po: 6.57  Li-ion: 6.14  Solar: -1.27  LiSu: -2.0
-
-(-1, 0, 0, 1, -1, -1)
-Solar: 13.5  LiSu: 12.05  Li-Po: 5.3  Li-ion: 4.9
-
-(-1, 0, 0, 1, 0, 0)
-Li-Po: 9785.57  Li-ion: 7118.4  Solar: -19994.98  LiSu: -20215.81
-
-(1, -1, 1, 0, 0, -1)
-Solar: 7271.66  Li-ion: 5918.41  LiSu: 2450.83  Li-Po: -4369.97
-
-(1, 1, -1, 1, 0, 1)
-Li-Po: 6.72  Li-ion: 5.98  Solar: 5.91  LiSu: 5.7
-
-(1, 0, 1, 0, 1, 0)
-LiSu: 8.7  Solar: 8.0  Li-ion: 7.27  Li-Po: 7.2
-
-(1, 1, 0, 1, 1, 0)
-Li-Po: 7.79  LiSu: 7.27  Li-ion: 6.74  Solar: 5.68
-
-(1, -1, -1, -1, 0, 1)
-Li-Po: 14.97  Li-ion: 12.34  LiSu: 2.9  Solar: -10.28
-
-(1, -1, -1, 0, -1, 1)
-Li-Po: 14.97  LiSu: 12.9  Li-ion: 9.34  Solar: -2.27
-
-(1, 1, 0, -1, 0, -1)
-LiSu: 31339.69  Solar: 6071.66  Li-Po: -4058.86  Li-ion: -9014.91
-
-(1, -1, 0, -1, -1, 1)
-Li-Po: 15.97  Li-ion: 8.34  LiSu: 5.9  Solar: -6.28
-
-(1, -1, 0, 0, 0, 1)
-Solar: 16.26  Li-ion: 6.66  LiSu: 4.1  Li-Po: 2.03
-
-(1, 1, 1, 1, 1, 0)
-Li-Po: 7.83  Li-ion: 7.39  LiSu: 7.22  Solar: 5.55
-
-(1, 0, -1, -1, -1, 1)
-Li-Po: 15.4  Li-ion: 12.2  LiSu: 2.9  Solar: -4.0
-
-(1, 0, -1, 0, 0, 1)
-Solar: 14.0  LiSu: 7.1  Li-ion: 2.8  Li-Po: 2.6
-
-(1, 0, 0, -1, 0, 1)
-Solar: 17.99  LiSu: 14.1  Li-ion: 3.8  Li-Po: 1.6
-
-(1, 0, 0, 0, -1, 1)
-Solar: 10.0  Li-ion: 6.8  LiSu: 4.1  Li-Po: 1.6
-
-(-1, 0, 1, 1, 1, -1)
-Li-Po: 15.4  Li-ion: 12.2  LiSu: 2.9  Solar: -4.0
-
-(0, -1, -1, 0, 0, 1)
-LiSu: 12.0  Li-Po: 10.57  Li-ion: 9.14  Solar: -1.27
-
-(-1, 1, 1, 0, 1, -1)
-Li-Po: 14.97  LiSu: 12.9  Li-ion: 9.34  Solar: -2.27
-
-(0, 0, -1, 1, 1, 1)
-Li-Po: 8.0  Solar: 7.0  Li-ion: 6.0  LiSu: 4.0
-
-(-1, -1, 1, -1, 1, 0)
-Li-Po: 5.17  Li-ion: 4.94  LiSu: 2.1  Solar: -0.27
-
-(-1, 1, 1, -1, 1, 1)
-LiSu: 11.45  Li-Po: 8.98  Solar: 7.36  Li-ion: 7.17
-
-(0, 1, 0, 1, 0, 1)
-Li-Po: 7.86  Li-ion: 7.38  LiSu: 5.0  Solar: 4.24
-
-(0, 1, -1, 0, 1, 1)
-LiSu: 9.0  Solar: 7.86  Li-Po: 7.79  Li-ion: 4.57
-
-(-1, -1, 1, 1, 0, -1)
-LiSu: 17.1  Solar: 15.73  Li-Po: 2.17  Li-ion: -0.06
-
-(-1, -1, 0, -1, 1, -1)
-Li-ion: 7.31  Li-Po: 6.39  LiSu: 4.7  Solar: 4.58
-
-(0, 1, 0, -1, 1, 1)
-LiSu: 12.5  Solar: 9.86  Li-Po: 7.29  Li-ion: 5.07
-
-(-1, -1, 0, -1, 1, 0)
-Li-ion: 7.47  Li-Po: 6.58  LiSu: 4.55  Solar: 2.36
-
-(0, 0, -1, 0, -1, -1)
-Solar: 7.67  Li-ion: 7.67  Li-Po: 7.67  LiSu: 7.33
-
-(0, 0, -1, -1, 0, 1)
-Li-ion: 12.0  Li-Po: 11.0  LiSu: 2.0  Solar: -3.0
-
-(-1, -1, 0, 0, 1, 1)
-Solar: 11716.1  Li-Po: 4074.46  Li-ion: 2362.85  LiSu: -9104.71
-
-(0, 1, -1, 1, -1, -1)
-Solar: 19.28  LiSu: 12.0  Li-ion: 7.86  Li-Po: 5.43
-
-(-1, 1, 1, 0, 1, 0)
-Li-Po: 10.48  LiSu: 8.95  Li-ion: 8.17  Solar: 3.37
-
-(-1, 0, 0, 1, 1, 0)
-Li-Po: 13.4  Li-ion: 9.2  LiSu: 0.9  Solar: 0.0
-
-(1, 0, 1, -1, -1, 1)
-Solar: 14.0  LiSu: 11.1  Li-ion: 7.8  Li-Po: 0.6
-
-(-1, 0, 0, -1, 0, -1)
-Li-ion: 7.27  Solar: 6.67  Li-Po: 6.53  LiSu: 4.7
-
-(1, 1, 1, 1, 1, -1)
-Li-Po: 8.29  LiSu: 7.77  Li-ion: 7.48  Solar: 4.68
-
-(0, -1, -1, -1, -1, -1)
-Li-Po: 8.11  Li-ion: 7.63  LiSu: 6.4  Solar: 5.35
-
-(-1, 0, 1, 1, 1, 0)
-Li-Po: 10.7  Li-ion: 9.6  LiSu: 3.95  Solar: 2.5
-
-(1, 0, 1, 0, 0, 0)
-LiSu: 8.05  Li-ion: 7.9  Solar: 7.5  Li-Po: 6.3
-
-(1, 0, -1, 0, -1, 0)
-Li-Po: 12.4  Li-ion: 10.2  LiSu: 7.9  Solar: 4.0
-
-(1, 0, -1, 0, 0, -1)
-Li-ion: 11.2  Li-Po: 9.4  Solar: 4.0  LiSu: 2.9
-
-(1, 0, 0, -1, -1, 0)
-Li-Po: 13.4  Li-ion: 9.2  LiSu: 0.9  Solar: -0.0
-
-(1, 0, 1, 0, 1, -1)
-LiSu: 10.55  Li-Po: 7.8  Solar: 7.5  Li-ion: 7.4
-
-(1, 0, 0, -1, 0, -1)
-Li-Po: 10.4  Li-ion: 10.2  Solar: -0.0  LiSu: -4.1
-
-(1, 0, 0, 0, -1, -1)
-Li-Po: 10.4  Solar: 8.0  Li-ion: 7.2  LiSu: 5.9
-
-(1, 1, 1, 1, 0, 0)
-Li-ion: 7.73  Li-Po: 7.54  LiSu: 6.52  Solar: 4.68
-
-(1, 0, 0, 0, 0, 0)
-Solar: 10.0  LiSu: 9.1  Li-ion: 5.8  Li-Po: 4.6
-
-(-1, 0, 1, 1, -1, 0)
-Li-ion: 16007.28  Li-Po: 7563.35  LiSu: -26882.47  Solar: -28883.86
-
-(1, 0, 1, -1, 1, 1)
-Solar: 10.67  LiSu: 10.37  Li-ion: 6.6  Li-Po: 6.2
-
-(1, 1, 1, -1, 1, -1)
-LiSu: 15.55  Solar: 8.36  Li-Po: 7.59  Li-ion: 5.97
-
-(-1, 0, 0, 1, -1, 0)
-LiSu: 19.11  Solar: 18.01  Li-Po: 4.6  Li-ion: 2.8
-
-(-1, 0, 0, 1, 0, -1)
-Solar: 18.01  LiSu: 14.1  Li-ion: 3.8  Li-Po: 1.6
-
-(-1, 1, 1, 0, -1, 0)
-Li-ion: 9651.74  Li-Po: 6607.8  LiSu: -4660.27  Solar: -25039.41
-
-(0, -1, -1, 1, 0, 1)
-Solar: 5049.44  Li-ion: -303.81  Li-Po: -3481.08  LiSu: -26660.25
-
-(-1, -1, 0, 0, -1, 1)
-LiSu: 12.05  Li-Po: 8.09  Solar: 6.37  Li-ion: 5.47
-
-(-1, -1, 0, -1, -1, 0)
-Li-Po: 7.79  LiSu: 7.28  Li-ion: 6.73  Solar: 5.68
-
-(-1, -1, 0, -1, 0, 0)
-Li-Po: 7.39  Li-ion: 6.98  LiSu: 6.37  Solar: 4.58
-
-(0, 1, -1, -1, 0, 1)
-LiSu: 17784.15  Solar: 12738.32  Li-Po: -5392.19  Li-ion: -13014.91
-
-(0, 1, -1, 0, -1, 1)
-LiSu: -4438.05  Solar: -5039.44  Li-Po: -5392.19  Li-ion: -6348.25
-
-(0, 1, 0, -1, -1, 1)
-LiSu: 11117.49  Solar: 3849.45  Li-ion: -4126.03  Li-Po: -7614.41
-
-(0, 1, 0, 0, 0, 1)
-LiSu: 7.5  Li-Po: 7.29  Li-ion: 6.57  Solar: 5.86
-
-(-1, 1, 1, -1, -1, 1)
-LiSu: 6450.83  Li-ion: 5207.3  Li-Po: -58.86  Solar: -7261.65
-
-(-1, -1, 0, 1, 1, -1)
-LiSu: 14.1  Solar: 11.73  Li-ion: 3.94  Li-Po: 1.17
-
-(-1, -1, 1, -1, -1, 0)
-Li-Po: 7.72  LiSu: 7.37  Solar: 5.91  Li-ion: 5.65
-
-(-1, -1, 1, -1, 0, -1)
-Li-Po: 6.72  Li-ion: 5.98  Solar: 5.91  LiSu: 5.7
-
-(-1, -1, 1, 0, -1, -1)
-LiSu: 9.03  Solar: 8.58  Li-Po: 6.72  Li-ion: 4.98
-
-(-1, -1, 1, 0, 0, 0)
-LiSu: 12.1  Solar: 7.73  Li-Po: 5.17  Li-ion: 1.94
-
-(0, 1, 1, -1, 0, 1)
-LiSu: 11.0  Solar: 7.86  Li-ion: 7.07  Li-Po: 6.79
-
-(0, 0, -1, 1, -1, 1)
-Li-ion: 7.3  Li-Po: -4436.64  Solar: -8883.88  LiSu: -26660.25
-
-(-1, 1, 1, 0, 0, 0)
-Li-Po: 11.97  Li-ion: 10.34  LiSu: 7.9  Solar: -2.27
-
-(0, -1, 0, 0, 0, 1)
-Solar: 13938.32  Li-ion: 1918.41  Li-Po: -5703.3  LiSu: -11104.71
-
-(1, 1, 1, 1, -1, 0)
-Li-ion: 8.31  Li-Po: 7.06  LiSu: 5.37  Solar: 3.24
-
-(-1, 0, 1, 1, 0, 0)
-Li-ion: 13.2  Li-Po: 12.4  LiSu: -2.1  Solar: -4.0
-
-(1, -1, -1, 0, 1, 1)
-Solar: 20.26  LiSu: 7.1  Li-Po: 3.03  Li-ion: 2.66
-
-(1, -1, 0, -1, 1, 1)
-Solar: 24.26  LiSu: 14.1  Li-ion: 3.66  Li-Po: 2.03
-
-(1, 0, -1, -1, 1, 1)
-Solar: 21.99  LiSu: 17.1  Li-Po: 2.6  Li-ion: -0.2
-
-(1, 0, 0, 0, 1, 1)
-Solar: 9.33  LiSu: 8.03  Li-Po: 6.53  Li-ion: 6.27
-
-(-1, 0, 1, -1, 1, -1)
-Solar: 6.0  Li-ion: 5.8  Li-Po: 2.6  LiSu: -2.9
-
-(1, 1, 0, 1, -1, 0)
-Li-ion: 7.47  Li-Po: 6.59  LiSu: 4.55  Solar: 2.37
-
-(1, 1, 0, 1, 0, -1)
-Li-Po: 8.08  LiSu: 7.05  Li-ion: 6.97  Solar: 2.37
-
-(1, 0, 1, 0, -1, 0)
-Li-ion: 9.8  LiSu: 6.1  Solar: 6.0  Li-Po: 3.6
-
-(1, -1, -1, 1, -1, -1)
-LiSu: 11.45  Li-Po: 8.99  Solar: 7.37  Li-ion: 7.17
-
-(1, 0, 0, 1, -1, -1)
-Li-ion: 4007.3  Li-Po: -3103.31  LiSu: -13104.71  Solar: -15550.54
-
-(1, -1, 1, 1, -1, -1)
-Li-ion: 12585.07  Li-Po: -4369.97  Solar: -10506.1  LiSu: -19771.37
-
-(1, -1, 1, 1, 0, 0)
-Li-ion: 9.33  Solar: 6.63  Li-Po: 6.52  LiSu: 3.05
-
-(-1, 0, 0, 0, 0, -1)
-Solar: 9.5  LiSu: 7.05  Li-ion: 6.4  Li-Po: 5.3
-
-(1, 1, -1, -1, -1, -1)
-Li-ion: 10.03  Li-Po: 9.42  Solar: 5.64  LiSu: 1.45
-
-(0, -1, 1, 1, 1, -1)
-Li-ion: 11.86  Li-Po: 11.43  Solar: 3.27  LiSu: 2.0
-
-(-1, 0, -1, 0, 1, 0)
-Li-ion: 9.8  LiSu: 6.1  Solar: 6.0  Li-Po: 3.6
-
-(0, 0, 1, -1, 0, 1)
-Solar: 13.0  LiSu: 12.0  Li-ion: 8.0  Li-Po: 5.0
-
-(0, 0, 1, 0, -1, 1)
-Li-ion: 11.0  Li-Po: 5.0  Solar: 5.0  LiSu: 2.0
-
-(-1, -1, -1, 1, 1, 1)
-Li-Po: 6296.68  Solar: 2827.22  Li-ion: 140.63  LiSu: -24660.25
-
-(-1, 1, -1, 1, 1, 0)
-Li-Po: 13.97  Li-ion: 5.34  LiSu: 3.9  Solar: -2.27
-
-(-1, -1, 1, 0, 1, 0)
-Li-ion: 9029.51  Li-Po: 8518.9  Solar: 2827.22  LiSu: -4660.27
-
-(0, 1, 1, 1, -1, 1)
-Li-ion: 8.71  Li-Po: 7.52  LiSu: 4.0  Solar: 2.91
-
-(-1, 1, -1, -1, 1, 1)
-LiSu: 19784.15  Solar: 10516.1  Li-Po: 4385.57  Li-ion: -12570.46
-
-(-1, 1, 0, 0, 1, 1)
-Li-Po: 9.48  LiSu: 7.95  Li-ion: 6.67  Solar: 5.36
-
-(-1, -1, -1, -1, 1, 0)
-Li-ion: 8.31  Li-Po: 7.06  LiSu: 5.37  Solar: 3.24
-
-(0, 0, 0, -1, 1, -1)
-Li-ion: 10.0  Li-Po: 6.0  Solar: 1.0  LiSu: -5.01
-
-(-1, -1, -1, 0, -1, -1)
-LiSu: 8.22  Li-Po: 7.23  Solar: 7.15  Li-ion: 6.99
-
-(0, 0, 0, 0, 1, 1)
-Solar: 9.0  Li-Po: 7.5  LiSu: 7.5  Li-ion: 6.5
-
-(0, -1, 0, 1, 0, 1)
-Li-ion: 9.86  Solar: 7.27  Li-Po: 6.43  LiSu: -4.99
-
-(-1, 1, 0, 1, -1, -1)
-Solar: 24.28  LiSu: 14.1  Li-ion: 3.66  Li-Po: 2.03
-
-(1, -1, 1, -1, 0, 1)
-Solar: 20.26  LiSu: 11.1  Li-ion: 7.66  Li-Po: 1.03
-
-(1, 1, 0, 0, 0, -1)
-LiSu: 14.1  Li-Po: 7.17  Li-ion: 4.94  Solar: 3.73
-
-(-1, 0, -1, -1, -1, -1)
-Li-ion: 7.56  Li-Po: 7.32  Solar: 6.8  LiSu: 6.22
-
-(1, 1, -1, 0, 1, 0)
-LiSu: 11.05  Solar: 8.36  Li-Po: 7.09  Li-ion: 3.97
-
-(1, -1, 1, 1, 1, 0)
-Li-ion: 8.22  Solar: 7.42  Li-Po: 7.34  LiSu: 5.37
-
-(-1, 0, -1, -1, -1, 1)
-Li-Po: 8.2  Li-ion: 7.93  LiSu: 7.03  Solar: 5.33
-
-(1, 1, 0, 0, 0, 1)
-LiSu: 8.03  Solar: 7.24  Li-Po: 6.39  Li-ion: 6.31
-
-(1, -1, 1, -1, 0, -1)
-Li-Po: 10.97  Li-ion: 6.34  LiSu: -1.1  Solar: -2.27
-
-(0, -1, 1, 1, -1, 0)
-Li-ion: 15251.73  Li-Po: -1258.86  Solar: -12728.32  LiSu: -28882.47
-
-(1, 0, -1, 1, 1, 0)
-Solar: 7.5  Li-Po: 7.3  LiSu: 6.05  Li-ion: 5.4
-
-(1, -1, 0, 1, 1, 0)
-Solar: 8.63  Li-ion: 7.33  Li-Po: 7.02  LiSu: 4.55
-
-(-1, 0, -1, 0, 0, 0)
-LiSu: 8.05  Li-ion: 7.9  Solar: 7.5  Li-Po: 6.3
-
-(-1, 1, 0, 1, -1, 1)
-Li-ion: 10.34  Li-Po: 9.97  LiSu: -4.1  Solar: -6.26
-
-(0, -1, 0, 1, -1, 0)
-LiSu: 20.01  Solar: 10.73  Li-Po: 8.57  Li-ion: 3.14
-
-(0, -1, 0, 1, 0, -1)
-LiSu: 15.0  Solar: 10.73  Li-Po: 5.57  Li-ion: 4.14
-
-(0, 0, 0, 0, 1, -1)
-LiSu: 11117.49  Li-Po: 6674.46  Solar: 5.0  Li-ion: -2214.92
-
-(-1, 1, -1, 1, 0, 0)
-Li-Po: 11052.24  Li-ion: -1459.36  LiSu: -13549.15  Solar: -25039.42
-
-(-1, -1, -1, 0, -1, 1)
-LiSu: 10.37  Li-Po: 8.06  Li-ion: 6.98  Solar: 5.91
-
-(0, 0, 0, -1, 1, 1)
-Solar: 16.99  LiSu: 15.0  Li-Po: 6.0  Li-ion: 4.0
-
-(-1, 1, -1, -1, 1, -1)
-Li-ion: 9.83  Solar: 6.64  Li-Po: 5.01  LiSu: 0.55
-
-(-1, 1, 0, 0, 1, -1)
-Li-Po: 15496.67  LiSu: 13117.49  Li-ion: -1459.37  Solar: -16150.54
-
-(0, 1, 1, 1, -1, -1)
-Li-ion: 12.14  Li-Po: 10.57  LiSu: 2.0  Solar: -9.26
-
-(0, 1, 1, 1, 0, 0)
-Li-Po: 8.52  Li-ion: 8.38  LiSu: 5.67  Solar: 2.91
-
-(-1, -1, -1, -1, 0, 0)
-Li-ion: 7.74  Li-Po: 7.54  LiSu: 6.53  Solar: 4.68
-
-(0, 0, 0, -1, -1, 0)
-Li-Po: 9.0  Li-ion: 7.5  Solar: 5.0  LiSu: 5.0
-
-(-1, -1, -1, 1, 1, -1)
-LiSu: 10.55  Solar: 8.37  Li-ion: 6.97  Li-Po: 4.58
-
-(0, 0, 1, -1, -1, 0)
-Li-Po: 10.0  Solar: 5.0  Li-ion: 5.0  LiSu: 3.0
-
-(0, 0, 1, -1, 0, -1)
-Li-Po: 7.0  Li-ion: 6.0  Solar: 5.0  LiSu: -2.0
-
-(0, 0, 1, 0, -1, -1)
-Solar: 13.0  LiSu: 8.0  Li-Po: 7.0  Li-ion: 3.0
-
-(0, 0, 1, 0, 0, 0)
-Li-ion: 10.0  Li-Po: 8.0  LiSu: 7.0  Solar: 5.0
-
-(0, -1, 1, 1, 1, 1)
-Li-ion: 8.62  Li-Po: 7.81  Solar: 7.09  LiSu: 4.0
-
-(1, 1, -1, -1, -1, 1)
-LiSu: 15784.15  Solar: 14960.55  Li-ion: -13459.35  Li-Po: -15169.96
-
-(-1, 0, 0, 0, 0, 1)
-Li-Po: 3118.91  Li-ion: 2673.96  Solar: -2217.22  LiSu: -9104.71
-
-(1, -1, 1, 1, -1, 1)
-Li-ion: 9.83  Solar: 6.63  Li-Po: 5.02  LiSu: 0.55
-
-(1, 1, -1, 0, 0, 0)
-LiSu: 12.1  Solar: 7.73  Li-Po: 5.17  Li-ion: 1.94
-
-(1, -1, -1, 1, -1, 1)
-Solar: 7271.66  Li-ion: -748.25  Li-Po: -13258.85  LiSu: -28660.25
-
-(1, 0, 0, 1, -1, 1)
-Li-ion: 7.9  Solar: 5.5  Li-Po: 5.3  LiSu: 2.05
-
-(1, -1, 0, 1, 0, 0)
-Li-ion: 8.66  Solar: 8.27  Li-Po: 5.03  LiSu: -0.9
-
-(1, 0, -1, 1, 0, 0)
-Solar: 6.0  Li-Po: 5.6  Li-ion: 4.8  LiSu: 2.1
-
-(1, 1, 0, 1, 0, 1)
-Li-Po: 7.04  Li-ion: 6.99  LiSu: 6.03  Solar: 5.68
-
-(-1, 0, 1, -1, 1, 1)
-LiSu: 12.9  Solar: 12.0  Li-Po: 9.4  Li-ion: 8.2
-
-(1, -1, -1, 0, 1, -1)
-Li-ion: 11.34  Li-Po: 8.97  LiSu: 2.9  Solar: -2.27
-
-(1, -1, 0, -1, 1, -1)
-Li-ion: 10.34  Li-Po: 9.97  LiSu: -4.1  Solar: -6.28
-
-(1, 0, -1, -1, 1, -1)
-Li-ion: 14.2  Li-Po: 9.4  Solar: -4.0  LiSu: -7.11
-
-(1, 0, 0, 0, 1, -1)
-LiSu: 14.1  Solar: 10.0  Li-Po: 7.6  Li-ion: 4.8
-
-(0, 0, 0, 0, -1, 0)
-LiSu: 10.0  Solar: 9.0  Li-Po: 9.0  Li-ion: 6.0
-
-(0, -1, 0, 0, 0, -1)
-LiSu: 7.5  Li-Po: 7.28  Li-ion: 6.57  Solar: 5.87
-
-(0, -1, -1, 0, 1, 0)
-Li-ion: 10.14  Li-Po: 7.57  LiSu: 7.0  Solar: -1.27
-
-(0, 1, 1, 1, 1, 0)
-Li-Po: 8.64  Li-ion: 7.78  LiSu: 6.75  Solar: 4.43
-
-(0, 0, -1, 1, -1, -1)
-Solar: 11.0  LiSu: 11.0  Li-ion: 7.0  Li-Po: 7.0
-
-(0, 0, -1, 1, 0, 0)
-Li-Po: 2230.02  Li-ion: -2214.92  Solar: -8883.88  LiSu: -15549.15
-
-(-1, -1, 1, -1, 0, 1)
-Li-Po: 8.17  LiSu: 7.1  Li-ion: 3.94  Solar: -0.27
-
-(-1, -1, 1, 0, -1, 1)
-LiSu: 17.1  Li-Po: 8.17  Solar: 7.73  Li-ion: 0.94
-
-(-1, 1, 1, -1, -1, -1)
-Solar: 10.64  Li-Po: 6.01  Li-ion: 5.83  LiSu: 3.55
-
-(-1, -1, 0, 1, 1, 1)
-Li-Po: 10.83  Li-ion: 10.06  Solar: 6.27  LiSu: -4.1
-
-(0, 1, 1, -1, 0, -1)
-LiSu: 26673.03  Li-Po: 3496.69  Li-ion: 318.41  Solar: -5039.44
-
-(0, 1, 0, 1, 1, 0)
-Li-Po: 8.86  Li-ion: 7.05  LiSu: 6.67  Solar: 4.24
-
-(0, 0, 1, 0, 1, 0)
-Li-Po: 8.5  LiSu: 8.5  Li-ion: 8.0  Solar: 7.0
-
-(0, 1, -1, -1, -1, 0)
-Li-ion: 9.43  Li-Po: 8.72  Solar: 6.14  LiSu: 3.5
-
-(0, 1, -1, -1, 0, -1)
-Li-ion: 9.93  Li-Po: 7.21  Solar: 6.14  LiSu: 1.0
-
-(0, 1, -1, 0, -1, -1)
-Solar: 10.14  Li-ion: 8.43  Li-Po: 7.21  LiSu: 6.0
-
-(0, 1, -1, 0, 0, 0)
-LiSu: 6673.05  Li-Po: 1274.47  Solar: -5039.44  Li-ion: -8570.47
-
-(0, 1, 0, -1, -1, -1)
-Solar: 8.14  Li-ion: 7.93  Li-Po: 7.71  LiSu: 2.5
-
-(0, 1, 0, -1, 0, 0)
-LiSu: 22228.59  Solar: 3849.44  Li-Po: -947.75  Li-ion: -6348.25
-
-(0, 1, 0, 0, -1, 0)
-Li-ion: 318.41  LiSu: 6.39  Li-Po: -947.75  Solar: -13928.31
-
-(0, 1, 0, 0, 0, -1)
-LiSu: 11117.49  Li-Po: 5718.91  Li-ion: -1903.81  Solar: -13928.32
-
-(0, 0, -1, -1, 1, 0)
-Li-ion: 13.0  Li-Po: 8.0  Solar: -3.0  LiSu: -3.0
-
-(-1, -1, 0, 0, -1, -1)
-LiSu: 8.53  Solar: 7.68  Li-Po: 7.04  Li-ion: 6.23
-
-(0, -1, -1, 1, -1, 0)
-LiSu: 13.5  Li-Po: 8.29  Solar: 7.87  Li-ion: 6.57
-
-(0, -1, -1, 1, 0, -1)
-LiSu: 11.0  Solar: 7.87  Li-ion: 7.07  Li-Po: 6.78
-
-(-1, 1, 1, 1, 0, -1)
-Li-Po: 14.97  Li-ion: 12.34  LiSu: 2.9  Solar: -10.26
-
-(-1, 0, 0, 1, 0, 1)
-Li-Po: 10.4  Li-ion: 10.2  Solar: 0.0  LiSu: -4.1
-
-(1, 1, 1, -1, 1, 1)
-LiSu: 10.27  Solar: 8.68  Li-Po: 6.79  Li-ion: 6.49
-
-(1, 0, 1, -1, 1, -1)
-LiSu: 21.09  Solar: 14.0  Li-Po: 6.6  Li-ion: 5.8
-
-(1, 0, 1, 0, 1, 1)
-Solar: 8.25  LiSu: 7.77  Li-ion: 7.2  Li-Po: 6.9
-
-(1, 1, 1, 1, 1, 1)
-Li-Po: 7.53  Li-ion: 7.32  LiSu: 6.85  Solar: 6.12
-
-(-1, 0, 0, -1, 0, 1)
-Li-ion: 7.8  Li-Po: 7.6  LiSu: 4.1  Solar: 2.0
-
-(0, -1, -1, -1, -1, 1)
-Li-Po: 9.52  Li-ion: 8.05  LiSu: 7.33  Solar: 2.91
-
-(1, 0, 1, -1, -1, -1)
-Li-Po: 11.4  Li-ion: 6.2  Solar: 4.0  LiSu: -1.1
-
-(0, -1, -1, 0, 0, 0)
-LiSu: 8.5  Li-Po: 8.29  Li-ion: 8.07  Solar: 3.86
-
-(0, 0, -1, 1, 1, 0)
-Li-Po: 10.0  Li-ion: 5.0  Solar: 5.0  LiSu: 3.0
-
-(0, 1, -1, 1, -1, 1)
-Li-Po: 6.57  Li-ion: 6.14  Solar: -1.27  LiSu: -2.0
-
-(-1, -1, 0, 0, 1, -1)
-LiSu: 7.05  Li-ion: 6.47  Solar: 6.37  Li-Po: 5.08
-
-(0, 0, -1, -1, 0, -1)
-Li-ion: 8.67  Li-Po: 7.67  Solar: 5.0  LiSu: 4.0
-
-(0, 1, 0, 1, 0, 0)
-Li-Po: 8.78  Li-ion: 7.57  LiSu: 5.0  Solar: 1.87
-
-(0, 1, -1, 0, 1, 0)
-LiSu: 13.0  Li-Po: 9.57  Solar: 6.73  Li-ion: 2.14
-
-(0, 1, 0, -1, 1, 0)
-LiSu: 19.99  Solar: 10.73  Li-Po: 8.57  Li-ion: 3.14
-
-(0, 0, -1, 0, -1, 1)
-LiSu: 12.0  Li-Po: 11.0  Li-ion: 9.0  Solar: 5.0
-
-(-1, -1, 0, -1, 1, 1)
-Li-ion: 7.94  Li-Po: 7.17  LiSu: 4.1  Solar: -4.27
-
-(-1, -1, 1, 1, 0, 1)
-Li-ion: 14.06  Li-Po: 9.83  Solar: 2.27  LiSu: -7.09
-
-(0, 1, -1, 0, 1, -1)
-LiSu: 17784.15  Li-Po: 7941.13  Solar: -5039.44  Li-ion: -10792.69
-
-(0, 1, 0, -1, 1, -1)
-LiSu: 33339.69  Li-Po: 5718.91  Solar: 3849.44  Li-ion: -8570.47
-
-(0, 1, 0, 1, 0, -1)
-Li-Po: 11.57  Li-ion: 8.14  LiSu: 5.0  Solar: -5.27
-
-(0, 0, -1, -1, 0, 0)
-Li-ion: 9.5  Li-Po: 8.5  LiSu: 3.5  Solar: 3.0
-
-(-1, 1, 1, -1, 1, -1)
-LiSu: 28673.03  Li-Po: 13274.45  Li-ion: 762.85  Solar: -7261.66
-
-(0, 1, 1, -1, 1, 0)
-LiSu: 13.5  Li-Po: 8.28  Solar: 7.86  Li-ion: 6.57
-
-(0, 0, -1, 1, 1, -1)
-Li-Po: 8896.68  Li-ion: -4437.14  LiSu: -4438.05  Solar: -8883.88
-
-(-1, 1, 1, 0, 1, 1)
-Li-Po: 8.99  Li-ion: 7.78  LiSu: 7.63  Solar: 5.24
-
-(0, -1, -1, 0, 0, -1)
-Li-ion: 7.71  Li-Po: 7.52  LiSu: 7.33  Solar: 5.58
-
-(1, 0, 1, -1, -1, 0)
-LiSu: 13561.93  Solar: 11116.1  Li-ion: 1785.08  Li-Po: -11992.19
-
-(0, -1, 0, 0, 1, 0)
-Solar: 13938.32  Li-Po: 963.36  LiSu: 6.39  Li-ion: -303.81
-
-(-1, 0, 1, 1, 1, 1)
-Li-Po: 9.13  Li-ion: 8.73  Solar: 4.67  LiSu: 4.3
-
-(1, 1, 0, -1, 0, 1)
-LiSu: 12.05  Solar: 10.36  Li-Po: 5.09  Li-ion: 4.97
-
-(1, -1, -1, -1, -1, 0)
-Li-Po: 9.99  Li-ion: 8.45  LiSu: 5.97  Solar: 2.58
-
-(1, -1, -1, -1, 0, -1)
-Li-Po: 8.99  Li-ion: 8.78  LiSu: 4.3  Solar: 2.58
-
-(1, -1, -1, 0, -1, -1)
-Li-Po: 8.99  Li-ion: 7.78  LiSu: 7.63  Solar: 5.24
-
-(1, -1, -1, 0, 0, 0)
-Li-Po: 11.97  Li-ion: 10.34  LiSu: 7.9  Solar: -2.27
-
-(1, -1, 0, -1, -1, -1)
-Li-Po: 9.32  Li-ion: 7.45  LiSu: 5.3  Solar: 3.91
-
-(1, -1, 0, -1, 0, 0)
-Li-Po: 12.97  Li-ion: 9.34  LiSu: 0.9  Solar: -6.28
-
-(1, -1, 0, 0, -1, 0)
-Li-Po: 12.97  LiSu: 10.9  Li-ion: 6.34  Solar: 1.73
-
-(1, -1, 0, 0, 0, -1)
-Li-Po: 9.97  Li-ion: 7.34  LiSu: 5.9  Solar: 1.73
-
-(1, 0, -1, -1, -1, -1)
-Li-Po: 9.13  Li-ion: 8.73  Solar: 4.67  LiSu: 4.3
-
-(1, 0, -1, -1, 0, 0)
-Li-ion: 13.2  Li-Po: 12.4  LiSu: -2.1  Solar: -4.0
-
-(1, 1, -1, 1, -1, 0)
-Li-Po: 5.17  Li-ion: 4.94  LiSu: 2.1  Solar: -0.27
-
-(1, 1, -1, 1, 0, -1)
-Li-Po: 8.17  LiSu: 7.1  Li-ion: 3.94  Solar: -0.27
-
-(1, -1, 1, 0, 0, 1)
-Solar: 10.63  Li-ion: 8.33  LiSu: 5.55  Li-Po: 5.02
-
-(-1, 0, 0, 1, -1, 1)
-Li-ion: 9340.62  Li-Po: 3118.91  Solar: -19994.98  LiSu: -31326.91
-
-(0, -1, 1, -1, 1, 1)
-Solar: 19.26  LiSu: 12.0  Li-ion: 7.86  Li-Po: 5.43
-
-(0, 0, 1, 1, -1, 1)
-Li-ion: 10.0  Li-Po: 7.0  Solar: 3.0  LiSu: 1.0
-
-(-1, -1, 0, 0, -1, 0)
-LiSu: 9.7  Li-Po: 7.39  Solar: 7.24  Li-ion: 5.98
-
-(0, 1, 1, 0, -1, 1)
-Li-ion: 8.57  Li-Po: 6.79  LiSu: 6.0  Solar: 3.87
-
-(0, 0, 1, 0, 1, -1)
-LiSu: 12.0  Li-Po: 11.0  Li-ion: 9.0  Solar: 5.0
-
-(-1, -1, -1, 1, -1, -1)
-LiSu: 10.28  Solar: 8.68  Li-Po: 6.79  Li-ion: 6.48
-
-(-1, -1, -1, 1, 0, 0)
-LiSu: 13.05  Solar: 8.37  Li-ion: 6.47  Li-Po: 6.08
-
-(-1, 1, 1, -1, -1, 0)
-Solar: 12.27  Li-Po: 6.03  Li-ion: 4.66  LiSu: 2.1
-
-(0, 1, 1, -1, 0, 0)
-LiSu: 17.0  Li-Po: 7.57  Li-ion: 7.14  Solar: 6.73
-
-(-1, -1, 1, -1, -1, 1)
-Li-Po: 8.59  LiSu: 8.55  Li-ion: 4.97  Solar: 4.36
-
-(-1, -1, 1, 0, 0, 1)
-Li-ion: 11251.73  Solar: 2827.22  Li-Po: 1852.24  LiSu: -15771.37
-
-(0, 0, 0, 1, 1, 1)
-Li-Po: 8.0  Li-ion: 7.33  Solar: 6.33  LiSu: 5.0
-
-(0, -1, 0, -1, -1, 1)
-Li-Po: 10.29  LiSu: 7.5  Li-ion: 7.07  Solar: 1.86
-
-(0, 1, 1, 1, 1, -1)
-Li-Po: 9.52  Li-ion: 8.05  LiSu: 7.33  Solar: 2.91
-
-(-1, 1, -1, -1, -1, -1)
-Li-ion: 7.92  Solar: 7.82  Li-Po: 7.01  LiSu: 5.27
-
-(-1, 1, -1, -1, 0, 0)
-Li-ion: 9.33  Solar: 6.64  Li-Po: 6.51  LiSu: 3.05
-
-(-1, 1, -1, 0, -1, 0)
-Solar: 10.64  LiSu: 8.05  Li-ion: 7.83  Li-Po: 6.51
-
-(-1, 1, -1, 0, 0, -1)
-Solar: 10.64  Li-ion: 8.33  LiSu: 5.55  Li-Po: 5.01
-
-(-1, 1, 0, -1, -1, 0)
-Solar: 8.64  Li-ion: 7.33  Li-Po: 7.01  LiSu: 4.55
-
-(-1, 1, 0, -1, 0, -1)
-Solar: 8.64  Li-ion: 7.83  Li-Po: 5.51  LiSu: 2.05
-
-(-1, 1, 0, 0, -1, -1)
-Solar: 12.64  LiSu: 7.05  Li-ion: 6.33  Li-Po: 5.51
-
-(-1, 1, 0, 0, 0, 0)
-Li-Po: 8830.02  LiSu: 2006.39  Li-ion: 762.86  Solar: -16150.54
-
-(0, -1, 0, 0, 0, 0)
-LiSu: 10.0  Li-Po: 8.57  Li-ion: 6.14  Solar: 2.73
-
-(0, 0, 0, 0, -1, -1)
-Solar: 9.0  LiSu: 7.5  Li-Po: 7.5  Li-ion: 6.5
-
-(-1, 0, -1, 1, -1, 0)
-LiSu: 13.05  Solar: 11.5  Li-ion: 6.4  Li-Po: 6.3
-
-(1, -1, -1, 0, 1, 0)
-Solar: 25049.42  LiSu: 4673.05  Li-Po: -6592.19  Li-ion: -9637.13
-
-(1, -1, 0, -1, 1, 0)
-Solar: 33938.3  LiSu: 20228.59  Li-ion: -7414.91  Li-Po: -8814.41
-
-(1, 0, -1, -1, 1, 0)
-Solar: 28893.86  LiSu: 26895.25  Li-Po: -7547.75  Li-ion: -15992.68
-
-(1, 0, 0, 0, 1, 0)
-LiSu: 9.55  Solar: 9.5  Li-Po: 6.8  Li-ion: 5.9
-
-(-1, 0, -1, 1, 0, -1)
-Solar: 11.5  LiSu: 10.55  Li-ion: 6.9  Li-Po: 4.8
-
-(1, 1, 0, 1, -1, 1)
-Li-ion: 7.31  Li-Po: 6.39  LiSu: 4.7  Solar: 4.58
-
-(1, -1, 0, 1, 0, -1)
-Li-ion: 3696.19  Solar: -1617.22  Li-Po: -2147.75  LiSu: -13104.71
-
-(1, 0, -1, 1, 0, -1)
-Li-Po: -881.09  Li-ion: -4881.58  LiSu: -6438.05  Solar: -6661.66
-
-(1, -1, 1, -1, 1, 0)
-Solar: 20.26  LiSu: 16.1  Li-ion: 6.66  Li-Po: 4.03
-
-(1, 1, -1, 0, 0, -1)
-LiSu: 15784.15  Li-Po: -1836.64  Solar: -2817.22  Li-ion: -11237.13
-
-(1, -1, 1, 1, 0, 1)
-Li-ion: 8.55  Solar: 7.42  Li-Po: 6.34  LiSu: 3.7
-
-(-1, 0, -1, -1, 1, -1)
-Li-ion: 8.6  Li-Po: 6.2  Solar: 5.33  LiSu: 3.7
-
-(1, 1, 0, 0, 1, 0)
-LiSu: 9.7  Li-Po: 7.39  Solar: 7.24  Li-ion: 5.98
-
-(0, -1, 0, -1, 0, 1)
-Li-Po: 11.57  Li-ion: 8.14  LiSu: 5.0  Solar: -5.27
-
-(-1, 0, -1, 0, 1, 1)
-Solar: 6671.66  Li-Po: 5341.13  LiSu: -2438.05  Li-ion: -6214.92
-
-(-1, 1, 0, 1, 1, -1)
-Li-Po: 15.97  Li-ion: 8.34  LiSu: 5.9  Solar: -6.26
-
-(-1, -1, -1, 1, 1, 0)
-LiSu: 16.1  Solar: 7.73  Li-ion: 6.94  Li-Po: 3.17
-
-(-1, 1, -1, 1, 1, 1)
-Li-Po: 9.98  Li-ion: 6.17  LiSu: 4.45  Solar: 3.37
-
-(0, 1, 1, 0, 0, 1)
-Li-ion: 7.71  Li-Po: 7.52  LiSu: 7.33  Solar: 5.58
-
-(-1, -1, -1, 0, 1, -1)
-Li-ion: 7.65  LiSu: 7.03  Li-Po: 6.06  Solar: 5.91
-
-(-1, -1, -1, -1, 0, -1)
-Li-ion: 7.59  Li-Po: 7.23  LiSu: 6.22  Solar: 5.55
-
-(0, 0, 0, -1, -1, -1)
-Li-Po: 8.0  Li-ion: 7.33  Solar: 6.33  LiSu: 5.0
-
-(-1, 1, -1, -1, 1, 0)
-Li-ion: 12.66  Solar: 4.27  Li-Po: 4.03  LiSu: -3.9
-
-(-1, 1, 0, 0, 1, 0)
-Li-Po: 12.97  LiSu: 10.9  Li-ion: 6.34  Solar: 1.73
-
-(-1, -1, -1, -1, 1, 1)
-Li-ion: 8.97  Li-Po: 7.58  LiSu: 5.55  Solar: 0.36
-
-(0, 0, 1, 1, 0, 1)
-Li-ion: 8.67  Li-Po: 7.67  Solar: 5.0  LiSu: 4.0
-
-(0, -1, 1, 0, 1, 1)
-Solar: 10.13  Li-ion: 8.43  Li-Po: 7.22  LiSu: 6.0
-
-(-1, 1, -1, 1, 0, -1)
-Solar: 20.28  LiSu: 11.1  Li-ion: 7.66  Li-Po: 1.03
-
-(1, -1, 1, 0, -1, 1)
-Solar: 12.27  Li-ion: 10.66  LiSu: 1.1  Li-Po: 1.03
-
-(-1, 0, -1, 0, 0, -1)
-Solar: 8.0  Li-ion: 7.6  LiSu: 7.03  Li-Po: 6.2
-
-(1, -1, 1, -1, 0, 0)
-Solar: 25049.42  LiSu: 13561.93  Li-ion: 1473.97  Li-Po: -11036.63
-
-(1, 1, -1, -1, 1, -1)
-LiSu: 38006.35  Solar: 14960.54  Li-Po: -1836.64  Li-ion: -17903.79
-
-(0, -1, 1, 1, -1, -1)
-LiSu: 18.01  Solar: 14.73  Li-Po: 6.57  Li-ion: 0.14
-
-(-1, 0, 0, 0, 1, 0)
-Li-Po: 9785.57  LiSu: 2006.39  Li-ion: 451.74  Solar: -2217.22
-
-(1, 1, 0, -1, -1, 1)
-LiSu: 14.1  Solar: 11.73  Li-ion: 3.94  Li-Po: 1.17
-
-(1, -1, 1, 1, 1, -1)
-Li-ion: 8.83  Li-Po: 8.01  Solar: 6.63  LiSu: 5.55
-
-(1, 1, -1, 0, 1, 1)
-LiSu: 9.03  Solar: 8.58  Li-Po: 6.72  Li-ion: 4.98
-
-(1, -1, -1, 1, 1, -1)
-Solar: 7271.66  Li-Po: 74.47  Li-ion: -5192.69  LiSu: -6438.05
-
-(1, 0, 0, 1, 1, -1)
-Li-Po: 8.3  LiSu: 7.05  Li-ion: 6.9  Solar: 5.5
-
-(-1, 0, -1, -1, -1, 0)
-Li-ion: 7.7  Li-Po: 7.65  LiSu: 6.53  Solar: 6.25
-
-(1, 1, 0, 0, 0, 0)
-LiSu: 9.55  Li-Po: 6.59  Solar: 6.36  Li-ion: 5.97
-
-(1, -1, 0, 1, 1, 1)
-Solar: 8.76  Li-ion: 7.22  Li-Po: 6.68  LiSu: 4.7
-
-(1, 0, -1, 1, 1, 1)
-Solar: 8.0  Li-Po: 6.87  Li-ion: 5.93  LiSu: 5.7
-
-(-1, 0, 1, -1, -1, -1)
-Solar: 8.0  Li-Po: 6.87  Li-ion: 5.93  LiSu: 5.7
-
-(-1, 0, 1, -1, 0, 0)
-Solar: 6.0  Li-Po: 5.6  Li-ion: 4.8  LiSu: 2.1
-
-(-1, 0, 1, 0, -1, 0)
-Solar: 14.0  LiSu: 12.1  Li-Po: 5.6  Li-ion: 1.8
-
-(-1, 1, 0, 1, -1, 0)
-Li-Po: 8830.02  Li-ion: 7429.52  LiSu: -20215.81  Solar: -33928.3
-
-(-1, 0, 1, 0, 0, -1)
-Solar: 14.0  LiSu: 7.1  Li-ion: 2.8  Li-Po: 2.6
-
-(0, -1, 0, 1, -1, 1)
-Li-ion: 8585.07  Solar: -3839.44  Li-Po: -5703.3  LiSu: -33326.91
-
-(-1, -1, 1, 1, -1, 1)
-Li-ion: 17918.39  Li-Po: 1852.24  Solar: -14950.54  LiSu: -37993.57
-
-(-1, 1, 1, 1, -1, 0)
-Li-ion: 13.34  Li-Po: 11.97  LiSu: -2.1  Solar: -10.26
-
-(0, 0, -1, 0, 0, 1)
-Solar: 8893.88  Li-Po: -4436.64  LiSu: -4438.05  Li-ion: -6659.36
-
-(-1, -1, -1, 0, -1, 0)
-LiSu: 9.03  Li-Po: 7.54  Li-ion: 6.98  Solar: 6.68

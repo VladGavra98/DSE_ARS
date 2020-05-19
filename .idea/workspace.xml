@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6b4580a3-03b8-4457-b88a-729be508e57a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sensitivity/Power/sesitivity_analysis_R_change.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sensitivity/Power/sesitivity_analysis_Scores.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sensitivity/Power/sesitivity_analysis_ScoresandRank.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sensitivity/Power/sesitivity_analysis_Weights.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sensitivity/Top Level/sensitivity_weights.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sensitivity/Top Level/sensitivity_weights.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sensitivity/Power/sensitivity_weights.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sensitivity/Power/sensitivity_weights.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sensitivity/Power/sesitivity_analysis_ScoreVariation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sensitivity/Power/sesitivity_analysis_ScoreVariation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +34,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="Python.sesitivity_analysis_Weights">
+  <component name="RunManager" selected="Python.sesitivity_analysis_ScoreVariation">
     <configuration name="sesitivity_analysis_ScoreVariation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DSE_ARS" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -147,9 +144,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.sesitivity_analysis_ScoreVariation" />
         <item itemvalue="Python.sesitivity_analysis_Weights" />
         <item itemvalue="Python.sesitivity_analysis_WeightVariation" />
-        <item itemvalue="Python.sesitivity_analysis_ScoreVariation" />
         <item itemvalue="Python.sesitivity_analysis_WeightVariation" />
         <item itemvalue="Python.sesitivity_analysis_Weights_All" />
       </list>
@@ -171,7 +168,7 @@
       <workItem from="1589809042512" duration="3000" />
       <workItem from="1589810690136" duration="7686000" />
       <workItem from="1589877221893" duration="5175000" />
-      <workItem from="1589893626371" duration="5611000" />
+      <workItem from="1589893626371" duration="6914000" />
     </task>
     <servers />
   </component>
@@ -183,22 +180,22 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="496" y="58" key="#sesitivity_analysis/0.0.1536.864@0.0.1536.864" timestamp="1589787083382" />
-    <state width="1493" height="394" key="GridCell.Tab.0.bottom" timestamp="1589899223757">
+    <state width="1493" height="394" key="GridCell.Tab.0.bottom" timestamp="1589902110215">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="394" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589899223757" />
-    <state width="1493" height="394" key="GridCell.Tab.0.center" timestamp="1589899223757">
+    <state width="1493" height="394" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589902110215" />
+    <state width="1493" height="394" key="GridCell.Tab.0.center" timestamp="1589902110213">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="394" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589899223757" />
-    <state width="1493" height="394" key="GridCell.Tab.0.left" timestamp="1589899223757">
+    <state width="1493" height="394" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589902110213" />
+    <state width="1493" height="394" key="GridCell.Tab.0.left" timestamp="1589902110213">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="394" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589899223757" />
-    <state width="1493" height="394" key="GridCell.Tab.0.right" timestamp="1589899223757">
+    <state width="1493" height="394" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589902110213" />
+    <state width="1493" height="394" key="GridCell.Tab.0.right" timestamp="1589902110214">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="394" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589899223757" />
+    <state width="1493" height="394" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589902110214" />
     <state x="277" y="74" key="SettingsEditor" timestamp="1589786820839">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -215,7 +212,7 @@
     <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_Weights_All.coverage" NAME="sesitivity_analysis_Weights_All Coverage Results" MODIFIED="1589896113579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sensitivity/Power" />
     <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_R_change.coverage" NAME="sesitivity_analysis_R_change Coverage Results" MODIFIED="1589813994426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sensitivity" />
     <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_Scores__1_.coverage" NAME="sesitivity_analysis_Scores (1) Coverage Results" MODIFIED="1589810813853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sensitivity" />
-    <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_ScoreVariation.coverage" NAME="sesitivity_analysis_ScoreVariation Coverage Results" MODIFIED="1589898788691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sensitivity/Power" />
+    <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_ScoreVariation.coverage" NAME="sesitivity_analysis_ScoreVariation Coverage Results" MODIFIED="1589899763358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sensitivity/Power" />
     <SUITE FILE_PATH="coverage/DSE_ARS$midterm_performance.coverage" NAME="midterm_performance Coverage Results" MODIFIED="1589786619225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DSE_ARS$midterm_aerodynamics.coverage" NAME="midterm_aerodynamics Coverage Results" MODIFIED="1589786624331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_Weights_All_percfind.coverage" NAME="sesitivity_analysis_Weights_All_percfind Coverage Results" MODIFIED="1589896078631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sensitivity/Power" />
