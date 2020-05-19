@@ -14,7 +14,7 @@ names = ["Airship", "Drone", "E-VTOL"]
 #    Average weights and standard deviation
 w_avg = np.array([14,29,22,19,16])
 w_SD  = np.array([4.9	,5.83	,5.45	,4.84	,3.5])
-SDadj = 0.6 #adjustment of SD, =1 means examines one SD deviation
+SDadj = 2#adjustment of SD, =1 means examines one SD deviation
 #rankings:
 R1 = 10
 R2 = 7
@@ -71,10 +71,11 @@ f.writelines("Scores with all possible 1*SD combinations\n\n\n")
 
 for i,order in enumerate(list(set(list(it.permutations([1,1,1,1,1,-1,-1,-1,-1,-1,0,0,0,0,0],5))))):
     # aux = w_avg
-    delta = np.dot(SDadj*w_SD,np.array(order))
+    delta = SDadj*(w_SD*np.array(order))
     # aux[n] = aux[n] + order
     aux = delta + w_avg
     aux = aux/sum(aux)*100
+
 
     #print(order)
     for k in range(concepts):
@@ -84,6 +85,7 @@ for i,order in enumerate(list(set(list(it.permutations([1,1,1,1,1,-1,-1,-1,-1,-1
     top.append(names[np.argsort(grades)[2]])
     sec.append(names[np.argsort(grades)[1]])
     trd.append(names[np.argsort(grades)[0]])
+
     f.writelines("\n"+str(order)+"\n")
     f.writelines(str(names[np.argsort(grades)[2]]+': '+str(round(grades[np.argsort(grades)[2]],2))+'  '+names[np.argsort(grades)[1]]+': '+str(round(grades[np.argsort(grades)[1]],2))+'  '+names[np.argsort(grades)[0]]+': '+str(round(grades[np.argsort(grades)[0]],2))+'\n'))
     #f.writelines(str(names[np.argsort(grades)[2]]))  uncomment for just first
