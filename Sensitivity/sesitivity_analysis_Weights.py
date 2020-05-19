@@ -8,13 +8,15 @@ import numpy as np
 import random
 import matplotlib.pyplot as plt
 import itertools as it
+import time
+
 
 concepts = 3
 names = ["Airship", "Drone", "E-VTOL"]
 #    Average weights and standard deviation
 w_avg = np.array([14,29,22,19,16])
 w_SD  = np.array([4.9	,5.83	,5.45	,4.84	,3.5])
-SDadj = 2 #adjustment of SD, =1 means examines one SD deviation
+SDadj = 1 #adjustment of SD, =1 means examines one SD deviation
 #rankings:
 R1 = 10
 R2 = 7
@@ -43,11 +45,11 @@ SIA = np.array([R1,R2,R2]) #Signal Isolation Ability
 #Risk
 RISK = np.array([8,7.6,6.5])
 #Sustainability
-SUST = np.array([7,7,7]) #ADD---------------------------------------!!
+SUST = np.array([5.71,7.71,6.57]) #ADDed
 
 OpCost = (CFR + CC + CBM) / 3
 FlPerf1 = (MVFT + MHFT + MHT) / 3
-FlPerf =  (FlPerf1 + Mo + St) / 3
+FlPerf =  (FlPerf1 + Mo + St) / 4
 PaAppl = (SC + SIA) / 2
 
 
@@ -65,7 +67,7 @@ sec = []
 trd = []
 
 f = open("sensitivity_weights.txt",'w')
-f.writelines("Scores with all possible 1*SD combinations\n\n\n")
+f.writelines("Scores with all possible 1*SD combinations (now)\n\n\n")
 
 
 for i,order in enumerate(list(set(list(it.permutations([1,1,1,1,1,-1,-1,-1,-1,-1,0,0,0,0,0],5))))):
@@ -104,7 +106,7 @@ print('Airship: '+str(trd.count('Airship')))
 print('Drone: '+str(trd.count('Drone')))
 print('E-VTOL: '+str(trd.count('E-VTOL')))
 
-
+f.close()
 print('\n\ndone')
 
 

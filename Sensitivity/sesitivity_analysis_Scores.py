@@ -43,7 +43,7 @@ SIA = np.array([R1,R2,R2]) #Signal Isolation Ability
 #Risk
 RISK = np.array([8,7.6,6.5])
 #Sustainability
-SUST = np.array([7,7,7]) #ADD---------------------------------------!!
+SUST = np.array([5.71,7.71,6.57]) #ADDed
 
 OpCost = (CFR + CC + CBM) / 3
 FlPerf1 = (MVFT + MHFT + MHT) / 3
@@ -65,7 +65,7 @@ sec = []
 trd = []
 
 f = open("sensitivity_scores.txt",'w')
-f.writelines("Scores with all possible 1*SD combinations\n\n\n")
+f.writelines("Scores with all possible 1*SD combinations (now)\n\n\n")
 
 for i,order in enumerate(list(set(list(it.permutations([1,1,1,-1,-1,-1,0,0,0],3))))):
     S2 = S
@@ -102,61 +102,8 @@ print('Airship: '+str(trd.count('Airship')))
 print('Drone: '+str(trd.count('Drone')))
 print('E-VTOL: '+str(trd.count('E-VTOL')))
 
-
-print('\n\ndone')
-
-
+f.close()
+print('\n\nDone')
 
 
 
-
-
-
-
-
-
-
-
-
-
-# print("\nAlll weights + SD:")
-
-# for i in range(len(w_avg)):
-#     aux = w_avg
-#     aux[i] = aux[i] + 1*w_SD[i]
-#     aux = aux/sum(aux)*100
-#     # print(aux,sum(aux))
-#     for k in range(concepts):
-#         grades[k] = np.dot(aux,S[:,k])/100
-#         # print(names[k],": ",grades[k])
-#     print(names[np.argsort(grades)[2]],names[np.argsort(grades)[1]],names[np.argsort(grades)[0]])
-
-
-# print("\nAll weights - SD:")
-
-# for i in range(len(w_avg)):
-#     aux = w_avg
-#     aux[i] = aux[i] - 1*w_SD[i]
-#     aux = aux/sum(aux)*100
-#     # print(aux,sum(aux))
-#     for k in range(concepts):
-#         grades[k] = np.dot(aux,S[:,k])/100
-#         # print(names[k],": ",grades[k])
-#     print(names[np.argsort(grades)[2]],names[np.argsort(grades)[1]],names[np.argsort(grades)[0]])
-
-# for n in range(len(w_avg)):
-#     aux = w_avg
-#     aux[n] = aux[n] - 1*w_SD[n]
-#     for l in range(len(w_avg)):
-#         if l!=n:
-#             for i in range(len(w_avg)):
-#                 if i!=n and i!=l:
-#                     aux[i] = aux[i] - 1*w_SD[i]
-#                     for j in range(len(w_avg)):
-#                         if j != i and j!=l and j!=n:
-#                             # print(n,l,i,j)
-#                             aux = aux/sum(aux)*100
-#                             for k in range(concepts):
-#                                 grades[k] = np.dot(aux,S[:,k])/100
-#                                 # print(names[k],": ",grades[k])
-#                             print(names[np.argsort(grades)[2]],names[np.argsort(grades)[1]],names[np.argsort(grades)[0]])

@@ -1,0 +1,408 @@
+Scores with all possible 1*SD combinations (now)
+
+
+
+(0, 1, 1)
+Drone: 8.09  Airship: 7.19  E-VTOL: 6.47
+
+(0, 1, 1)
+Drone: 8.38  Airship: 7.19  E-VTOL: 6.76
+
+(0, 1, 1)
+Drone: 8.6  Airship: 7.19  E-VTOL: 6.98
+
+(0, 1, 1)
+Drone: 8.79  Airship: 7.19  E-VTOL: 7.17
+
+(0, 1, 1)
+Drone: 8.95  E-VTOL: 7.33  Airship: 7.19
+
+(1, -1, -1)
+Drone: 8.81  Airship: 7.33  E-VTOL: 7.19
+
+(1, -1, -1)
+Drone: 8.52  Airship: 7.62  E-VTOL: 6.9
+
+(1, -1, -1)
+Drone: 8.3  Airship: 7.84  E-VTOL: 6.68
+
+(1, -1, -1)
+Drone: 8.11  Airship: 8.03  E-VTOL: 6.49
+
+(1, -1, -1)
+Airship: 8.19  Drone: 7.95  E-VTOL: 6.33
+
+(1, 0, 0)
+Airship: 8.33  Drone: 7.95  E-VTOL: 6.33
+
+(1, 0, 0)
+Airship: 8.62  Drone: 7.95  E-VTOL: 6.33
+
+(1, 0, 0)
+Airship: 8.84  Drone: 7.95  E-VTOL: 6.33
+
+(1, 0, 0)
+Airship: 9.03  Drone: 7.95  E-VTOL: 6.33
+
+(1, 0, 0)
+Airship: 9.19  Drone: 7.95  E-VTOL: 6.33
+
+(1, 0, 1)
+Airship: 9.33  Drone: 7.95  E-VTOL: 6.47
+
+(1, 0, 1)
+Airship: 9.62  Drone: 7.95  E-VTOL: 6.76
+
+(1, 0, 1)
+Airship: 9.84  Drone: 7.95  E-VTOL: 6.98
+
+(1, 0, 1)
+Airship: 10.03  Drone: 7.95  E-VTOL: 7.17
+
+(1, 0, 1)
+Airship: 10.19  Drone: 7.95  E-VTOL: 7.33
+
+(-1, -1, -1)
+Airship: 10.05  Drone: 7.81  E-VTOL: 7.19
+
+(-1, -1, -1)
+Airship: 9.76  Drone: 7.52  E-VTOL: 6.9
+
+(-1, -1, -1)
+Airship: 9.54  Drone: 7.3  E-VTOL: 6.68
+
+(-1, -1, -1)
+Airship: 9.35  Drone: 7.11  E-VTOL: 6.49
+
+(-1, -1, -1)
+Airship: 9.19  Drone: 6.95  E-VTOL: 6.33
+
+(-1, 1, -1)
+Airship: 9.05  Drone: 7.09  E-VTOL: 6.19
+
+(-1, 1, -1)
+Airship: 8.76  Drone: 7.38  E-VTOL: 5.9
+
+(-1, 1, -1)
+Airship: 8.54  Drone: 7.6  E-VTOL: 5.68
+
+(-1, 1, -1)
+Airship: 8.35  Drone: 7.79  E-VTOL: 5.49
+
+(-1, 1, -1)
+Airship: 8.19  Drone: 7.95  E-VTOL: 5.33
+
+(1, 1, -1)
+Airship: 8.33  Drone: 8.09  E-VTOL: 5.19
+
+(1, 1, -1)
+Airship: 8.62  Drone: 8.38  E-VTOL: 4.9
+
+(1, 1, -1)
+Airship: 8.84  Drone: 8.6  E-VTOL: 4.68
+
+(1, 1, -1)
+Airship: 9.03  Drone: 8.79  E-VTOL: 4.49
+
+(1, 1, -1)
+Airship: 9.19  Drone: 8.95  E-VTOL: 4.33
+
+(0, -1, -1)
+Airship: 9.19  Drone: 8.81  E-VTOL: 4.19
+
+(0, -1, -1)
+Airship: 9.19  Drone: 8.52  E-VTOL: 3.9
+
+(0, -1, -1)
+Airship: 9.19  Drone: 8.3  E-VTOL: 3.68
+
+(0, -1, -1)
+Airship: 9.19  Drone: 8.11  E-VTOL: 3.49
+
+(0, -1, -1)
+Airship: 9.19  Drone: 7.95  E-VTOL: 3.33
+
+(0, 0, -1)
+Airship: 9.19  Drone: 7.95  E-VTOL: 3.19
+
+(0, 0, -1)
+Airship: 9.19  Drone: 7.95  E-VTOL: 2.9
+
+(0, 0, -1)
+Airship: 9.19  Drone: 7.95  E-VTOL: 2.68
+
+(0, 0, -1)
+Airship: 9.19  Drone: 7.95  E-VTOL: 2.49
+
+(0, 0, -1)
+Airship: 9.19  Drone: 7.95  E-VTOL: 2.33
+
+(-1, 0, 1)
+Airship: 9.05  Drone: 7.95  E-VTOL: 2.47
+
+(-1, 0, 1)
+Airship: 8.76  Drone: 7.95  E-VTOL: 2.76
+
+(-1, 0, 1)
+Airship: 8.54  Drone: 7.95  E-VTOL: 2.98
+
+(-1, 0, 1)
+Airship: 8.35  Drone: 7.95  E-VTOL: 3.17
+
+(-1, 0, 1)
+Airship: 8.19  Drone: 7.95  E-VTOL: 3.33
+
+(-1, 0, 0)
+Airship: 8.05  Drone: 7.95  E-VTOL: 3.33
+
+(-1, 0, 0)
+Drone: 7.95  Airship: 7.76  E-VTOL: 3.33
+
+(-1, 0, 0)
+Drone: 7.95  Airship: 7.54  E-VTOL: 3.33
+
+(-1, 0, 0)
+Drone: 7.95  Airship: 7.35  E-VTOL: 3.33
+
+(-1, 0, 0)
+Drone: 7.95  Airship: 7.19  E-VTOL: 3.33
+
+(-1, 0, -1)
+Drone: 7.95  Airship: 7.05  E-VTOL: 3.19
+
+(-1, 0, -1)
+Drone: 7.95  Airship: 6.76  E-VTOL: 2.9
+
+(-1, 0, -1)
+Drone: 7.95  Airship: 6.54  E-VTOL: 2.68
+
+(-1, 0, -1)
+Drone: 7.95  Airship: 6.35  E-VTOL: 2.49
+
+(-1, 0, -1)
+Drone: 7.95  Airship: 6.19  E-VTOL: 2.33
+
+(0, 0, 1)
+Drone: 7.95  Airship: 6.19  E-VTOL: 2.47
+
+(0, 0, 1)
+Drone: 7.95  Airship: 6.19  E-VTOL: 2.76
+
+(0, 0, 1)
+Drone: 7.95  Airship: 6.19  E-VTOL: 2.98
+
+(0, 0, 1)
+Drone: 7.95  Airship: 6.19  E-VTOL: 3.17
+
+(0, 0, 1)
+Drone: 7.95  Airship: 6.19  E-VTOL: 3.33
+
+(0, -1, 1)
+Drone: 7.81  Airship: 6.19  E-VTOL: 3.47
+
+(0, -1, 1)
+Drone: 7.52  Airship: 6.19  E-VTOL: 3.76
+
+(0, -1, 1)
+Drone: 7.3  Airship: 6.19  E-VTOL: 3.98
+
+(0, -1, 1)
+Drone: 7.11  Airship: 6.19  E-VTOL: 4.17
+
+(0, -1, 1)
+Drone: 6.95  Airship: 6.19  E-VTOL: 4.33
+
+(0, 0, 0)
+Drone: 6.95  Airship: 6.19  E-VTOL: 4.33
+
+(0, 0, 0)
+Drone: 6.95  Airship: 6.19  E-VTOL: 4.33
+
+(0, 0, 0)
+Drone: 6.95  Airship: 6.19  E-VTOL: 4.33
+
+(0, 0, 0)
+Drone: 6.95  Airship: 6.19  E-VTOL: 4.33
+
+(0, 0, 0)
+Drone: 6.95  Airship: 6.19  E-VTOL: 4.33
+
+(0, -1, 0)
+Drone: 6.81  Airship: 6.19  E-VTOL: 4.33
+
+(0, -1, 0)
+Drone: 6.52  Airship: 6.19  E-VTOL: 4.33
+
+(0, -1, 0)
+Drone: 6.3  Airship: 6.19  E-VTOL: 4.33
+
+(0, -1, 0)
+Airship: 6.19  Drone: 6.11  E-VTOL: 4.33
+
+(0, -1, 0)
+Airship: 6.19  Drone: 5.95  E-VTOL: 4.33
+
+(1, 1, 1)
+Airship: 6.33  Drone: 6.09  E-VTOL: 4.47
+
+(1, 1, 1)
+Airship: 6.62  Drone: 6.38  E-VTOL: 4.76
+
+(1, 1, 1)
+Airship: 6.84  Drone: 6.6  E-VTOL: 4.98
+
+(1, 1, 1)
+Airship: 7.03  Drone: 6.79  E-VTOL: 5.17
+
+(1, 1, 1)
+Airship: 7.19  Drone: 6.95  E-VTOL: 5.33
+
+(-1, 1, 0)
+Drone: 7.09  Airship: 7.05  E-VTOL: 5.33
+
+(-1, 1, 0)
+Drone: 7.38  Airship: 6.76  E-VTOL: 5.33
+
+(-1, 1, 0)
+Drone: 7.6  Airship: 6.54  E-VTOL: 5.33
+
+(-1, 1, 0)
+Drone: 7.79  Airship: 6.35  E-VTOL: 5.33
+
+(-1, 1, 0)
+Drone: 7.95  Airship: 6.19  E-VTOL: 5.33
+
+(1, 1, 0)
+Drone: 8.09  Airship: 6.33  E-VTOL: 5.33
+
+(1, 1, 0)
+Drone: 8.38  Airship: 6.62  E-VTOL: 5.33
+
+(1, 1, 0)
+Drone: 8.6  Airship: 6.84  E-VTOL: 5.33
+
+(1, 1, 0)
+Drone: 8.79  Airship: 7.03  E-VTOL: 5.33
+
+(1, 1, 0)
+Drone: 8.95  Airship: 7.19  E-VTOL: 5.33
+
+(-1, 1, 1)
+Drone: 9.09  Airship: 7.05  E-VTOL: 5.47
+
+(-1, 1, 1)
+Drone: 9.38  Airship: 6.76  E-VTOL: 5.76
+
+(-1, 1, 1)
+Drone: 9.6  Airship: 6.54  E-VTOL: 5.98
+
+(-1, 1, 1)
+Drone: 9.79  Airship: 6.35  E-VTOL: 6.17
+
+(-1, 1, 1)
+Drone: 9.95  E-VTOL: 6.33  Airship: 6.19
+
+(-1, -1, 1)
+Drone: 9.81  E-VTOL: 6.47  Airship: 6.05
+
+(-1, -1, 1)
+Drone: 9.52  E-VTOL: 6.76  Airship: 5.76
+
+(-1, -1, 1)
+Drone: 9.3  E-VTOL: 6.98  Airship: 5.54
+
+(-1, -1, 1)
+Drone: 9.11  E-VTOL: 7.17  Airship: 5.35
+
+(-1, -1, 1)
+Drone: 8.95  E-VTOL: 7.33  Airship: 5.19
+
+(1, -1, 0)
+Drone: 8.81  E-VTOL: 7.33  Airship: 5.33
+
+(1, -1, 0)
+Drone: 8.52  E-VTOL: 7.33  Airship: 5.62
+
+(1, -1, 0)
+Drone: 8.3  E-VTOL: 7.33  Airship: 5.84
+
+(1, -1, 0)
+Drone: 8.11  E-VTOL: 7.33  Airship: 6.03
+
+(1, -1, 0)
+Drone: 7.95  E-VTOL: 7.33  Airship: 6.19
+
+(1, 0, -1)
+Drone: 7.95  E-VTOL: 7.19  Airship: 6.33
+
+(1, 0, -1)
+Drone: 7.95  E-VTOL: 6.9  Airship: 6.62
+
+(1, 0, -1)
+Drone: 7.95  Airship: 6.84  E-VTOL: 6.68
+
+(1, 0, -1)
+Drone: 7.95  Airship: 7.03  E-VTOL: 6.49
+
+(1, 0, -1)
+Drone: 7.95  Airship: 7.19  E-VTOL: 6.33
+
+(-1, -1, 0)
+Drone: 7.81  Airship: 7.05  E-VTOL: 6.33
+
+(-1, -1, 0)
+Drone: 7.52  Airship: 6.76  E-VTOL: 6.33
+
+(-1, -1, 0)
+Drone: 7.3  Airship: 6.54  E-VTOL: 6.33
+
+(-1, -1, 0)
+Drone: 7.11  Airship: 6.35  E-VTOL: 6.33
+
+(-1, -1, 0)
+Drone: 6.95  E-VTOL: 6.33  Airship: 6.19
+
+(1, -1, 1)
+Drone: 6.81  E-VTOL: 6.47  Airship: 6.33
+
+(1, -1, 1)
+E-VTOL: 6.76  Airship: 6.62  Drone: 6.52
+
+(1, -1, 1)
+E-VTOL: 6.98  Airship: 6.84  Drone: 6.3
+
+(1, -1, 1)
+E-VTOL: 7.17  Airship: 7.03  Drone: 6.11
+
+(1, -1, 1)
+E-VTOL: 7.33  Airship: 7.19  Drone: 5.95
+
+(0, 1, 0)
+E-VTOL: 7.33  Airship: 7.19  Drone: 6.09
+
+(0, 1, 0)
+E-VTOL: 7.33  Airship: 7.19  Drone: 6.38
+
+(0, 1, 0)
+E-VTOL: 7.33  Airship: 7.19  Drone: 6.6
+
+(0, 1, 0)
+E-VTOL: 7.33  Airship: 7.19  Drone: 6.79
+
+(0, 1, 0)
+E-VTOL: 7.33  Airship: 7.19  Drone: 6.95
+
+(0, 1, -1)
+Airship: 7.19  E-VTOL: 7.19  Drone: 7.09
+
+(0, 1, -1)
+Drone: 7.38  Airship: 7.19  E-VTOL: 6.9
+
+(0, 1, -1)
+Drone: 7.6  Airship: 7.19  E-VTOL: 6.68
+
+(0, 1, -1)
+Drone: 7.79  Airship: 7.19  E-VTOL: 6.49
+
+(0, 1, -1)
+Drone: 7.95  Airship: 7.19  E-VTOL: 6.33
