@@ -41,11 +41,7 @@ W_E  	= 0.453592 * W_TO * (-4.6E-5*W_TO + 0.68) 	# [kg] empty weight
 CD_top   = 1.05                                     # assumed as a cube
 CD_side  = 0.0613                                   # for i = 15. this is to be iterated
 S_top    = 0.5**2                                   # [m2]
-<<<<<<< HEAD
 S_side   = 0.5*0.25                                 # [m2] thickness of 5cm
-=======
-S_side   = 0.5*0.05                                 # [m2] thickness of 5cm
->>>>>>> origin/master
 r_prop   = 0.49                                     # [m] maximum radius of propeller for quadcopter config with 2cm space between propellers
 A        = 8 * (pi * r_prop**2)                     # [m2] total area of the 8 propellers
 rho  	 = 1.225 									# [kg/m^3] sea-level density	
@@ -55,14 +51,12 @@ V 	     = 25 		 								# [m/s] Cruise speed; minimum required max. speed equal 
 eta_prop = 0.8
 eta_mech = 0.9
 eta_coaxial = 0.78125                               # efficiency of coaxial rotors
-P_PL 	= 100	                                    # [W] required power for payload
 
 P_PL 	= 100										# [W] required power for payload
 
 
 P_vert 	= (W_TO * g + CD_top * 0.5 * rho * V_climb**2 * S_top) * V_climb / eta_prop / eta_mech / eta_coaxial		# [W] required power for vertical flight
 
-<<<<<<< HEAD
 T_hover = W_TO * g 	 					             	# [N] required thrust to hover
 P_hover = sqrt(W_TO ** 3 / (2*rho*A)) / eta_prop / eta_mech / eta_coaxial	# [W] required power to hover											# [W] required power to hover
 
@@ -78,12 +72,6 @@ Vi 		= float(fsolve(func2, 0))
 P_hori 	= P_PL + 1/(eta_prop*eta_mech*eta_coaxial)*(T*Vi + D*V)	# [W] required power for horizontal flight
 
 P_hover = P_hover + P_PL 							# [W] required hover power with payload power included
-=======
-i       = atan(W_TO * g / (CD_side * 0.5 * rho * V**2 * S_side))
-P_hori 	= (CD_side * 0.5 * rho * V**2 * S_side) * V	/ eta_prop / eta_mech / eta_coaxial					# [W] required power for horizontal flight
-# T_hover = W_TO * g 	 					             	# [N] required thrust to hover
-P_hover = sqrt(W_TO ** 3 / (2*rho*A)) / eta_prop / eta_mech / eta_coaxial + P_PL 	# [W] required power to hover with payload power included											# [W] required power to hover
->>>>>>> origin/master
 
 t_vert 	= C_batt / P_vert * 60						# [min] endurance time in pure vertical flight
 t_hori 	= C_batt / P_hori * 60						# [min] endurance time in pure horizontal flight
