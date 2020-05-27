@@ -30,8 +30,6 @@ C_batt 	= C_batt * V_batt							# [Wh] battery capacity converted from Ah to Wh
 # Mass breakdown
 g 		= 9.81 										# [m/s^2] gravitational acceleration
 eta_p	= 0.8 										# [-] propeller efficiency
-# E 		= 10800										# [s] endurance
-# R 		= 1000 										# [m] range
 W_PL  	= 2.394										# [kg] payload mass
 W_B 	= 0.448 									# [kg] battery weight
 
@@ -43,9 +41,9 @@ W_E  	= 0.453592 * W_TO * (-4.6E-5*W_TO + 0.68) 	# [kg] empty weight
 CD_top   = 1.05                                     # assumed as a cube
 CD_side  = 0.0613                                   # for i = 15. this is to be iterated
 S_top    = 0.5**2                                   # [m2]
-S_side   = 0.5*0.04                                 # [m2] thickness of 5cm
+S_side   = 0.5*0.25                                 # [m2] thickness of 5cm
 r_prop   = 0.49                                     # [m] maximum radius of propeller for quadcopter config with 2cm space between propellers
-A        = 8 * (pi * r_prop**2)                        # [m2] total area of the 8 propellers
+A        = 8 * (pi * r_prop**2)                     # [m2] total area of the 8 propellers
 rho  	 = 1.225 									# [kg/m^3] sea-level density	
 V_climb	 = 0.00508 * 500 							# [m/s] required minimum climb speed
 eta_m    = 0.9 								 		# [-] electromechancial efficiency
@@ -54,15 +52,25 @@ eta_prop = 0.8
 eta_mech = 0.9
 eta_coaxial = 0.78125                               # efficiency of coaxial rotors
 
-# V_acc = V_climb / 1                                  # [m/s2] aim to reach V_climb in 1s. this is possible according to https://www.wired.com/story/calculate-thrust-force-on-a-drone/
+P_PL 	= 100										# [W] required power for payload
+
+
 P_vert 	= (W_TO * g + CD_top * 0.5 * rho * V_climb**2 * S_top) * V_climb / eta_prop / eta_mech / eta_coaxial		# [W] required power for vertical flight
 
-i       = atan(W_TO * g / (CD_side * 0.5 * rho * V**2 * S_side))
-P_hori 	= (CD_side * 0.5 * rho * V**2 * S_side) * V	/ eta_prop / eta_mech / eta_coaxial					# [W] required power for horizontal flight
 T_hover = W_TO * g 	 					             	# [N] required thrust to hover
 P_hover = sqrt(W_TO ** 3 / (2*rho*A)) / eta_prop / eta_mech / eta_coaxial	# [W] required power to hover											# [W] required power to hover
 
-P_PL 	= 100										# [W] required power for payload
+D 		= 0.5*rho*V**2*S_side * CD_side
+W 		= W_TO * g
+T 		= W
+
+theta 	= atan(D/W)
+
+func2 	= lambda Vi: -Vi + T/(2*rho*A)*1/sqrt((V*cos(theta))**2 + (V*sin(theta) + Vi)**2)
+Vi 		= float(fsolve(func2, 0))
+
+P_hori 	= P_PL + 1/(eta_prop*eta_mech*eta_coaxial)*(T*Vi + D*V)	# [W] required power for horizontal flight
+
 P_hover = P_hover + P_PL 							# [W] required hover power with payload power included
 
 t_vert 	= C_batt / P_vert * 60						# [min] endurance time in pure vertical flight
