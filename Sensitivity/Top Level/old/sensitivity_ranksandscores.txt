@@ -1,0 +1,2 @@
+Scores with all possible ranking options (linear)
+

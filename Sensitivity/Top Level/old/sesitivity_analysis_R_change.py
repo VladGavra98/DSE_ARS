@@ -14,64 +14,98 @@ names = ["Airship", "Drone", "E-VTOL"]
 #    Average weights and standard deviation
 w_avg = np.array([14,29,22,19,16])
 w_SD  = np.array([4.9	,5.83	,5.45	,4.84	,3.5])
+percadj = 10 #adjustment of variations, =10 means 10%       #set to zero for no change
 SDadj = 2 #adjustment of SD, =1 means examines one SD deviation
+#rankings:
+f = open("sensitivity_ranks.txt",'w')
+f.writelines("Scores with all possible ranking options (linear)\n\n")
+
+top = []
+sec = []
+trd = []
+ranks = [[10,9,8],[10,8,6],[10,7,4],[10,6,2],[10,5,0],[9,8,7],[9,7,5],[9,6,3],[9,5,1],[8,7,6],[8,6,4],[8,5,2],[8,4,0],[7,6,5],[7,5,3],[7,4,1],[6,5,4],[6,4,2],[6,3,0],[5,4,3],[5,3,1],[4,3,2],[4,2,0],[3,2,1],[2,1,0]]
+for rnk in ranks:
+    R1 = rnk[0]
+    R2 = rnk[1]
+    R3 = rnk[2]
+    if(R1-R2)/(R2-R3)!=1:
+        print(rnk)
+
 
 #Scores given to each concept:
 #Concept order: Airship, Drone, E-VTOL (in this order)
 #only risks will stay like this!!
-S = np.array([[6,6.33,6],
-              [6, 5.67, 6.33],
-              [9,5,4],
-              [8, 7.6, 6.5],
-              [7,6,5]])
 
-grades = np.zeros((concepts))
-top = []
-sec = []
-trd = []
+    #Operational Cost
+    CFR = np.array([R2,R1,R3]) #Cost and Freq of Repair
+    CC = np.array([R3,R2,R1]) #Cost of Consumables
+    CBM = np.array([R3,R1,R2])  #Cost Between Mission
 
-f = open("sensitivity.txt",'w')
-f.writelines("Scores with all possible 1*SD combinations\n\n\n")
+    #Flight Performance
+    MVFT = np.array([5,7.4,10]) #max vertical flight time
+    MHFT = np.array([0.7,8.57,10])  #max horizontal flight time
+    MHT = np.array([10,8.91,4.38])  #max hover time
+    Mo = np.array([R3,R1,R2])  #Mobility
+    St = np.array([R1,R3,R2])  #Stability
+
+    #Payload Application
+    SC = np.array([R1,R2,R3])  #Sensing Capability
+    SIA = np.array([R1,R2,R2]) #Signal Isolation Ability
+
+    #Risk
+    RISK = np.array([8,7.6,6.5])
+    #Sustainability
+    SUST = np.array([6,7.71,6.57])
+
+    OpCost = (CFR + CC + CBM) / 3
+    FlPerf1 = (MVFT + MHFT + MHT) / 3
+    FlPerf =  (FlPerf1*0.5 + Mo*0.25 + St*0.25)
+    PaAppl = (SC + SIA) / 2
 
 
-for i,order in enumerate(list(set(list(it.permutations([1,1,1,1,1,-1,-1,-1,-1,-1,0,0,0,0,0],5))))):
-    # aux = w_avg
-    delta = np.dot(SDadj*w_SD,np.array(order))
-    # aux[n] = aux[n] + order
-    aux = delta + w_avg
-    aux = aux/sum(aux)*100
 
-    print(order)
+    S = np.zeros([5,3])
+    S[0,] = OpCost
+    S[1,] = FlPerf
+    S[2,] = PaAppl
+    S[3,] = RISK
+    S[4,] = SUST
+
+    grades = np.zeros((concepts))
+
+
+
+
     for k in range(concepts):
-        grades[k] = np.dot(aux,S[:,k])/100
+        grades[k] = np.dot(w_avg,S[:,k])/100
         # print(names[k],": ",grades[k])
-    print(names[np.argsort(grades)[2]],names[np.argsort(grades)[1]],names[np.argsort(grades)[0]])
+    #print(names[np.argsort(grades)[2]],names[np.argsort(grades)[1]],names[np.argsort(grades)[0]])
     top.append(names[np.argsort(grades)[2]])
     sec.append(names[np.argsort(grades)[1]])
     trd.append(names[np.argsort(grades)[0]])
-    f.writelines("\n"+str(order)+"\n")
-    f.writelines(str(names[np.argsort(grades)[2]]+': '+str(round(grades[np.argsort(grades)[2]],2))+'  '+names[np.argsort(grades)[1]]+': '+str(round(grades[np.argsort(grades)[1]],2))+'  '+names[np.argsort(grades)[0]]+': '+str(round(grades[np.argsort(grades)[0]],2))+'\n'))
+    f.writelines("\n"+str(rnk)+"\n")
+    f.writelines(str(names[np.argsort(grades)[2]]+': '+str(round(grades[np.argsort(grades)[2]],3))+'  '+names[np.argsort(grades)[1]]+': '+str(round(grades[np.argsort(grades)[1]],3))+'  '+names[np.argsort(grades)[0]]+': '+str(round(grades[np.argsort(grades)[0]],3))+'\n'))
     #f.writelines(str(names[np.argsort(grades)[2]]))  uncomment for just first
 
-print('\ntotal combinations: '+str(len((list(set(list(it.permutations([1,1,1,1,1,-1,-1,-1,-1,-1,0,0,0,0,0],5))))))))
+print('\ntotal combinations: '+str(len(ranks)))
 
-print('\nFirst Count:')
+print('\nFirst:')
 print('Airship: '+str(top.count('Airship')))
 print('Drone: '+str(top.count('Drone')))
 print('E-VTOL: '+str(top.count('E-VTOL')))
 
-print('\nSecond Count:')
+print('\nSecond:')
 print('Airship: '+str(sec.count('Airship')))
 print('Drone: '+str(sec.count('Drone')))
 print('E-VTOL: '+str(sec.count('E-VTOL')))
 
-print('\nThird Count:')
+print('\nThird:')
 print('Airship: '+str(trd.count('Airship')))
 print('Drone: '+str(trd.count('Drone')))
 print('E-VTOL: '+str(trd.count('E-VTOL')))
 
-
-print('\n\ndone')
+f.close()
+print('done')
 
 
 
