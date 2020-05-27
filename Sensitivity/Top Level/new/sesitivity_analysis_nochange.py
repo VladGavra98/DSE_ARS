@@ -25,21 +25,20 @@ R3 = 4
 #Concept order: Airship, Drone, E-VTOL (in this order)
 #only risks will stay like this!!
 
-#Operational Cost
 CFR = np.array([R2,R1,R3]) #Cost and Freq of Repair
 CC = np.array([R3,R2,R1]) #Cost of Consumables
 CBM = np.array([R3,R1,R2])  #Cost Between Mission
 
 #Flight Performance
 MVFT = np.array([1,7.4,10]) #max vertical flight time
-MHFT = np.array([0.7,0.67,10])   #max horizontal flight time
+MHFT = np.array([4.62,4.42,10])   #max horizontal flight time
 MHT = np.array([10,8.91,4.38])  #max hover time
 Mo = np.array([R3,R1,R2])  #Mobility
 St = np.array([R1,R3,R2])  #Stability
 
 #Payload Application
-SC = np.array([R2,R1,R3]) #Sensing Capability
-SIA = np.array([R1,R2,R2]) #Signal Isolation Ability
+SC = np.array([R3,R1,R2])  #Sensing Capability
+SIA = np.array([R1,R3,R2]) #Signal Isolation Ability
 
 #Risk
 RISK = np.array([8,7.6,6.5])

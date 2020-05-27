@@ -14,7 +14,7 @@ names = ["Airship", "Drone", "E-VTOL"]
 #    Average weights and standard deviation
 w_avg = np.array([14,29,22,19,16])
 w_SD  = np.array([4.9	,5.83	,5.45	,4.84	,3.5])
-SDadj = 2#adjustment of SD, =1 means examines one SD deviation
+SDadj = 3.0#adjustment of SD, =1 means examines one SD deviation
 #rankings:
 R1 = 10
 R2 = 7
@@ -31,14 +31,14 @@ CBM = np.array([R3,R1,R2])  #Cost Between Mission
 
 #Flight Performance
 MVFT = np.array([1,7.4,10]) #max vertical flight time
-MHFT = np.array([0.7,0.67,10])   #max horizontal flight time
+MHFT = np.array([4.62,4.42,10])   #max horizontal flight time
 MHT = np.array([10,8.91,4.38])  #max hover time
 Mo = np.array([R3,R1,R2])  #Mobility
 St = np.array([R1,R3,R2])  #Stability
 
 #Payload Application
 SC = np.array([R3,R1,R2])  #Sensing Capability
-SIA = np.array([R1,R2,R2]) #Signal Isolation Ability
+SIA = np.array([R1,R3,R2]) #Signal Isolation Ability
 
 #Risk
 RISK = np.array([8,7.6,6.5])
@@ -91,21 +91,22 @@ for i,order in enumerate(list(set(list(it.permutations([1,1,1,1,1,-1,-1,-1,-1,-1
     #f.writelines(str(names[np.argsort(grades)[2]]))  uncomment for just first
 
 print('\ntotal combinations: '+str(len((list(set(list(it.permutations([1,1,1,1,1,-1,-1,-1,-1,-1,0,0,0,0,0],5))))))))
+tl = (len((list(set(list(it.permutations([1,1,1,1,1,-1,-1,-1,-1,-1,0,0,0,0,0],5)))))))
 
 print('\nFirst Count:')
-print('Airship: '+str(top.count('Airship')))
-print('Drone: '+str(top.count('Drone')))
-print('E-VTOL: '+str(top.count('E-VTOL')))
+print('Airship: '+str(top.count('Airship')),'   ',str(round((top.count('Airship'))*100/tl,2)),' %')
+print('Drone: '+str(top.count('Drone')),'   ',str(round((top.count('Drone'))*100/tl,2)),' %')
+print('E-VTOL: '+str(top.count('E-VTOL')),'   ',str(round((top.count('E-VTOL'))*100/tl,2)),' %')
 
 print('\nSecond Count:')
-print('Airship: '+str(sec.count('Airship')))
-print('Drone: '+str(sec.count('Drone')))
-print('E-VTOL: '+str(sec.count('E-VTOL')))
+print('Airship: '+str(sec.count('Airship')),'   ',str(round((sec.count('Airship'))*100/tl,2)),' %')
+print('Drone: '+str(sec.count('Drone')),'   ',str(round((sec.count('Drone'))*100/tl,2)),' %')
+print('E-VTOL: '+str(sec.count('E-VTOL')),'   ',str(round((sec.count('E-VTOL'))*100/tl,2)),' %')
 
 print('\nThird Count:')
-print('Airship: '+str(trd.count('Airship')))
-print('Drone: '+str(trd.count('Drone')))
-print('E-VTOL: '+str(trd.count('E-VTOL')))
+print('Airship: '+str(trd.count('Airship')),'   ',str(round((trd.count('Airship'))*100/tl,2)),' %')
+print('Drone: '+str(trd.count('Drone')),'   ',str(round((trd.count('Drone'))*100/tl,2)),' %')
+print('E-VTOL: '+str(trd.count('E-VTOL')),'   ',str(round((trd.count('E-VTOL'))*100/tl,2)),' %')
 
 f.close()
 print('\n\ndone')
