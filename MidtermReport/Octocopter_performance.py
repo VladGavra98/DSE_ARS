@@ -58,7 +58,7 @@ P_PL 	= 100										# [W] required power for payload
 P_vert 	= (W_TO * g + CD_top * 0.5 * rho * V_climb**2 * S_top) * V_climb / eta_prop / eta_mech / eta_coaxial		# [W] required power for vertical flight
 
 T_hover = W_TO * g 	 					             	# [N] required thrust to hover
-P_hover = sqrt(W_TO ** 3 / (2*rho*A)) / eta_prop / eta_mech / eta_coaxial	# [W] required power to hover											# [W] required power to hover
+P_hover = sqrt((W_TO*g) ** 3 / (2*rho*A)) / eta_prop / eta_mech / eta_coaxial	# [W] required power to hover											# [W] required power to hover
 
 D 		= 0.5*rho*V**2*S_side * CD_side
 W 		= W_TO * g
