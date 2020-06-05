@@ -17,18 +17,17 @@ f = open("file.txt",'w')
 def points(r,s):
     return int((ttot-2*r/Vdr + s/Vdr)/(thov+s/Vdr))
 
+#
+# for sp in np.linspace(0,2000,10):
+#     for ra in np.linspace(0,2.5,10):
+#         f.writelines(str(sp)+','+str(ra)+','+str(points(ra,sp))+'\n')
+#f.close()
 
 
-
-
-
-for sp in np.linspace(0,2000,10):
-    for ra in np.linspace(0,2.5,10):
-        f.writelines(str(sp)+','+str(ra)+','+str(points(ra,sp))+'\n')
-
-f.close()
 radm = 5#km
 space = 200 #----------------------
+
+
 xl = np.linspace(-radm,radm,int(radm*2*1000/space))
 yl = np.linspace(-radm,radm,int(radm*2*1000/space))
 allc = []
@@ -46,7 +45,7 @@ allc = allc[::-1]
 
 t = []
 d = []
-print(len(allc))
+print('Num of nodes ',len(allc))
 while len(allc) > 0:
     radd = 1000*allc[0][2]
     pnts = points(radd,space)
@@ -58,12 +57,11 @@ while len(allc) > 0:
     t.append(2*radd/Vdr) #transfer
     d.append(radd*2)
 
-
-
-
     allc = allc[pnts:]
     print('Transfer distance: ',round(radd,2),' [m], points covered: ',round(pnts,2),', time taken: ',round(pnts*thov+(pnts-1)*space/Vdr+2*radd/Vdr,2),' [s], points left: ',len(allc),' distance covered: ',round(sum(d)/1000,2), 'km')
     d = []
+
+
 print('\nTime [hrs] ',round(redo*layers*sum(t)/3600,2))
 
 
