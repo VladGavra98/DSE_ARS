@@ -12,7 +12,7 @@ import itertools as it
 concepts = 4
 names = ["Li-Po", "Li-ion", "LiSu","Solar"]
 #    Average weights and standard deviation
-des = 'VTOL'  #airship, drone or VTOL
+des = 'airship'  #airship, drone or VTOL
 
 if des == 'airship':
     w_avg = np.array([30,10,10,24.5,10.5,15])
@@ -21,7 +21,7 @@ if des == 'drone':
 if des == 'VTOL':
     w_avg = np.array([12,28,10,24.5,10.5,15])
 
-scr = 90 #  adjustment score (abs mult) 1 = 100%, 1.50=50% increase
+scr = 10000 #  adjustment score (abs mult) 1 = 100%, 1.50=50% increase
 
 
 
@@ -30,7 +30,7 @@ S = np.zeros([6,4])
 S[0,] = [4.6,5.8,9.1,10]
 S[1,] = [8.57,6.14,10,2.73]
 S[2,] = [8,10,7,5]
-S[3,] = [9,9,0,1]
+S[3,] = [9,9,0,3]
 S[4,] = [9,6,10,9]
 S[5,] = [6,7,5,9]
 

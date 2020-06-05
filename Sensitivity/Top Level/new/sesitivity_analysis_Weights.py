@@ -14,7 +14,7 @@ names = ["Airship", "Drone", "E-VTOL"]
 #    Average weights and standard deviation
 w_avg = np.array([14,29,22,19,16])
 w_SD  = np.array([4.9	,5.83	,5.45	,4.84	,3.5])
-SDadj = 3.0#adjustment of SD, =1 means examines one SD deviation
+SDadj = 2.4#adjustment of SD, =1 means examines one SD deviation
 #rankings:
 R1 = 10
 R2 = 7
@@ -43,12 +43,12 @@ SIA = np.array([R1,R3,R2]) #Signal Isolation Ability
 #Risk
 RISK = np.array([8,7.6,6.5])
 #Sustainability
-SUST = np.array([5.71,7.14,6.3])
+SUST = np.array([6.32,6.96,6.16])
 
 OpCost = (CFR + CC + CBM) / 3
 FlPerf1 = (MVFT + MHFT + MHT) / 3
 FlPerf =  (FlPerf1*0.5 + Mo*0.25 + St*0.25)
-PaAppl = (SC + SIA) / 2
+PaAppl = (SC*0.6 + SIA*0.4) / 1
 
 
 

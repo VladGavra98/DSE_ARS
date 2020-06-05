@@ -14,7 +14,7 @@ names = ["Airship", "Drone", "E-VTOL"]
 #    Average weights and standard deviation
 w_avg = np.array([14,29,22,19,16])
 w_SD  = np.array([4.9	,5.83	,5.45	,4.84	,3.5])
-percadj = 19 #adjustment of variations, =10 means 10%       #set to zero for no change
+percadj = 10 #adjustment of variations, =10 means 10%       #set to zero for no change
 f = open("sensitivity_ranksandscores.txt",'w')
 f.writelines("Scores with all possible ranking options (linear)\n\n")
 
@@ -52,12 +52,12 @@ for rnk in ranks:
     #Risk
     RISK = np.array([8,7.6,6.5])
     #Sustainability
-    SUST = np.array([5.71,7.14,6.3])
+    SUST = np.array([6.32,6.96,6.16])
 
     OpCost = (CFR + CC + CBM) / 3
     FlPerf1 = (MVFT + MHFT + MHT) / 3
-    FlPerf =  (FlPerf1*0.5 + Mo*0.25 + St*0.25)
-    PaAppl = (SC + SIA) / 2
+    FlPerf = (FlPerf1*0.5 + Mo*0.25 + St*0.25)
+    PaAppl = (SC*0.6 + SIA*0.4) / 1
 
 
 

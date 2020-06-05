@@ -43,12 +43,12 @@ SIA = np.array([R1,R3,R2]) #Signal Isolation Ability
 #Risk
 RISK = np.array([8,7.6,6.5])
 #Sustainability
-SUST = np.array([5.71,7.14,6.3])
+SUST = np.array([6.32,6.96,6.16])
 
 OpCost = (CFR + CC + CBM) / 3
 FlPerf1 = (MVFT + MHFT + MHT) / 3
 FlPerf =  (FlPerf1*0.5 + Mo*0.25 + St*0.25)
-PaAppl = (SC + SIA) / 2
+PaAppl = (SC*0.6 + SIA*0.4) / 1
 
 
 
