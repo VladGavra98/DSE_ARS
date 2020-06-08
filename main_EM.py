@@ -15,7 +15,7 @@ b=  1
 c = 1
 d = 10
 
-class Point(np.ndarray):
+class Point():
 
     def __init__(self,location,distance,aicraft,noise,concentrantions):
         """ Initiliase the Point class with:
@@ -27,22 +27,22 @@ class Point(np.ndarray):
 
         """
         if(len(concentrantions)!=8):
-            raise "Wrong number of recorded values!"
+           print("Wrong number of recorded values!")
 
         self.x = location[0]
         self.y = location[1]
         self.z = location[2]
         self.aicraft  =  str(aicraft)
         self.concentrations = concentrantions
-        self.O3      =  concentrantions[0]
+        self.O3     =  concentrantions[0]
         self.CO     =  concentrantions[1]
-        self.NO      =  concentrantions[2]
-        self.NO2      =  concentrantions[3]
-        self.SO2      =  concentrantions[4]
-        self.PM      =  concentrantions[5]
-        self.UFP      = concentrantions[6]
-        self.CH4     = concentrantions[7]
-        self.noise   = noise
+        self.NO     =  concentrantions[2]
+        self.NO2    =  concentrantions[3]
+        self.SO2    =  concentrantions[4]
+        self.PM     =  concentrantions[5]
+        self.UFP    = concentrantions[6]
+        self.CH4    = concentrantions[7]
+        self.noise  = noise
 
 
         def __str__(self):
