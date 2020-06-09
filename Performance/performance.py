@@ -18,62 +18,89 @@
 from math import pi, sqrt
 import numpy as np
 import pandas as pd
+from scipy.optimize import curve_fit
+from sklearn.metrics import r2_score
+import matplotlib
 import matplotlib.pyplot as plt
+import matplotlib.ticker as plticker
+from PIL import Image
+import cv2
+from itertools import zip_longest
+# ==============================================================================================
+# Set global plotting parameters
+# ==============================================================================================
+texpsize= [18,20,22]
+
+plt.rc('font', size=texpsize[1], family='serif')                        # controls default text sizes
+plt.rc('axes', titlesize=texpsize[1])                                   # fontsize of the axes title
+plt.rc('axes', labelsize=texpsize[1])                                   # fontsize of the x and y labels
+plt.rc('xtick', labelsize=texpsize[0])                                  # fontsize of the tick labels
+plt.rc('ytick', labelsize=texpsize[0])                                  # fontsize of the tick labels
+plt.rc('legend', fontsize=texpsize[0])                                  # legend fontsize
+plt.rc('figure', titlesize=texpsize[2])                                 # fontsize of the figure title
+matplotlib.rcParams['lines.linewidth']  = 1.5
+matplotlib.rcParams['figure.facecolor'] = 'white'
+matplotlib.rcParams['axes.facecolor']   = 'white'
+matplotlib.rcParams["legend.fancybox"]  = False
+
+# Mass budget
+n_battery 		= 3 # [-] number of batteries in parallel
+n_propellers	= 8 # [-] number of propellers
+m_sensors 		= 1.248 # [kg] noise and air pollution sensors mass
+m_autonomy 		= 0.219 # [kg] autonomy hardware mass
+m_battery 		= n_battery * 0.4 # [kg] battery mass
+m_structures 	= 2.73 # [kg] operational empty mass
+m_motors 		= n_propellers * 0.63 #[kg] brushless motor mass
+m_propellers 	= n_propellers * 91.46E-3 # [kg] propeller mass
+m 				= m_sensors + m_autonomy + m_battery + m_structures + m_motors + m_propellers
+m 				= 1.05 * m # [kg] contingency added
 
 # Define constants
-m 			= 8.856 # [kg] Maximum take-off mass
-g 			= 9.80665 # [m/s^2] Gravitational Acceleration
-n_prop 		= 8 # [-] Number of propellers
-rho 		= 1.225 # [kg/m^3] sea-level density
-mu 			= 1.81E-5 # [Ns/m^2] Dynamic visocity of air
-a 			= 343 # [m/s] Speed of sound of air
-D 			= 0.0254 * np.array([22, 24, 26, 28, 30, 32, 40]) # [m] Propeller Diameter
-eta_coaxial = 0.85 # [-] Coaxial efficiency loss
-eta_mech 	= 0.8 # [-] Total mechanical efficiency loss
-TW 			= 2 # [-] Thrust-to-Weight Ratio
+g 				= 9.80665 # [m/s^2] Gravitational Acceleration
+rho 			= 1.225 # [kg/m^3] sea-level density
+mu 				= 1.81E-5 # [Ns/m^2] Dynamic visocity of air
+a 				= 343 # [m/s] Speed of sound of air
+D 				= 0.0254 * np.array([28, 30, 32]) # [m] Propeller Diameter
+eta_coaxial 	= 0.85 # [-] Coaxial efficiency loss
+eta_mech 		= 0.8 # [-] Total mechanical efficiency loss
+TW 				= 2 # [-] Thrust-to-Weight Ratio
 
 # Define mission constraints
-T_hover 	= (m*g) / 8 # [N] Required thrust per propeller during hovering
+T_hover 	= (m*g) / n_propellers # [N] Required thrust per propeller during hovering
 T_manoeuvre = TW * T_hover # [N] Required thrust per propeller during manoeuvres
 
 # Import propeller data from excel file in the following format
 # ['Motor Speed [1/s', 'Thrust [N]', 'Torque [Nm]', 'Voltage[V]', 'Current [A]']
 xls 	= pd.ExcelFile("PropellerData_Meizlik.xlsx")
-blade22 = pd.read_excel(xls, '22')
-blade24 = pd.read_excel(xls, '24')
-blade26 = pd.read_excel(xls, '26')
 blade28 = pd.read_excel(xls, '28')
 blade30 = pd.read_excel(xls, '30')
 blade32 = pd.read_excel(xls, '32')
 
 # Store blade dataframes into list for easy iterating
-blades 	= [blade22, blade24, blade26, blade28, blade30, blade32]
-bladetype = ['22" x 7.4"', '24" x 8.1"', '26" x"8.7"', '28" x 9.4"', '30" x 10"', '32" x 10.6"']
+blades 	= [blade28, blade30, blade32]
+bladetype = ['28" x 9.4"', '30" x 10"', '32" x 10.6"']
 
 # Initialise dataframe for hovering point which stores data of all propellers
-hover 	= pd.DataFrame(columns=['RPM [1/s]', 'Power [W]', 'FOM [-]', 'Disk Loading [N/m^2]'])
+hover 	= pd.DataFrame(columns=['RPM Hover [1/s]', 'Thrust Hover [N]', 'Power Hover [W]', 'Torque Hover [Nm]', 'RPM Max [1/s]', 'Thrust Max [N]', 'Power Max [W]', 'Torque Max [Nm]'])
 
- # Initialise figure with 2 rows and 2 columns
-fig1, ax1 = plt.subplots(nrows=2, ncols=2, squeeze=False, figsize=(10,8))
+# Initialise figures
+fig1, ax1 = plt.subplots(nrows=2, ncols=2, squeeze=False, figsize=(20,20))
+
+# Colors used for iterative plotting
+colors = ['tab:blue', 'tab:orange', 'tab:grey']
 
 # Iterate over dataframes to add columns
-# Mechanical power = 2 * pi * n * torque
-# Electrical power = voltage * current
-# Thrust coefficient = thrust / (rho * n**2 * D**4)
-# Power coefficient = power / (rho * n**3 * D**5)
-#
 for index, df in enumerate(blades):
 	P_mech 	= 2 * pi * df['Motor Speed [1/s]'] * df['Torque [Nm]'] / eta_coaxial
 	P_elec 	= df['Voltage [V]'] * df['Current [A]']
 	Ct 		= df['Thrust [N]'] / (rho * df['Motor Speed [1/s]']**2 * D[index]**4)
 	Cp 		= P_mech / (rho * df['Motor Speed [1/s]']**3 * D[index]**5)
 	FOM 	= Ct**(3/2) / (sqrt(2) * Cp)
+	Cw 		= (m * g) / (rho * (pi / 4) * D[index]**2 * (2 * pi * df['Motor Speed [1/s]'])**2 * (0.5 * D[index])**2)
 
-	# c 		= D[index]/2 * 0.121867779 # [m] chord at r/R = 0.75
-	# J 		= (2 * pi * df['Motor Speed [1/s]'] * c) / (2 * pi * df['Motor Speed [1/s]'] * D[index])
-	# eta 	= J * Ct / Cp
-	# Re 		= rho * (2 * pi * df['Motor Speed [1/s]']) * c / mu # [-] Reynolds number at given rpm
-	# M 		= (2 * pi * df['Motor Speed [1/s]'] * D[index] * 0.5) / a # [-] Mach number at given rpm for tip speeds
+	c 		= 0.5* D[index] * 0.121867779 # [m] chord at r/R = 0.75
+	Re 		= rho * (df['Motor Speed [1/s]'] * c) / mu # [-] Reynolds number at given rpm
+	M 		= (df['Motor Speed [1/s]'] * D[index] * 0.5) / a # [-] Mach number at given rpm for tip speeds
 
 	# Insert columns to dataframe
 	df['Mechanical Power [W]'] = P_mech
@@ -81,49 +108,224 @@ for index, df in enumerate(blades):
 	df['Thrust Coefficient [-]'] = Ct
 	df['Power Coefficient [-]'] = Cp
 	df['Figure of Merit [-]'] = FOM
-	# df['Advance Ratio [-]'] = J
-	# df['Efficiency [-]'] = eta
-	# df['Reynolds Number [-]'] = Re
-	# df['Mach Number [-]'] = M
+	df['Weight Coefficient [-]'] = Cw
+	df['Reynolds Number [-]'] = Re
+	df['Mach Number [-]'] = M
+	df = df.iloc[1:] # Remove first row from dataframe
 
-	# Remove first row from dataframe
-	df = df.iloc[1:]
+	# ==============================================================================================
+	# PLOT ROTATIONAL SPEED VS. THRUST
+	# ==============================================================================================
+	pfit_thrust = np.polyfit(df['Motor Speed [1/s]'], df['Thrust [N]'], deg=3)
+	tl_thrust	= np.poly1d(pfit_thrust)
+	R2_thrust 	= r2_score(df['Thrust [N]'], tl_thrust(df['Motor Speed [1/s]']))
 
-	# Calculate operating point for hovering flight
-	rpm_hover 			= np.interp(T_hover, df['Thrust [N]'], df['Motor Speed [1/s]'])
-	P_hover 			= np.interp(rpm_hover, df['Motor Speed [1/s]'], df['Mechanical Power [W]'])
-	P_hover 			= P_hover / eta_mech
-	FOM_hover 			= np.interp(rpm_hover, df['Motor Speed [1/s]'], df['Figure of Merit [-]'])
-	DL_hover 			= T_hover / (pi / 4 * D[index])
-	hover.loc[index] 	= [rpm_hover*60, P_hover, FOM_hover, DL_hover] # add row to dataframe
-
-	# Polynomial fit to C_T vs. FOM curve
-	pfit = np.polyfit(df['Thrust Coefficient [-]'].to_numpy(), df['Figure of Merit [-]'].to_numpy(), deg=3)
-	trendline = np.poly1d(pfit)
-
-# 	# Plot advance ratio against efficiency for each propeller
-	ax1[0,0].plot(df['Motor Speed [1/s]'], df['Thrust [N]'], marker='o', label=bladetype[index])
-	ax1[0,0].set_xlabel('Rotational Speed Motor $\Omega$ [1/s]')
+	ax1[0,0].scatter(df['Motor Speed [1/s]'], df['Thrust [N]'], color=colors[index], marker='o')
+	ax1[0,0].plot(df['Motor Speed [1/s]'], tl_thrust(df['Motor Speed [1/s]']), color=colors[index], label=bladetype[index])
+	ax1[0,0].set_xlabel('Rotational Speed Motor $n$ [rev/s]')
 	ax1[0,0].set_ylabel('Thrust [N]')
+	ax1[0,0].set_xlim(0,60)
+	ax1[0,0].set_ylim(0,100)
 	ax1[0,0].minorticks_on() # set minor ticks
 	ax1[0,0].grid(which='major', linestyle='-', linewidth='0.5', color='black') # customise major grid
 	ax1[0,0].grid(which='minor', linestyle=':', linewidth='0.5', color='grey') # customise minor grid
+	ax1[0,0].legend(loc=0, framealpha=1.0).get_frame().set_edgecolor('k') # set legend for subplot
 
-	ax1[0,1].plot(df['Motor Speed [1/s]'], df['Mechanical Power [W]'], marker='o')
-	ax1[0,1].set_xlabel('Rotational Speed Motor $\Omega$ [1/s]')
+	# ==============================================================================================
+	# PLOT ROTATIONAL SPEED VS. MECHANICAL POWER
+	# ==============================================================================================
+	pfit_power 	= np.polyfit(df['Motor Speed [1/s]'], df['Mechanical Power [W]'], deg=3)
+	tl_power	= np.poly1d(pfit_power)
+	R2_power 	= r2_score(df['Mechanical Power [W]'], tl_power(df['Motor Speed [1/s]']))
+
+	ax1[0,1].scatter(df['Motor Speed [1/s]'], df['Mechanical Power [W]'], color=colors[index], marker='o')
+	ax1[0,1].plot(df['Motor Speed [1/s]'], tl_power(df['Motor Speed [1/s]']), color=colors[index], label=bladetype[index])
+	ax1[0,1].set_xlabel('Rotational Speed Motor $n$ [rev/s]')
 	ax1[0,1].set_ylabel('Mechanical Power [W]')
+	ax1[0,1].set_xlim(0,60)
+	ax1[0,1].set_ylim(0,1000)
 	ax1[0,1].minorticks_on() # set minor ticks
 	ax1[0,1].grid(which='major', linestyle='-', linewidth='0.5', color='black') # customise major grid
 	ax1[0,1].grid(which='minor', linestyle=':', linewidth='0.5', color='grey') # customise minor grid
 
-	# ax1[1,0].scatter(df['Thrust Coefficient [-]'], df['Figure of Merit [-]'])
-	ax1[1,0].plot(df['Thrust Coefficient [-]'], trendline(df['Thrust Coefficient [-]']))
-	ax1[1,0].set_xlabel('Thrust Coefficient $c_T$ [-]')
-	ax1[1,0].set_ylabel('Figure of Merit [-]')
+	# ==============================================================================================
+	# PLOT ROTATIONAL SPEED VS. TORQUE
+	# ==============================================================================================
+	pfit_torque	= np.polyfit(df['Motor Speed [1/s]'], df['Torque [Nm]'], deg=3)
+	tl_torque	= np.poly1d(pfit_torque)
+	R2_torque 	= r2_score(df['Torque [Nm]'], tl_torque(df['Motor Speed [1/s]']))
+
+	ax1[1,0].scatter(df['Motor Speed [1/s]'], df['Torque [Nm]'], color=colors[index], marker='o')
+	ax1[1,0].plot(df['Motor Speed [1/s]'], tl_torque(df['Motor Speed [1/s]']), color=colors[index], label=bladetype[index])
+	ax1[1,0].set_xlabel('Rotational Speed Motor $n$ [rev/s]')
+	ax1[1,0].set_ylabel('Torque [Nm]')
+	ax1[1,0].set_xlim(0,60)
+	ax1[1,0].set_ylim(0,4)
 	ax1[1,0].minorticks_on() # set minor ticks
 	ax1[1,0].grid(which='major', linestyle='-', linewidth='0.5', color='black') # customise major grid
 	ax1[1,0].grid(which='minor', linestyle=':', linewidth='0.5', color='grey') # customise minor grid
 
-fig1.legend()
+	# ==============================================================================================
+	# PLOT DISK LOADING VS. POWER LOADING
+	# ==============================================================================================
+	DL = df['Thrust [N]'] / ((pi / 4) * D[index]**2)
+	PL = df['Thrust [N]'] / df['Mechanical Power [W]']
 
-plt.show()
+	pfit_pl	= np.polyfit(DL, PL, deg=10)
+	tl_pl	= np.poly1d(pfit_pl)
+	R2_pl 	= r2_score(PL, tl_pl(DL))
+
+	ax1[1,1].scatter(DL, PL, marker='o', color=colors[index])
+	ax1[1,1].plot(DL, tl_pl(DL), color=colors[index], label=bladetype[index])
+	ax1[1,1].set_xlabel(r'Disk Loading [N/$\mathrm{m}^2$]')
+	ax1[1,1].set_ylabel('Power Loading [N/W]')
+	ax1[1,1].set_xlim(0,100)
+	ax1[1,1].set_ylim(0,0.4)
+	ax1[1,1].minorticks_on() # set minor ticks
+	ax1[1,1].grid(which='major', linestyle='-', linewidth='0.5', color='black') # customise major grid
+	ax1[1,1].grid(which='minor', linestyle=':', linewidth='0.5', color='grey') # customise minor grid
+
+	# ==============================================================================================
+	# CALCULATE DESIGN POINTS
+	# ==============================================================================================
+	rpm_dp1	= np.interp(T_hover, df['Thrust [N]'], df['Motor Speed [1/s]'])
+	T_dp1	= tl_thrust(rpm_dp1)
+	P_dp1 	= sqrt(T_dp1**3 / (2 * rho * (pi / 4) * D[index]**2))
+	torque_dp1 = np.interp(rpm_dp1, df['Motor Speed [1/s]'], df['Torque [Nm]'])
+	rpm_max	= np.interp(T_manoeuvre, df['Thrust [N]'], df['Motor Speed [1/s]'])
+	T_max 	= tl_thrust(rpm_max)
+	P_max 	= sqrt(T_max**3 / (2 * rho * (pi / 4) * D[index]**2))
+	torque_max = np.interp(rpm_max, df['Motor Speed [1/s]'], df['Torque [Nm]'])
+
+
+	hover.loc[index] 	= [rpm_dp1, T_dp1, P_dp1, torque_dp1, rpm_max, T_max, P_max, torque_max] # add row to dataframe
+
+	DL_dp1 	= T_dp1 / ((pi / 4) * D[index]**2)
+	PL_dp1 	= T_dp1 / P_dp1
+
+	ax1[1,1].text(50, PL_dp1, bladetype[index], fontsize=12, horizontalalignment='center', verticalalignment='center', bbox=dict(facecolor='white', edgecolor='black'))
+	ax1[1,1].axhline(y=PL_dp1, xmin=0, xmax=1, linestyle='--', color='black')
+
+
+# ==============================================================================================
+# PLOT DESIGN POINTS
+# ==============================================================================================
+ax1[0,0].axhline(y=max(hover['Thrust Hover [N]']), xmin=0, xmax=1, linestyle='--', color='black')
+ax1[0,0].text(-1, max(hover['Thrust Hover [N]']), r'T$_\mathrm{hover}$', fontsize=14, horizontalalignment='right', verticalalignment='center')
+ax1[0,0].axhline(y=max(hover['Thrust Max [N]']), xmin=0, xmax=(1), linestyle='--', color='black')
+ax1[0,0].text(-1, max(hover['Thrust Max [N]']), r'T$_\mathrm{max}$', fontsize=14, horizontalalignment='right', verticalalignment='center')
+
+ax1[0,1].axhline(y=max(hover['Power Hover [W]']), xmin=0, xmax=1, linestyle='--', color='black')
+ax1[0,1].text(-1, max(hover['Power Hover [W]']), r'P$_\mathrm{hover}$', fontsize=14, horizontalalignment='right', verticalalignment='center')
+ax1[0,1].axhline(y=max(hover['Power Max [W]']), xmin=0, xmax=1, linestyle='--', color='black')
+ax1[0,1].text(-1, max(hover['Power Max [W]']), r'P$_\mathrm{max}$', fontsize=14, horizontalalignment='right', verticalalignment='center')
+
+ax1[1,0].axhline(y=max(hover['Torque Hover [Nm]']), xmin=0, xmax=1, linestyle='--', color='black')
+ax1[1,0].text(-1, max(hover['Torque Hover [Nm]']), r'$\tau_\mathrm{hover}$', fontsize=14, horizontalalignment='right', verticalalignment='center')
+ax1[1,0].axhline(y=max(hover['Torque Max [Nm]']), xmin=0, xmax=1, linestyle='--', color='black')
+ax1[1,0].text(-1, max(hover['Torque Max [Nm]']), r'$\tau_\mathrm{max}$', fontsize=14, horizontalalignment='right', verticalalignment='center')
+
+# ==============================================================================================
+# SAVE FIGURE1 AND EXPORT DATA TO CSV
+# ==============================================================================================
+plt.savefig('2_PropComparison.png', bbox_inches='tight', dpi=300)
+
+hover = hover.round(3)
+hover.to_csv('DesignPointData.txt', header=True, index=None, sep=' ')
+# ==============================================================================================
+# PLOT MOTOR DATA
+# ==============================================================================================
+def image_resize(image, width = None, height = None, inter = cv2.INTER_AREA):
+    # initialize the dimensions of the image to be resized and
+    # grab the image size
+    dim = None
+    (h, w) = image.shape[:2]
+
+    # if both the width and height are None, then return the
+    # original image
+    if width is None and height is None:
+        return image
+
+    # check to see if the width is None
+    if width is None:
+        # calculate the ratio of the height and construct the
+        # dimensions
+        r = height / float(h)
+        dim = (int(w * r), height)
+
+    # otherwise, the height is None
+    else:
+        # calculate the ratio of the width and construct the
+        # dimensions
+        r = width / float(w)
+        dim = (width, int(h * r))
+
+    # resize the image
+    resized = cv2.resize(image, dim, interpolation = inter)
+
+    # return the resized image
+    return resized
+
+img1 = cv2.imread('Maxon_400W.PNG') # read image
+img1 = image_resize(img1, height=1000)
+height, width = img1.shape[:2] # determine size of image
+dx, dy = 188, 100 # determine grid spacing
+nx = width / (188) + 1  # calculate number of grid lines on x-axis
+ny = height / (100) # calculate number of grid lines on y-axis
+xlabels = np.linspace(0, 2, int(nx))
+ylabels = np.linspace(0, 5000/60, int(ny))
+
+# draw horizontal lines
+for i in range(0, int(ny)):
+	cv2.line(img1, (0, height - i*dy), (width, height - i*dy), (0,0,0), thickness=2) # draw major gridlines
+	cv2.putText(img1, str(round(ylabels[i])), (0, height - i*dy -5), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,0), thickness=3) # add ticks on y-axis inside image
+	dy_minor = dy / ny
+	for j in range(0, 12):
+		dh = int(j * dy_minor)
+		cv2.line(img1, (0, height - i*dy - dh), (width, height - i*dy - dh), (0,0,0), thickness=1) # draw minor gridlines
+
+# draw vertical lines
+for i in range(1, int(nx)):
+	cv2.line(img1, (i*dx, height), (i*dx, 0), (0,0,0), thickness=2) # draw major gridlines
+	cv2.putText(img1, str(round(xlabels[i],2)), (i*dx, height - 5), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,0), thickness=3) # add ticks on y-axis inside image
+	dx_minor = dx / (nx - 1)
+	for j in range(1, 11):
+		dw = int(j * dx_minor)
+		cv2.line(img1, ((i-1)*dx + dw, height), ((i-1)*dx + dw, 0), (0,0,0), thickness=1) # draw minor gridlines
+
+cv2.putText(img1, 'Motor Speed [1/s]', (5, 35), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,0), thickness=3) # add ticks on y-axis inside image
+cv2.putText(img1, 'T[Nm]', (width - 100, height - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,0), thickness=3) # add ticks on y-axis inside image
+
+cv2.imwrite('M400W.PNG', img1)
+
+img1 = cv2.imread('Maxon_600W.PNG') # read image
+img1 = image_resize(img1, height=1000)
+height, width = img1.shape[:2] # determine size of image
+dx, dy = 188, 100 # determine grid spacing
+nx = width / (188) + 1  # calculate number of grid lines on x-axis
+ny = height / (100) # calculate number of grid lines on y-axis
+xlabels = np.linspace(0, 3, int(nx))
+ylabels = np.linspace(0, 5000/60, int(ny))
+
+# draw horizontal lines
+for i in range(0, int(ny)):
+	cv2.line(img1, (0, height - i*dy), (width, height - i*dy), (0,0,0), thickness=2) # draw major gridlines
+	cv2.putText(img1, str(round(ylabels[i])), (0, height - i*dy -5), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,0), thickness=3) # add ticks on y-axis inside image
+	dy_minor = dy / ny
+	for j in range(0, 12):
+		dh = int(j * dy_minor)
+		cv2.line(img1, (0, height - i*dy - dh), (width, height - i*dy - dh), (0,0,0), thickness=1) # draw minor gridlines
+
+# draw vertical lines
+for i in range(1, int(nx)):
+	cv2.line(img1, (i*dx, height), (i*dx, 0), (0,0,0), thickness=2) # draw major gridlines
+	cv2.putText(img1, str(round(xlabels[i],2)), (i*dx, height - 5), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,0), thickness=3) # add ticks on y-axis inside image
+	dx_minor = dx / (nx - 1)
+	for j in range(1, 11):
+		dw = int(j * dx_minor)
+		cv2.line(img1, ((i-1)*dx + dw, height), ((i-1)*dx + dw, 0), (0,0,0), thickness=1) # draw minor gridlines
+
+cv2.putText(img1, 'Motor Speed [1/s]', (5, 35), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,0), thickness=3) # add ticks on y-axis inside image
+cv2.putText(img1, 'T[Nm]', (width - 100, height - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,0), thickness=3) # add ticks on y-axis inside image
+
+cv2.imwrite('M600W.PNG', img1)
