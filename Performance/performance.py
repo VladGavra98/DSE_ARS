@@ -44,7 +44,7 @@ matplotlib.rcParams['axes.facecolor']   = 'white'
 matplotlib.rcParams["legend.fancybox"]  = False
 
 # Mass budget
-n_battery 		= 3 # [-] number of batteries in parallel
+n_battery 		= 1 # [-] number of batteries in parallel
 n_propellers	= 8 # [-] number of propellers
 m_sensors 		= 1.248 # [kg] noise and air pollution sensors mass
 m_autonomy 		= 0.219 # [kg] autonomy hardware mass
@@ -53,7 +53,9 @@ m_structures 	= 2.73 # [kg] operational empty mass
 m_motors 		= n_propellers * 0.63 #[kg] brushless motor mass
 m_propellers 	= n_propellers * 91.46E-3 # [kg] propeller mass
 m 				= m_sensors + m_autonomy + m_battery + m_structures + m_motors + m_propellers
-m 				= 1.05 * m # [kg] contingency added
+m 				= 1.25 * m # [kg] contingency added
+
+m = 8.856
 
 # Define constants
 g 				= 9.80665 # [m/s^2] Gravitational Acceleration
@@ -206,7 +208,6 @@ for index, df in enumerate(blades):
 	ax1[1,1].text(50, PL_dp1, bladetype[index], fontsize=12, horizontalalignment='center', verticalalignment='center', bbox=dict(facecolor='white', edgecolor='black'))
 	ax1[1,1].axhline(y=PL_dp1, xmin=0, xmax=1, linestyle='--', color='black')
 
-
 # ==============================================================================================
 # PLOT DESIGN POINTS
 # ==============================================================================================
@@ -302,7 +303,7 @@ img1 = cv2.imread('Maxon_600W.PNG') # read image
 img1 = image_resize(img1, height=1000)
 height, width = img1.shape[:2] # determine size of image
 dx, dy = 188, 100 # determine grid spacing
-nx = width / (188) + 1  # calculate number of grid lines on x-axis
+nx = width / (188) + 1 # calculate number of grid lines on x-axis
 ny = height / (100) # calculate number of grid lines on y-axis
 xlabels = np.linspace(0, 3, int(nx))
 ylabels = np.linspace(0, 5000/60, int(ny))
