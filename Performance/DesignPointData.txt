@@ -1,0 +1,4 @@
+"RPM Hover [1/s]" "Thrust Hover [N]" "Power Hover [W]" "Torque Hover [Nm]" "RPM Max [1/s]" "Thrust Max [N]" "Power Max [W]" "Torque Max [Nm]"
+21.994 10.99 36.928 0.383 30.554 21.306 99.683 0.746
+19.008 10.747 33.332 0.408 26.617 21.747 95.94 0.793
+16.641 11.172 33.122 0.438 23.425 21.81 90.339 0.854
