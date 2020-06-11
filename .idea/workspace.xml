@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b4580a3-03b8-4457-b88a-729be508e57a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Sensitivity/Data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sensitivity/sensitivity_scores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sensitivity/sensitivity_scores.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sensitivity/sensitivity_weights.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sensitivity/sensitivity_weights.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sensitivity/sesitivity_analysis_Scores.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sensitivity/sesitivity_analysis_Scores.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sensitivity/sesitivity_analysis_Weights.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sensitivity/sesitivity_analysis_Weights.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +32,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="Python.sesitivity_analysis_Weights">
-    <configuration name="TesterFile" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Plotter_point_2_manual_noplot_conststime">
+    <configuration name="Plotter_point_2_manual_noplot_conststime" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DSE_ARS" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -46,78 +41,21 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Path Planning" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TesterFile.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Path Planning/Plotter_point_2_manual_noplot_conststime.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="sesitivity_analysis_R_change" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DSE_ARS" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sensitivity" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sensitivity/sesitivity_analysis_R_change.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sesitivity_analysis_Scores" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DSE_ARS" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sensitivity" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sensitivity/sesitivity_analysis_Scores.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sesitivity_analysis_ScoresandRank" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DSE_ARS" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sensitivity" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sensitivity/sesitivity_analysis_ScoresandRank.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sesitivity_analysis_Weights" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="sesitivity_analysis_ScoreVariation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DSE_ARS" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -125,12 +63,78 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sensitivity" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sensitivity/Power" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sensitivity/sesitivity_analysis_Weights.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sensitivity/Power/sesitivity_analysis_ScoreVariation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sesitivity_analysis_WeightVariation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DSE_ARS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sensitivity/Power" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sensitivity/Power/sesitivity_analysis_WeightVariation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sesitivity_analysis_Weights (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DSE_ARS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sensitivity/Top Level/new" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sensitivity/Top Level/new/sesitivity_analysis_Weights.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sesitivity_analysis_nochange" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DSE_ARS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sensitivity/Top Level/new" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sensitivity/Top Level/new/sesitivity_analysis_nochange.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -141,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.sesitivity_analysis_Weights" />
-        <item itemvalue="Python.sesitivity_analysis_ScoresandRank" />
-        <item itemvalue="Python.sesitivity_analysis_R_change" />
-        <item itemvalue="Python.sesitivity_analysis_Scores" />
-        <item itemvalue="Python.sesitivity_analysis_ScoresandRank" />
+        <item itemvalue="Python.Plotter_point_2_manual_noplot_conststime" />
+        <item itemvalue="Python.sesitivity_analysis_Weights (1)" />
+        <item itemvalue="Python.sesitivity_analysis_nochange" />
+        <item itemvalue="Python.sesitivity_analysis_WeightVariation" />
+        <item itemvalue="Python.sesitivity_analysis_ScoreVariation" />
       </list>
     </recent_temporary>
   </component>
@@ -164,6 +168,20 @@
       <workItem from="1589786734568" duration="6246000" />
       <workItem from="1589809042512" duration="3000" />
       <workItem from="1589810690136" duration="7686000" />
+      <workItem from="1589877221893" duration="5175000" />
+      <workItem from="1589893626371" duration="6914000" />
+      <workItem from="1589961517398" duration="808000" />
+      <workItem from="1590398973852" duration="1247000" />
+      <workItem from="1590584006804" duration="6408000" />
+      <workItem from="1590592142220" duration="8000" />
+      <workItem from="1590671974915" duration="184000" />
+      <workItem from="1590747865196" duration="1198000" />
+      <workItem from="1590755248930" duration="2467000" />
+      <workItem from="1590769613626" duration="1596000" />
+      <workItem from="1590834508290" duration="1687000" />
+      <workItem from="1591365682442" duration="139000" />
+      <workItem from="1591612793534" duration="599000" />
+      <workItem from="1591620853711" duration="29000" />
     </task>
     <servers />
   </component>
@@ -175,22 +193,26 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="496" y="58" key="#sesitivity_analysis/0.0.1536.864@0.0.1536.864" timestamp="1589787083382" />
-    <state width="1493" height="305" key="GridCell.Tab.0.bottom" timestamp="1589818380449">
+    <state width="1493" height="386" key="GridCell.Tab.0.bottom" timestamp="1591365821420">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="305" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589818380449" />
-    <state width="1493" height="305" key="GridCell.Tab.0.center" timestamp="1589818380448">
+    <state width="1493" height="386" key="GridCell.Tab.0.bottom/0.0.1536.864/1920.0.2560.1440@0.0.1536.864" timestamp="1590780322625" />
+    <state width="1493" height="386" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1591365821420" />
+    <state width="1493" height="386" key="GridCell.Tab.0.center" timestamp="1591365821420">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="305" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589818380448" />
-    <state width="1493" height="305" key="GridCell.Tab.0.left" timestamp="1589818380448">
+    <state width="1493" height="386" key="GridCell.Tab.0.center/0.0.1536.864/1920.0.2560.1440@0.0.1536.864" timestamp="1590780322625" />
+    <state width="1493" height="386" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1591365821420" />
+    <state width="1493" height="386" key="GridCell.Tab.0.left" timestamp="1591365821419">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="305" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589818380448" />
-    <state width="1493" height="305" key="GridCell.Tab.0.right" timestamp="1589818380449">
+    <state width="1493" height="386" key="GridCell.Tab.0.left/0.0.1536.864/1920.0.2560.1440@0.0.1536.864" timestamp="1590780322625" />
+    <state width="1493" height="386" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1591365821419" />
+    <state width="1493" height="386" key="GridCell.Tab.0.right" timestamp="1591365821420">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="305" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589818380449" />
+    <state width="1493" height="386" key="GridCell.Tab.0.right/0.0.1536.864/1920.0.2560.1440@0.0.1536.864" timestamp="1590780322625" />
+    <state width="1493" height="386" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1591365821420" />
     <state x="277" y="74" key="SettingsEditor" timestamp="1589786820839">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -198,18 +220,24 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis__1_.coverage" NAME="sesitivity_analysis (1) Coverage Results" MODIFIED="1589786720895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop" />
-    <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_Weights.coverage" NAME="sesitivity_analysis_Weights Coverage Results" MODIFIED="1589818058678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sensitivity" />
+    <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_Weights.coverage" NAME="sesitivity_analysis_Weights Coverage Results" MODIFIED="1589899223748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sensitivity/Top Level" />
     <SUITE FILE_PATH="coverage/DSE_ARS$main.coverage" NAME="main Coverage Results" MODIFIED="1589452194393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DSE_ARS$money.coverage" NAME="money Coverage Results" MODIFIED="1589786778929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Documents/PYTHON/STUFF/Money" />
-    <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_ScoresandRank.coverage" NAME="sesitivity_analysis_ScoresandRank Coverage Results" MODIFIED="1589815440573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sensitivity" />
-    <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_nochange.coverage" NAME="sesitivity_analysis_nochange Coverage Results" MODIFIED="1589811729348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sensitivity" />
+    <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_WeightVariation.coverage" NAME="sesitivity_analysis_WeightVariation Coverage Results" MODIFIED="1590770596446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sensitivity/Power" />
+    <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_ScoresandRank.coverage" NAME="sesitivity_analysis_ScoresandRank Coverage Results" MODIFIED="1590748454585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sensitivity/Top Level/new" />
+    <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_nochange.coverage" NAME="sesitivity_analysis_nochange Coverage Results" MODIFIED="1590834649694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sensitivity/Top Level/new" />
+    <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_Weights_All.coverage" NAME="sesitivity_analysis_Weights_All Coverage Results" MODIFIED="1589896113579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sensitivity/Power" />
     <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_R_change.coverage" NAME="sesitivity_analysis_R_change Coverage Results" MODIFIED="1589813994426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sensitivity" />
     <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_Scores__1_.coverage" NAME="sesitivity_analysis_Scores (1) Coverage Results" MODIFIED="1589810813853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sensitivity" />
+    <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_ScoreVariation.coverage" NAME="sesitivity_analysis_ScoreVariation Coverage Results" MODIFIED="1590770509372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sensitivity/Power" />
     <SUITE FILE_PATH="coverage/DSE_ARS$midterm_performance.coverage" NAME="midterm_performance Coverage Results" MODIFIED="1589786619225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DSE_ARS$midterm_aerodynamics.coverage" NAME="midterm_aerodynamics Coverage Results" MODIFIED="1589786624331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DSE_ARS$Plotter_point_2_manual_noplot_conststime.coverage" NAME="Plotter_point_2_manual_noplot_conststime Coverage Results" MODIFIED="1591365752703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Path Planning" />
+    <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_Weights_All_percfind.coverage" NAME="sesitivity_analysis_Weights_All_percfind Coverage Results" MODIFIED="1589896078631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sensitivity/Power" />
     <SUITE FILE_PATH="coverage/DSE_ARS$TesterFile.coverage" NAME="TesterFile Coverage Results" MODIFIED="1589796257770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DSE_ARS$Octocopter_performance.coverage" NAME="Octocopter_performance Coverage Results" MODIFIED="1590399192278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MidtermReport" />
     <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_Scores.coverage" NAME="sesitivity_analysis_Scores Coverage Results" MODIFIED="1589796505054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_Weights__1_.coverage" NAME="sesitivity_analysis_Weights (1) Coverage Results" MODIFIED="1589813426723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sensitivity" />
+    <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis_Weights__1_.coverage" NAME="sesitivity_analysis_Weights (1) Coverage Results" MODIFIED="1590835722024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sensitivity/Top Level/new" />
     <SUITE FILE_PATH="coverage/DSE_ARS$sesitivity_analysis.coverage" NAME="sesitivity_analysis Coverage Results" MODIFIED="1589787101978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

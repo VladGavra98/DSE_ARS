@@ -14,7 +14,7 @@ names = ["Airship", "Drone", "E-VTOL"]
 #    Average weights and standard deviation
 w_avg = np.array([14,29,22,19,16])
 w_SD  = np.array([4.9	,5.83	,5.45	,4.84	,3.5])
-percadj = 23 #adjustment of variations, =10 means 10%       #set to zero for no change
+percadj = 10 #adjustment of variations, =10 means 10%       #set to zero for no change
 f = open("sensitivity_ranksandscores.txt",'w')
 f.writelines("Scores with all possible ranking options (linear)\n\n")
 
