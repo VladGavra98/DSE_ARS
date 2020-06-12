@@ -62,14 +62,14 @@ D_max 		= 0.5 * rho * V_max ** 2 * CD * S # [N] drag force during cruise flight
 
 # Mass budget
 n_propellers	= 8 # [-] number of propellers
-m_sensors 		= 1.248 # [kg] noise and air pollution sensors mass
+m_sensors 		= 2.386 # [kg] noise and air pollution sensors mass
 m_autonomy 		= 0.219 # [kg] autonomy hardware mass
 m_motors 		= n_propellers * 0.630 #[kg] brushless motor mass
 m_propellers 	= n_propellers * 91.46E-3 # [kg] propeller mass
 
 # Frame data
-w_frame = 0.23 # [m] frame width
-h_frame = 0.23 # [m] frame height
+w_frame = 0.236 # [m] frame width
+h_frame = 0.313 # [m] frame height
 
 # Motor data
 V_motor = 36 # [V] nominal voltage of motor
@@ -96,6 +96,8 @@ A_battery = h_cell * n_series * t_cell
 A_battery = 1.05 * A_battery # contingency margin for cooling / packaging
 
 n_max = floor(A_frame / A_battery) - 1
+
+print(n_max * m_battery)
 
 # Import propeller data from excel file in the following format
 # ['Motor Speed [1/s', 'Thrust [N]', 'Torque [Nm]', 'Voltage[V]', 'Current [A]']
