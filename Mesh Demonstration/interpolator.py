@@ -1,19 +1,26 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jun  9 22:56:31 2020
+
+@author: vladg
+"""
 
 import numpy as np
 import numpy.linalg
 import scipy as sp
 import scipy.interpolate
 import scipy.ndimage
+import time
 
 #++++++++++++++++++++++++++++++++++++++++++++ Data Point Class +++++++++++++++++++++++++++++++++++
 class Point:
     """Data point self-defined class, use if numpy arrays are not sufficient"""
-    def __init__(self,position,psi):
-        self.x = position[0]
-        self.y = position[1]
-        self.z = position[2]
-        self.t = position[3]
+    def __init__(self,position,time, psi):
+
+        self.position =position
+        self.time = time
         self.psi = psi
+
 
 
 #+++++++++++++++++++++++++++++++++++++ Cubic Spline Class +++++++++++++++++++++++++++++++++++++++++
@@ -90,7 +97,7 @@ class Spline_RBF(sp.interpolate.Rbf):
         Spline class based on scipy radial basis functions, generates multidimensional splines
     """
 
-    def __init__(self,grid,data,ndim,epsilon,basis_name=None):
+    def __init__(self,grid,data,ndim,epsilon=None,basis_name=None):
 
         """
         Interpoalte unknown function from data, it takes as arguments:
@@ -122,7 +129,6 @@ class Spline_RBF(sp.interpolate.Rbf):
         #     raise ValueError("Basis given is not valid!")
 
         self.epsilon = epsilon
-
 
         if isinstance(basis_name, str):
             self.basis_name = basis_name.lower()
@@ -165,7 +171,18 @@ class Spline_RBF(sp.interpolate.Rbf):
 
 
 # ++++++++++++++++++++++++++++++++ Helper Functions ++++++++++++++++++++++++++++++++++++++++++++++++
+def normalise(x):
 
+    """
+    Helper function to normlise the a vector
+    Can be used to remove the units of physical dimension
+    """
+    x =np.array(x)
+    maxim = np.max(x)
+
+    if maxim :
+        return x/maxim
+    return x
 
 def main():
 
@@ -183,7 +200,13 @@ def main():
 
     # Testing....
     # Geberate RBF spline:
-    x = y= z= t= np.arange(1,30,0.01)
+    x = y= z= t= np.arange(-30,30,1)
+    y = np.zeros(len(x)) +1
+    x = normalise(x)
+    y = normalise(y)
+    z = normalise(z)
+    t = normalise(t)
+
     data = np.linspace(10,20,len(x))
 
     print("Grid dimesnion: %i points " %(len(x)**4))
@@ -197,11 +220,11 @@ def main():
     # data_hat = spline2.interpolate([1,1,1])  # should return one number  -> correct!
     data_hat, basis_weights = spline2.interpolate([xi,yi,zi,ti])  # should return one number, outside of domain (extrapolate)  -> correct!
 
-    # print(data_hat)
+    print(data_hat)
 
 
 if __name__=='__main__':
-    import time
+
     start = time.time()
     main()
     end= time.time()
