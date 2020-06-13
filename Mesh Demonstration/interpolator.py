@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*-
 """
 Created on Tue Jun  9 22:56:31 2020
@@ -52,6 +53,20 @@ class Spline (sp.interpolate.CubicSpline):
 
 
 
+
+class interpolate:
+
+    ''' see example below for how to get the coefficients. Keep in mind its ai(x-xi)^3 etc'''
+    def __init__(self, data, pos):
+        self.data   = data
+        self.n      = len(data)
+
+        #Create a list of all the distances between points.
+        self.h      = np.zeros(self.n-1)
+        for i in range(self.n-1):
+            self.h[i]  = pos[i+1]-pos[i]
+
+
         #Setup the matrixes
         co_matrix   = np.zeros((self.n-2,self.n-2))
         f_matrix    = np.zeros((self.n-2,1))
@@ -72,6 +87,11 @@ class Spline (sp.interpolate.CubicSpline):
         m_matrix    = np.linalg.solve(co_matrix,f_matrix)
 
 
+
+        
+
+        m_matrix    = np.linalg.solve(co_matrix,f_matrix)
+
         #Add boundary conditions for m_matrix
         m_matrix    = np.vstack((np.array([0]),m_matrix))
         m_matrix    = np.vstack((m_matrix,np.array([0])))
@@ -79,8 +99,7 @@ class Spline (sp.interpolate.CubicSpline):
         self.abcd   = np.zeros((self.n - 1 , 4))
 
 
-
-
+    
         for i in range(self.n-1):
 
             ai  = (m_matrix[i+1] - m_matrix[i] )/ (6 * self.h[i])
@@ -230,3 +249,10 @@ if __name__=='__main__':
     end= time.time()
 
     print("Elapsed time [s]: ", end-start)
+
+
+
+#Example 4.2 from the ANA reader
+#data = [0,0.2624,0.6419,1.0296]
+#pos = [0,0.1,0.3,0.6]
+#print(interpolate(data,pos).abcd)
