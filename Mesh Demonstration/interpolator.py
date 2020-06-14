@@ -1,17 +1,28 @@
-
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Jun  9 22:56:31 2020
+'''
 
-@author: vladg
-"""
+	AE3200 Design Synthesis Exercise
+	Group 09 - Autonomous Environmental Sensing
 
+   Created on Tue Jun  9 22:56:31 2020
+	@author: vladg
+
+	Project Supervisors:
+		- Dr. Irene C. Dedoussi
+		- Dr. Ir. Mirjam Snellen
+		- Ir. Lorenzo Pasqualetto Cassinis
+		- Mark Schelbergen
+
+	This script is used for the initial sizing of the propellers / aerodynamic surfaces for the concept selection
+'''
 import numpy as np
 import numpy.linalg
 import scipy as sp
 import scipy.interpolate
 import scipy.ndimage
 import time
+
+
 
 #++++++++++++++++++++++++++++++++++++++++++++ Data Point Class +++++++++++++++++++++++++++++++++++
 class Point:
@@ -88,7 +99,7 @@ class interpolate:
 
 
 
-        
+
 
         m_matrix    = np.linalg.solve(co_matrix,f_matrix)
 
@@ -99,7 +110,7 @@ class interpolate:
         self.abcd   = np.zeros((self.n - 1 , 4))
 
 
-    
+
         for i in range(self.n-1):
 
             ai  = (m_matrix[i+1] - m_matrix[i] )/ (6 * self.h[i])

@@ -1,17 +1,159 @@
+# -*- coding: utf-8 -*-
+'''
 
+	AE3200 Design Synthesis Exercise
+	Group 09 - Autonomous Environmental Sensing
+
+   Created on Tue Jun  9 22:56:31 2020
+	@author: moroberson, vgavra
+   @version 2.0: fixed pygame.quit(), cleaned layout, modified plume model
+
+
+	Project Supervisors:
+		- Dr. Irene C. Dedoussi
+		- Dr. Ir. Mirjam Snellen
+		- Ir. Lorenzo Pasqualetto Cassinis
+		- Mark Schelbergen
+
+	This script is used for the initial sizing of the propellers / aerodynamic surfaces for the calcConcentrationept selection
+'''
 import numpy as np
 import pygame as pg
 from shapely.geometry import Point
 from shapely.geometry.polygon import Polygon
 import math
 
-black = (0,0,0)
-white = (255,255,255)
+
+# Constants:
+    #colours
+black     = (0,0,0)
+white     = (255,255,255)
 lightblue = (64,224,238)
-blue = (64,22,255)
-red = (255,0,0)
-difblue = (0,76,153)
-lightred = (255, 102, 102)
+blue      = (64,22,255)
+red       = (255,0,0)
+difblue   = (0,76,153)
+lightred  = (255, 102, 102)
+
+   # pygame screen
+xmax = 1200
+ymax = 800
+sf   = 1 #scaling factor
+
+
+# %%+++++++++++++++++++++++++++++++ Plume Modelling ++++++++++++++++++++++++++++++++++++++++++++++
+
+class Plume():
+
+    """ Class to generate the aircraft emission plume based on the Gaussian model"""
+
+    def __init__(self,source=[10,10],thresh=0.001):
+
+        """
+        Constructor for the plume class
+        """
+        self.spnum  = 100            #resolution of plume - higher is better must more computationally expensive
+        self.ym     = 30000*10          #  m-  width of plume taken into account from aircraft longitudinal axis
+        self.xm     = 100000          # m --length of plume taken into account from plane
+        self.Q      = 270.480176      # mg/m/3rough
+        self.v      = 8               # m/s - rough
+        self.thresh =   0.00000770      # 1/% of max concentration
+
+    def calcConcentration(self,lc):
+        """
+         Calcualtes the concentration given the aircraft location coordinates
+             Input: lc - tuple of aircraft coordinates (source of the plume)
+             Output: concentration filed as sclar function of (x,y)
+        """
+        x = (lc[0])
+        y = (lc[1])
+        #sigy = (2*ky*x/v)**0.5
+        #sigz = (2*kz*x/v)**0.5
+
+        self.sigz = 0.06 *x *(1 + 0.0015*x)**(-0.5)
+        self.sigy = max(self.sigz, 0.08*x*(1 + 0.0001*x)**(-0.5))
+
+        return (self.Q/( 2* np.pi*self.sigy*self.sigz*self.v))*np.exp(-y**2/(2*self.sigy**2))  #dont forget the 2!
+
+
+    # def noemConcentration(self, concentration):
+    #     """
+    #     Normalises the concentration value a.k.a. transforms the Plume(0,sigma) to N(0,1)
+    #     """
+
+    #     return cocentration / (self.Q/(np.pi*sigy*sigz*self.v))
+
+    def plume(self, ac,rot): #rot in rad
+
+        """
+
+        """
+        rot = -(np.pi-rot)#corrected for right x-positive as 0deg
+        xr = np.linspace(0, self.xm, self.spnum)
+        yr1 = np.linspace(0, -self.ym, self.spnum)
+        yr2 = np.linspace(0, self.ym, self.spnum)
+
+
+        moveon = False
+        xlst1 = []
+        xlst2 = []
+        xlst = []
+        ylst1 = []
+        ylst2 = []
+        ylst = []
+
+
+
+        for xxl in xr:
+            moveon = False
+            for yyl in yr1:
+                if self.calcConcentration((xxl, yyl)) < self.thresh and moveon == False:
+                    if len(ylst1) > 0:
+                        if yyl == ylst1[-1]:
+                            moveon = True
+                    # print('appended 1',xxl,yyl)
+                    ylst1.append(yyl)
+                    xlst1.append(xxl)
+                    moveon = True
+
+        for xxl in xr:
+            moveon = False
+            for yyl in yr2:
+                if self.calcConcentration((xxl, yyl)) < self.thresh and moveon == False:
+                    if len(ylst2) > 0:
+                        if yyl == ylst2[-1]:
+                            moveon = True
+                    ylst2.append(yyl)
+                    xlst2.append(xxl)
+                    # print('appended 2',xxl,yyl)
+                    moveon = True
+
+        xlst2old = xlst2[:]
+
+        #removing not needed tails
+        for l in range(len(xlst1))[::-1]:
+            if ylst1[l] == 0:
+                xlst1.pop(l)
+                ylst1.pop(l)
+        for l in range(len(xlst2))[::-1]:
+            if ylst2[l] == 0:
+                xlst2.pop(l)
+                ylst2.pop(l)
+
+        #combining and adding the y=0 part
+        xlst = xlst2 + [xlst2old[len(xlst2)]] + xlst1[::-1]
+        ylst = ylst2 + [0] + ylst1[::-1]
+
+
+        flst = []
+        for i in range(len(xlst)):
+            xlr = (xlst[i] * np.cos(rot) - ylst[i] * np.sin(rot)) + ac[0] #tempplume
+            ylr = (xlst[i] * np.sin(rot) + ylst[i] * np.cos(rot)) + ac[1] #tempplume
+            flst.append((xlr,ylr))
+
+        return flst
+
+
+# %% +++++++++++++++++++++++++++++++ Mission Geometry ++++++++++++++++++++++++++++++++++++++++++++++
 
 layers = 4
 laymin = 10 #m
@@ -24,13 +166,6 @@ vpsfix = 0.99 #factor on vps
 vps = vps*vpsfix
 
 
-#A/C plumes
-thresh = 0.001 #absolute concentration  #random for now  #IF TOO SMALL MUST INCREASE ym AND xm (def xm!)
-spnum = 100  #resolution of plume - higher is better must more computationally expensive
-ym  = 3000  #width of plume taken into account from aircraft longitudinal axis
-xm = 10000  #length of plume taken into account from plane
-Q = 1000 #rough
-v = 12 #rough
 
 #LTO
 lastLT0takeoff = - 40 - 100
@@ -42,11 +177,7 @@ tf = 1 #timefactor 1=realtime
 #funcs
 
 
-#pygame variables
-xmax = 1200
-ymax = 800
-sf = 1 #scaling factor
-
+# %% +++++++++++++++++++++++++++ Pygame Helper Functions ++++++++++++++++++++++++++++++++++++++++++
 #distance m to pixel
 def d(dist): #length to pixel
     return int(dist*(1/16))
@@ -54,10 +185,18 @@ def d(dist): #length to pixel
 def tdc(c): #coords to pixel
     return (int(d(c[0])+xmax/2),int(-d(c[1])+ymax/2))
 
-def tdcl(cl): #coords list to pixel
+def tdcl(cl,xscreen=xmax,yscreen=ymax):
+    """
+    Returns the converted list of coordinates to pixels
+    Input:  cl = list of coordinates
+            xcreen = x-dimension of the screen
+            yscreen =  y-dimension of the screen
+    """
+
     lstc = []
     for c in cl:
-        lstc.append((int(d(c[0])+xmax/2),int(-d(c[1])+ymax/2)))
+        lstc.append((int(d(c[0])+xscreen/2),int(-d(c[1])+yscreen/2)))
+
     return lstc
 
 def getPos():
@@ -74,79 +213,9 @@ def vdir(d,P1,P2):
     return (x1+(x2-x1)*d,y1+(y2-y1)*d)
 
 
-def conc(lc): #aircraft coords and location coords
-    x = (lc[0])
-    y = (lc[1])
-    #sigy = (2*ky*x/v)**0.5
-    #sigz = (2*kz*x/v)**0.5
-
-    sigy = 0.08 * x * (1 + 0.0001 * x) ** (-0.5)  # updated
-    sigz = sigy  # updated
-
-    return (Q/(np.pi*sigy*sigz*v))*np.exp(-y**2/(2*sigy**2))
 
 
-def plume(ac,rot,Q,v): #rot in rad
-    rot = -(np.pi-rot)#corrected for right x-positive as 0deg
-    xr = np.linspace(0, xm, spnum)
-    yr1 = np.linspace(0, -ym, spnum)
-    yr2 = np.linspace(0, ym, spnum)
-    vals = []
-    moveon = False
-    xlst1 = []
-    xlst2 = []
-    xlst = []
-    ylst1 = []
-    ylst2 = []
-    ylst = []
-    for xxl in xr:
-        moveon = False
-        for yyl in yr1:
-            if conc((xxl, yyl)) < thresh and moveon == False:
-                if len(ylst1) > 0:
-                    if yyl == ylst1[-1]:
-                        moveon = True
-                # print('appended 1',xxl,yyl)
-                ylst1.append(yyl)
-                xlst1.append(xxl)
-                moveon = True
-
-    for xxl in xr:
-        moveon = False
-        for yyl in yr2:
-            if conc((xxl, yyl)) < thresh and moveon == False:
-                if len(ylst2) > 0:
-                    if yyl == ylst2[-1]:
-                        moveon = True
-                ylst2.append(yyl)
-                xlst2.append(xxl)
-                # print('appended 2',xxl,yyl)
-                moveon = True
-
-    xlst2old = xlst2[:]
-
-    #removing not needed tails
-    for l in range(len(xlst1))[::-1]:
-        if ylst1[l] == 0:
-            xlst1.pop(l)
-            ylst1.pop(l)
-    for l in range(len(xlst2))[::-1]:
-        if ylst2[l] == 0:
-            xlst2.pop(l)
-            ylst2.pop(l)
-    #combining and adding the y=0 part
-    xlst = xlst2 + [xlst2old[len(xlst2)]] + xlst1[::-1]
-    ylst = ylst2 + [0] + ylst1[::-1]
-
-
-    flst = []
-    for i in range(len(xlst)):
-        xlr = (xlst[i] * np.cos(rot) - ylst[i] * np.sin(rot)) + ac[0] #tempplume
-        ylr = (xlst[i] * np.sin(rot) + ylst[i] * np.cos(rot)) + ac[1] #tempplume
-        flst.append((xlr,ylr))
-    return flst
-
-
+#%% +++++++++++++++++++++++++++++++++ Airport Data +++++++++++++++++++++++++++++++++++++++++++++++++
 #define no go zones:
 rwy36Lcoords = [(-3482,2307), (-2882,12060), (-2670,12000), (-3270,2247)]
 rwy24coords = [(1424,-245),(1600,-500),(-4500,-3890),(-5000,-6000),(-6000,-4409)]
@@ -167,7 +236,7 @@ rwy24angle = math.atan2(rwy24start[1]-rwy24finish1[1],rwy24start[0]-rwy24finish1
 
 
 #plume (tempplume)
-tempplumecoords = tdcl(plume((0,0),rwy24angle,Q,v))
+# tempplumecoords = tdcl(Plume.plume((0,0),rwy24angle))
 
 
 #nodes
@@ -185,7 +254,8 @@ for xxl in xl:
 
 #aircraft
 
-actypes = np.array(['A300','A318','A319','A320','A321','A330','A340','A350','A380','AT72','B737','B747','B757','B767','B777','B787','A220','E170','E190','CRJ700'])
+actypes = np.array(['A300','A318','A319','A320','A321','A330','A340','A350','A380','AT72','B737',
+                     'B747','B757','B767','B777','B787','A220','E170','E190','CRJ700'])
 acfreq = np.array([11,6,33,77,22,33,8,16,13,10,89,25,7,25,31,44,12,11,14,7])#initial guess
 acfreq = acfreq/(sum(acfreq))#normalised sum -> 1
 aclivetakeoff = []
@@ -203,7 +273,7 @@ for px in range(len(actypes)):
 
 
 
-
+# %% ++++++++++++++++++++++++ Main Simulation +++++++++++++++++++++++++++++++++++++++++++++++++++++
 #Start of Pygame
 scr = pg.display.set_mode((xmax*sf,ymax*sf))
 win = pg.Surface((xmax, ymax)) #leave
@@ -294,7 +364,8 @@ while running == True:
 
     #draw plumes
     for ac in acliveland+aclivetakeoff:
-        pg.draw.polygon(scr, lightred, tdcl(plume(ac[1],ac[3],Q,2*v)) ,d(40))
+        acPlume = Plume()
+        pg.draw.polygon(scr, lightred, tdcl(acPlume.plume(ac[1],ac[3])),d(40))
 
 
 
@@ -303,11 +374,17 @@ while running == True:
 
 
     #quit
+    for event in pg.event.get():
+        if event.type==pg.QUIT:
+            running = False
+
     keys = pg.key.get_pressed()
     if keys[pg.K_ESCAPE]:
-        pg.display.quit()
-        pg.quit()
         running = False
+
+
+pg.display.quit()
+pg.quit()
 
 print('\n\n')
 actots = list(set(actot))
@@ -315,5 +392,5 @@ actots.sort()
 for acs in actots:
     print(acs,' -- count: ',actot.count(acs),', freq: ',round(actot.count(acs)*100/len(actot),3),'%')
 
+print(" \n \n Done! ")
 
-pg.quit

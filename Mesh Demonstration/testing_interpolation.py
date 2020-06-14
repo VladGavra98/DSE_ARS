@@ -1,9 +1,21 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Jun  9 22:56:31 2020
+'''
 
-@author: vladg
-"""
+	AE3200 Design Synthesis Exercise
+	Group 09 - Autonomous Environmental Sensing
+
+   Created on Tue Jun  9 22:56:31 2020
+	@author: vladg
+
+	Project Supervisors:
+		- Dr. Irene C. Dedoussi
+		- Dr. Ir. Mirjam Snellen
+		- Ir. Lorenzo Pasqualetto Cassinis
+		- Mark Schelbergen
+
+	This script is used for the initial sizing of the propellers / aerodynamic surfaces for the concept selection
+'''
+
 import numpy as np
 import numpy.linalg
 import scipy as sp
