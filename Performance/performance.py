@@ -66,6 +66,7 @@ m_sensors 		= 2.386 # [kg] noise and air pollution sensors mass
 m_autonomy 		= 0.219 # [kg] autonomy hardware mass
 m_motors 		= n_propellers * 0.630 #[kg] brushless motor mass
 m_propellers 	= n_propellers * 91.46E-3 # [kg] propeller mass
+m_structures 	= 2.289 # [kg] operational empty mass
 
 # Frame data
 w_frame = 0.236 # [m] frame width
@@ -74,7 +75,7 @@ h_frame = 0.313 # [m] frame height
 # Motor data
 V_motor = 36 # [V] nominal voltage of motor
 
-# Battery configuration - Chosen cell: EEMB LP401730
+# Battery configuration - Chosen cell: EEMB LP623454
 DoD = 0.8 # [-] Depth of Discharge
 C_cell = 1200E-3 # [Ah] cell capacity
 m_cell = 22.5E-3 # [kg] cell mass
@@ -97,8 +98,6 @@ A_battery = 1.05 * A_battery # contingency margin for cooling / packaging
 
 n_max = floor(A_frame / A_battery) - 1
 
-print(n_max * m_battery)
-
 # Import propeller data from excel file in the following format
 # ['Motor Speed [1/s', 'Thrust [N]', 'Torque [Nm]', 'Voltage[V]', 'Current [A]']
 xls 	= pd.ExcelFile("PropellerData_Meizlik.xlsx")
@@ -113,7 +112,6 @@ exportname = ['28', '30', '32']
 
 # Initialise figures
 fig1, ax1 = plt.subplots(nrows=2, ncols=2, squeeze=False, figsize=(20,20))
-# fig2, ax2 = plt.subplots(nrows=2, ncols=2, squeeze=False, figsize=(20,10))
 
 # Colors used for iterative plotting
 colors = ['tab:blue', 'tab:orange', 'tab:grey']
@@ -125,7 +123,6 @@ for index, df in enumerate(blades):
 	m_parallel = n_max * m_battery 
 
 	# Mass budget
-	m_structures 	= 2.73 # [kg] operational empty mass
 	m 				= m_sensors + m_autonomy + m_parallel + m_structures + m_motors + m_propellers
 	m 				= 1.05 * m # [kg] contingency added
 
