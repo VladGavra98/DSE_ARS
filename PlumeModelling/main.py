@@ -18,7 +18,7 @@ import numpy as np
 import pandas as pd
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-from math import pi, exp
+from math import pi, exp, sqrt
 from pathlib import Path
 from sympy.solvers import solve
 from sympy.abc import xi, Q
@@ -79,7 +79,9 @@ for species, stations in schiphol_data.items():
 		df.timestamp_measured = pd.to_datetime(df.timestamp_measured, format='%Y-%m-%dT%H:%M:%S+00:00')
 		df = df[df['timestamp_measured'].dt.time.isin(times)] # remove times between 23:00:00 - 06:00:00
 
-		df = df[(np.abs(zscore(df['value'])) < 3)] # remove outliers from dataset which are below/above 3 std. deviations
+		# print(df.value.max())
+
+		df = df[(np.abs(zscore(df['value'])) < 4)] # remove outliers from dataset which are below/above 3 std. deviations
 		# df = df[df.value != 0] # remove rows which measured no concentration; negative concentrations are not excluded
 		df = df.reset_index() # reset indices of dataframe
 		df = df.drop(['index', 'formula'], axis=1) # remove unimportant columns
@@ -99,7 +101,7 @@ exportfolder = 'AQ_Boxplots'
 for key, value in pollutants.items():
 	fig1, ax1 = plt.subplots(nrows=1, ncols=1, squeeze=False, figsize=(8,6)) # create subplots
 
-	ylabel = 'Concentration ' + (r'particles/$m^3$' if key == 'PS' else r'g/$m^3$')
+	ylabel = 'Concentration ' + (r'[particles/$m^3$]' if key == 'PS' else r'[g/$m^3$]')
 
 	value.boxplot(ax=ax1[0,0]) # plot boxplots
 	ax1[0,0].set_ylabel(ylabel)
@@ -120,9 +122,12 @@ func = lambda xi, x, y, z, h, sigma_y, sigma_z, Q: -xi + Q / (2 * pi * sigma_y *
 
 V = 12 # [m/s] freestream velocity
 
-x = np.array([1.445E3, 0.4431E3, 1.339E3]) # minimum distance between station and runway
+# x = np.array([1.445E3, 0.4431E3, 1.339E3]) # minimum distance between station and runway
+
+x = np.array([5000, 6000, 6000])
 
 emissionrates = pd.DataFrame(columns=['Species', 'Q', 'Unit'])
+xi = pd.DataFrame()
 
 for index, key in enumerate(schiphol_data.keys()):
 	unit = 'p/s' if key == 'PS' else 'g/s' # print string of unit into dataframe
@@ -131,14 +136,57 @@ for index, key in enumerate(schiphol_data.keys()):
 	sigma_z = 0.06 * x_i * (1 + 0.0015 * x_i)**(-0.5)
 	sigma_y = 0.08 * x_i * (1 + 0.0001 * x_i)**(-0.5)
 	sigma_y = sigma_y if sigma_y > sigma_z else sigma_z
-	Q_i = solve(func(xi_i, x_i, 0, 0, 0, sigma_y, sigma_z, Q), Q) # FIX X INPUT TO MATCH MEASUREMENT STATION
+	Q_i = solve(func(xi_i, x_i, 0, 0, 0, sigma_y, sigma_z, Q), Q)
 	emissionrates.loc[index] = [concentration.Species.iloc[index], Q_i[0], unit]
 
 emissionrates['Q'] = emissionrates['Q'].astype('float64') # convert object data type to float
 
-print ('\nMaximum Concentration per Pollutant:')
+y = 106 # [m] minimum clearance distance from centerline of runway
+x = (y - 5.75) / (2 * 0.1) #[m] minimum distance before plume hits UAV
+# x = sqrt(x**2 + y**2)
+# y = 0
+x = 106
+y = 0
+z, h = 0, 0
+sigma_z = 0.06 * x * (1 + 0.0015 * x)**(-0.5)
+sigma_y = 0.08 * x * (1 + 0.0001 * x)**(-0.5)
+sigma_y = sigma_y if sigma_y > sigma_z else sigma_z
+xi['value'] = emissionrates['Q'] / (2 * pi * sigma_y * sigma_z * V) * exp( - y**2 / (2 * sigma_y**2) - (z - h)**2 / (2 * sigma_z**2)) #[g/m^3] pollutant concentration
+
+# print ('\nMaximum Concentration per Pollutant:')
+# print ('............................................')
+# print(concentration)
+# print ('\nMaximum Estimated Emission Rate per Pollutant:')
+# print ('............................................')
+# print(emissionrates)
+
+
+R = 0.082057366080960 # [L*atm/(K*mol)]
+T = 283 # [K] averaged yearly temperature around Schiphol airport
+p = 1 # [atm] ambient pressure
+
+c1 = R * T / p 
+c2 = 1000 / c1 
+
+molarmasses = {	'CO': 28.010,
+				'NO': 30.006,
+				'NO2': 46.006,
+				'O3': 47.998,
+				'PM25': 0,
+				'PM10': 0,
+				'PS': 0}
+
+index = 0
+
+for species, mass in molarmasses.items():
+	if mass != 0:
+		c3 = c2 * mass * 1E-6
+		xi.loc[index] *= 1 / c3
+		index += 1
+	else:
+		index += 1
+		pass
+
+print ('\nMaximum EXPECTED Concentration per Pollutant:')
 print ('............................................')
-print(concentration)
-print ('\nMaximum Estimated Emission Rate per Pollutant:')
-print ('............................................')
-print(emissionrates)
+print(xi)
