@@ -101,7 +101,7 @@ for key, value in pollutants.items():
 
 	ylabel = 'Concentration ' + (r'particles/$m^3$' if key == 'PS' else r'g/$m^3$')
 
-	value.boxplot(ax=ax1[0,0])
+	value.boxplot(ax=ax1[0,0]) # plot boxplots
 	ax1[0,0].set_ylabel(ylabel)
 
 	exportname = str(key) + '_boxplot.png'
@@ -109,7 +109,7 @@ for key, value in pollutants.items():
 	fig1.savefig(exportpath, bbox_inches='tight', dpi=300)
 
 	xi_max, pos = value.max(), value.max().idxmax(axis=1)
-	unit = 'p/m^3' if species == 'PS' else 'g/m^3' # print string of unit into dataframe
+	unit = 'p/m^3' if key == 'PS' else 'g/m^3' # print string of unit into dataframe
 	concentration.loc[index] = [key, pos, max(xi_max), unit]
 	index += 1
 
@@ -125,13 +125,14 @@ x = np.array([1.445E3, 0.4431E3, 1.339E3]) # minimum distance between station an
 emissionrates = pd.DataFrame(columns=['Species', 'Q', 'Unit'])
 
 for index, key in enumerate(schiphol_data.keys()):
+	unit = 'p/s' if key == 'PS' else 'g/s' # print string of unit into dataframe
 	xi_i = concentration.Max.iloc[index]
 	x_i = x[0] if str(concentration.Station) == 'Badhoevedorp' else x[1] if str(concentration.Station) == 'Hoofddorp' else x[2]
 	sigma_z = 0.06 * x_i * (1 + 0.0015 * x_i)**(-0.5)
 	sigma_y = 0.08 * x_i * (1 + 0.0001 * x_i)**(-0.5)
 	sigma_y = sigma_y if sigma_y > sigma_z else sigma_z
 	Q_i = solve(func(xi_i, x_i, 0, 0, 0, sigma_y, sigma_z, Q), Q) # FIX X INPUT TO MATCH MEASUREMENT STATION
-	emissionrates.loc[index] = [concentration.Species.iloc[index], Q_i[0], concentration.Unit.iloc[index]]
+	emissionrates.loc[index] = [concentration.Species.iloc[index], Q_i[0], unit]
 
 emissionrates['Q'] = emissionrates['Q'].astype('float64') # convert object data type to float
 
