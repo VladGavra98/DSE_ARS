@@ -11,75 +11,134 @@
 		- Ir. Lorenzo Pasqualetto Cassinis
 		- Mark Schelbergen
 
-	This script is used for the propeller and motor sizing of the coaxial quadcopter		
+	This script is used for the data processing of the AQ data around Schiphol airport	
 '''
 
 import numpy as np
 import pandas as pd
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 from math import pi, exp
 from pathlib import Path
-from scipy.stats import norm
-
-
+from sympy.solvers import solve
+from sympy.abc import xi, Q
+import datetime
+from scipy.stats import zscore
 
 # ==============================================================================================
-# Gaussian Plume Model
+# Set global plotting parameters
 # ==============================================================================================
-V = 12 # [m/s] freestream velocity
-xi = lambda x, y, z, h, Q, Ky, Kz: Q / (2 * pi * V) * (2 * Ky * x / V)**(-0.5) * (2 * Kz * x / V)**(-0.5) * exp( - y**2 / 2 * (2 * Ky * x / V)**(-1) - (z - h)**2 / 2 * (2 * Kz * x / V)**(-1)) #[g/m^3] pollutant concentration
+# texpsize= [18,20,22]
+
+# plt.rc('font', size=texpsize[1], family='serif')                        # controls default text sizes
+# plt.rc('axes', titlesize=texpsize[1])                                   # fontsize of the axes title
+# plt.rc('axes', labelsize=texpsize[1])                                   # fontsize of the x and y labels
+# plt.rc('xtick', labelsize=texpsize[0])                                  # fontsize of the tick labels
+# plt.rc('ytick', labelsize=texpsize[0])                                  # fontsize of the tick labels
+# plt.rc('legend', fontsize=texpsize[0])                                  # legend fontsize
+# plt.rc('figure', titlesize=texpsize[2])                                 # fontsize of the figure title
+# matplotlib.rcParams['lines.linewidth']  = 1.5
+# matplotlib.rcParams['figure.facecolor'] = 'white'
+# matplotlib.rcParams['axes.facecolor']   = 'white'
+# matplotlib.rcParams["legend.fancybox"]  = False
 
 # ==============================================================================================
 # Read Measurement Data from Pickle into DataFrame
 # ==============================================================================================
-# CO_stations 	= ['Badhoevedorp']
-# NO_stations 	= ['Badhoevedorp', 'Hoofddorp', 'Oude_Meer']
-# NO2_stations 	= ['Badhoevedorp', 'Hoofddorp', 'Oude_Meer']
-# O3_stations 	= ['Hoofddorp']
-# PM25_stations 	= ['Badhoevedorp']
-# PM10_stations 	= ['Badhoevedorp', 'Hoofddorp', 'Oude_Meer']
-PS_stations 	= ['Badhoevedorp', 'Hoofddorp', 'Oude_Meer']
+colors = ['tab:blue', 'tab:orange', 'tab:grey']
 
-species = ['CO', 'NO', 'NO2', 'O3', 'PM25', 'PM10', 'PS']
-species = ['PS']
-# stations_species = [CO_stations, NO_stations, NO2_stations, O3_stations, PM25_stations, PM10_stations, PS_stations]
-stations_species = [PS_stations]
+schiphol_data = {'CO'  : {'s1': 'Badhoevedorp'},
+				 'NO'  : {'s1': 'Badhoevedorp', 's2': 'Hoofddorp', 's3': 'OudeMeer'},
+				 'NO2' : {'s1': 'Badhoevedorp', 's2': 'Hoofddorp', 's3': 'OudeMeer'},
+				 'O3'  : {'s2': 'Hoofddorp'},
+				 'PM25': {'s1': 'Badhoevedorp'},
+				 'PM10': {'s1': 'Badhoevedorp', 's2': 'Hoofddorp', 's3': 'OudeMeer'},
+				 'PS'  : {'s1': 'Badhoevedorp', 's2': 'Hoofddorp', 's3': 'OudeMeer'}}
 
-df_CO 	= pd.DataFrame(columns=['concentration', 'timestamp'])
-df_NO 	= pd.DataFrame(columns=['concentration', 'timestamp'])
-df_NO2 	= pd.DataFrame(columns=['concentration', 'timestamp'])
-df_O3 	= pd.DataFrame(columns=['concentration', 'timestamp'])
-df_PM25 = pd.DataFrame(columns=['concentration', 'timestamp'])
-df_PM10 = pd.DataFrame(columns=['concentration', 'timestamp'])
-df_PS 	= pd.DataFrame()
+pollutants = {}
+times = [datetime.time(i,0) for i in range(6,24)]
 
-fig1, ax1 = plt.subplots(nrows=3, ncols=1, squeeze=False, figsize=(30,10))
+for species, stations in schiphol_data.items():
+	pollutant = pd.DataFrame() # initialise dataframe
 
-for index1, stations in enumerate(stations_species):
-	for index2, station in enumerate(stations):
+	for key, station in stations.items():
 		filedir = 'AQ_SchipholData'
-		file = str(station) + '_' + species[index1] + '.pickle'
-		path = Path(filedir, file)
+		file = station + '_' + species + '.pickle'
+		path = Path(filedir, file) # merge file direction and file name
 
-		df = pd.read_pickle(path) # import measurement data from pickle
-		df = df.drop(['formula'], axis=1) # remove column indicating species
-		df.columns = ['concentration', 'timestamp'] # rename column headers
-		df.concentration = df.concentration / 1000 # convert from milligram to gram
+		df = pd.read_pickle(path) # read data from pickle into dataframe
+		df.value = df.value.astype('float64') # convert data type for concentration back from object to flaot64
+		df.value = df.value * 1E-6 # convert concentrations from [microgram] to [gram]
 
-		# Get index where measurements for 2020 start - if no measurements taken in 2020, skip command
 		try:
-			dropindex = df.index[df.timestamp.str.startswith('2020')][0]
-			df = df[df.index < dropindex]
+			dropindex = df.index[df.timestamp_measured.str.startswith('2020')][0] # get start index for 2020 measurements
+			df = df[df.index < dropindex] # remove measurements for 2020
 		except IndexError:
 			pass
 
-		mu 		= df.concentration.mean()
-		sigma 	= df.concentration.std()
-		x 		= np.linspace(mu - 3 * sigma, mu + 3 * sigma, 1000)
+		df.timestamp_measured = pd.to_datetime(df.timestamp_measured, format='%Y-%m-%dT%H:%M:%S+00:00')
+		df = df[df['timestamp_measured'].dt.time.isin(times)] # remove times between 23:00:00 - 06:00:00
 
-		ax1[index2, 0].plot(x, norm.pdf(x, mu, sigma))
-		# print(index2)
+		df = df[(np.abs(zscore(df['value'])) < 3)] # remove outliers from dataset which are below/above 3 std. deviations
+		# df = df[df.value != 0] # remove rows which measured no concentration; negative concentrations are not excluded
+		df = df.reset_index() # reset indices of dataframe
+		df = df.drop(['index', 'formula'], axis=1) # remove unimportant columns
 
+		pollutant[station] = df.value
 
-plt.show()
+	pollutants[species] = pollutant
 
+# ==============================================================================================
+# Plot Data in Boxplots
+# ==============================================================================================
+concentration = pd.DataFrame(columns=['Species', 'Station', 'Max', 'Unit']) # initialise dataframe for plotting
+index = 0
+
+exportfolder = 'AQ_Boxplots'
+
+for key, value in pollutants.items():
+	fig1, ax1 = plt.subplots(nrows=1, ncols=1, squeeze=False, figsize=(8,6)) # create subplots
+
+	ylabel = 'Concentration ' + (r'particles/$m^3$' if key == 'PS' else r'g/$m^3$')
+
+	value.boxplot(ax=ax1[0,0]) # plot boxplots
+	ax1[0,0].set_ylabel(ylabel)
+
+	exportname = str(key) + '_boxplot.png'
+	exportpath = Path(exportfolder, exportname)
+	fig1.savefig(exportpath, bbox_inches='tight', dpi=300)
+
+	xi_max, pos = value.max(), value.max().idxmax(axis=1)
+	unit = 'p/m^3' if key == 'PS' else 'g/m^3' # print string of unit into dataframe
+	concentration.loc[index] = [key, pos, max(xi_max), unit]
+	index += 1
+
+# ==============================================================================================
+# Gaussian Plume Model
+# ==============================================================================================
+func = lambda xi, x, y, z, h, sigma_y, sigma_z, Q: -xi + Q / (2 * pi * sigma_y * sigma_z * V) * exp( - y**2 / (2 * sigma_y**2) - (z - h)**2 / (2 * sigma_z**2)) #[g/m^3] pollutant concentration
+
+V = 12 # [m/s] freestream velocity
+
+x = np.array([1.445E3, 0.4431E3, 1.339E3]) # minimum distance between station and runway
+
+emissionrates = pd.DataFrame(columns=['Species', 'Q', 'Unit'])
+
+for index, key in enumerate(schiphol_data.keys()):
+	unit = 'p/s' if key == 'PS' else 'g/s' # print string of unit into dataframe
+	xi_i = concentration.Max.iloc[index]
+	x_i = x[0] if str(concentration.Station) == 'Badhoevedorp' else x[1] if str(concentration.Station) == 'Hoofddorp' else x[2]
+	sigma_z = 0.06 * x_i * (1 + 0.0015 * x_i)**(-0.5)
+	sigma_y = 0.08 * x_i * (1 + 0.0001 * x_i)**(-0.5)
+	sigma_y = sigma_y if sigma_y > sigma_z else sigma_z
+	Q_i = solve(func(xi_i, x_i, 0, 0, 0, sigma_y, sigma_z, Q), Q) # FIX X INPUT TO MATCH MEASUREMENT STATION
+	emissionrates.loc[index] = [concentration.Species.iloc[index], Q_i[0], unit]
+
+emissionrates['Q'] = emissionrates['Q'].astype('float64') # convert object data type to float
+
+print ('\nMaximum Concentration per Pollutant:')
+print ('............................................')
+print(concentration)
+print ('\nMaximum Estimated Emission Rate per Pollutant:')
+print ('............................................')
+print(emissionrates)
