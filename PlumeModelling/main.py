@@ -95,7 +95,7 @@ for species, stations in schiphol_data.items():
 # ==============================================================================================
 exportfolder = 'AQ_Boxplots'
 
-# for key, value in pollutants.items():
+for key, value in pollutants.items():
 	# fig1, ax1 = plt.subplots(nrows=1, ncols=1, squeeze=False, figsize=(8,6)) # create subplots
 
 	# ylabel = 'Concentration ' + (r'[particles/$m^3$]' if key == 'PS' else r'[g/$m^3$]')
@@ -107,18 +107,20 @@ exportfolder = 'AQ_Boxplots'
 	# exportpath = Path(exportfolder, exportname)
 	# fig1.savefig(exportpath, bbox_inches='tight', dpi=300)
 
+	print(value.max().max())
+
 # ==============================================================================================
 # Gaussian Plume Model
 # ==============================================================================================
 Q = pd.Series([24.912, # CH4
 			  27.84, # CO
-			  237.778, # NO
-			  237.778, # NO2
-			  float(pollutants['O3'].max()), # CO
+			  236.0946, # NO
+			  np.nan,
+			  np.nan, # 03
 			  0.373, #PM2.5
 			  0.746, # PM10
-			  max(pollutants['PS'].max()), # UFP
-			  1.05]) #SO2
+			  np.nan, # UFP
+			  1.3]) #SO2
 
 unit1 = pd.Series(['g/s','g/s','g/s','g/s','g/s','g/s','g/s','p/s', 'g/s'])
 
@@ -128,7 +130,7 @@ emissions = pd.DataFrame()
 emissions['Q'], emissions['Unit of Q'] = Q, unit1
 
 V = 12 # [m/s] freestream velocity
-x = 106 # [m] minimum distance between the aircraft and the drone
+x = 80 # [m] minimum distance between the aircraft and the drone
 y, z, h = 0, 0, 0
 
 sigma_y = 0.08 * x * (1 + 0.0001 * x)**(-0.5) # dispersion coefficient based on literature
@@ -136,6 +138,10 @@ sigma_z = 0.06 * x * (1 + 0.0015 * x)**(-0.5) # dispersion coefficient based on 
 sigma_y = sigma_y if sigma_y > sigma_z else sigma_z # set sigma_y = sigma_z if sigma_y < sigma_Z
 
 emissions['Xi'] = emissions.Q / (2 * pi * sigma_y * sigma_z * V) * exp( - y**2 / (2 * sigma_y**2) - (z - h)**2 / (2 * sigma_z**2))
+emissions['Xi'].loc[3] = 0.07 * emissions['Xi'].loc[2]
+emissions['Xi'].loc[2] = 0.93 * emissions['Xi'].loc[2]
+emissions['Xi'].loc[4] = float(pollutants['O3'].max())
+emissions['Xi'].loc[7] = max(pollutants['PS'].max())
 emissions['Unit of Xi'] = unit2
 
 R = 0.082057366080960 # [L*atm/(K*mol)]
@@ -144,6 +150,6 @@ p = 1 # [atm] ambient pressure
 
 molarmasses = pd.Series([16.043, 28.010, 30.006, 46.006, 47.996, np.nan, np.nan, np.nan, 64.064])
 
-emissions['Xi [ppmm]'] = emissions['Xi'] * R * T * 1E3 / (p * molarmasses) # convert gram/m3 to ppm by weight
+emissions['Xi [ppmM]'] = emissions['Xi'] * R * T * 1E3 / (p * molarmasses) # convert gram/m3 to ppm by weight
 
 print(emissions) # print dataframe
