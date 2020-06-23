@@ -136,8 +136,11 @@ class Spline_RBF(sp.interpolate.Rbf):
             data = Psi value at a grid point
             pos =  numpy ndarray containing the grid locations  -- list of grid values
             ndim = numer of dimensions of the gird  -- int
-            basis = string or callable to be used inside the RBF constructor -- str/callable
-
+            epsilon = valuea for epsilon optimisation
+            basis_name = string or callable to be used inside the RBF constructor -- str/callable
+                        - noise
+                        - air_quality
+                        - None (default)
             Returns:
                 rbfObj
 
@@ -159,17 +162,16 @@ class Spline_RBF(sp.interpolate.Rbf):
         #     raise ValueError("Basis given is not valid!")
 
         self.epsilon = epsilon
-
-        if isinstance(basis_name, str):
-            self.basis_name = basis_name.lower()
-        elif basis_name==None:
-            self.basis_name = None
-        else:
-            raise ValueError("Basis given is not valid!")
+        self.basis_name = basis_name
+        print(self.basis_name)
 
 
-    def basis(self,r):
+    def basis_airquality(self,r):
         return np.exp(-r*r/(self.epsilon * self.epsilon))
+
+    def basis_noise(self,r):
+
+         return  1/np.sqrt((self.epsilon + r*r))
 
 
     def interpolate(self,target_grid):
@@ -181,19 +183,32 @@ class Spline_RBF(sp.interpolate.Rbf):
                                 same length as data grid dimensions
         """
 
-        if self.basis_name == None:
-            # no name specified, use the self defined one
-            self.rbfObj = sp.interpolate.Rbf(*self.grid,self.data,function=self.basis)
+
+
+        if self.basis_name !=None:
+            if self.basis_name == "air_quality" or self.basis_name == "air quality":
+                # no name specified, use the self defined one
+                self.rbfObj = sp.interpolate.Rbf(*self.grid,self.data,function=self.basis_airquality)
+
+            elif self.basis_name == "noise":
+                # no name specified, use the self defined one
+                self.rbfObj = sp.interpolate.Rbf(*self.grid,self.data,function=self.basis_noise)
+
+            else:
+                # Basis name spceified, let Scipy find the correct base in its list
+                # Epsilon parameter cannot be used anymore
+
+                self.rbfObj = sp.interpolate.Rbf(*self.grid,self.data,function=self.basis_name)
         else:
-            # Basis name spceified, let Scipy find the correct base in its list
-            # Epsilon parameter cannot be used anymore
-            self.rbfObj = sp.interpolate.Rbf(*self.grid,self.data,function=self.basis_name)
+            raise Warning("No function is given so default scipy will be used!")
+            self.rbfObj = sp.interpolate.Rbf(*self.grid,self.data)
+
 
         weights = self.rbfObj.nodes
 
         # tested with self defined function:
-        # RMS error depnds on epsilon so 1d optimisation can be performed
-        # tested with gaussian basis: low error and epislon indeed does not matter
+        # RMS error depends on epsilon so 1d optimisation can be performed
+        # tested with gaussian basis: low error is achieved and epislon,  indeed, does not matter
 
 
         return self.rbfObj(*target_grid),weights
@@ -242,7 +257,7 @@ def main():
     print("Grid dimesnion: %i points " %(len(x)**4))
 
     # spline2 = Spline_RBF([x,y,z,t],data,4)
-    spline2 = Spline_RBF([x,y,z,t],data,4,2)    #works with a given new basis function (user defined)
+    spline2 = Spline_RBF([x,y,z,t],data,4)    #works with a given new basis function (user defined)
 
 
     xi = yi= zi = ti= np.linspace(0,1,30)
@@ -252,9 +267,16 @@ def main():
 
     print(data_hat)
 
+def test():
+    x, y, z, d = np.random.rand(4, 50)
+    rbfi = sp.interpolate.Rbf(x, y, z, d)  # radial basis function interpolator instance
+    xi = yi = zi = np.linspace(0, 1, 20)
+    di = rbfi(xi, yi, zi)   # interpolated values
+    print(di.shape)
 
 if __name__=='__main__':
 
+    # test()
     start = time.time()
     main()
     end= time.time()

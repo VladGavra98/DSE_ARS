@@ -51,12 +51,12 @@ class Plume():
         """
         Constructor for the plume class
         """
-        self.spnum  = 100            #resolution of plume - higher is better must more computationally expensive
-        self.ym     = 30000*10          #  m-  width of plume taken into account from aircraft longitudinal axis
-        self.xm     = 100000          # m --length of plume taken into account from plane
-        self.Q      = 270.480176      # mg/m/3rough
-        self.v      = 8               # m/s - rough
-        self.thresh =   0.00000770      # 1/% of max concentration
+        self.spnum  = 100          #  resolution of plume - higher is better must more computationally expensive
+        self.ym     = 300000        #  m-  width of plume taken into account from aircraft longitudinal axis
+        self.xm     = 10000          # m --length of plume taken into account from plane
+        self.Q      = 270.480176    # mg/m/3rough
+        self.v      = 12            # m/s - rough
+        self.thresh = 0.00000770 *100     # % of max concentration
 
     def calcConcentration(self,lc):
         """
@@ -69,10 +69,11 @@ class Plume():
         #sigy = (2*ky*x/v)**0.5
         #sigz = (2*kz*x/v)**0.5
 
+            # Sigma z and y updated
         self.sigz = 0.06 *x *(1 + 0.0015*x)**(-0.5)
         self.sigy = max(self.sigz, 0.08*x*(1 + 0.0001*x)**(-0.5))
 
-        return (self.Q/( 2* np.pi*self.sigy*self.sigz*self.v))*np.exp(-y**2/(2*self.sigy**2))  #dont forget the 2!
+        return (self.Q/( 2* np.pi*self.sigy*self.sigz*self.v))*np.exp(-y**2/(2*self.sigy**2)), self.sigy #dont forget the 2!
 
 
     # def noemConcentration(self, concentration):
@@ -106,7 +107,8 @@ class Plume():
         for xxl in xr:
             moveon = False
             for yyl in yr1:
-                if self.calcConcentration((xxl, yyl)) < self.thresh and moveon == False:
+                concentration, sigy = self.calcConcentration((xxl, yyl))
+                if  concentration < self.calcConcentration((xxl, 2.15*sigy))[0] and moveon == False:
                     if len(ylst1) > 0:
                         if yyl == ylst1[-1]:
                             moveon = True
@@ -115,10 +117,12 @@ class Plume():
                     xlst1.append(xxl)
                     moveon = True
 
+
         for xxl in xr:
             moveon = False
             for yyl in yr2:
-                if self.calcConcentration((xxl, yyl)) < self.thresh and moveon == False:
+                concentration, sigy = self.calcConcentration((xxl, yyl))
+                if concentration < self.calcConcentration((2.15*sigy, yyl))[0] and moveon == False:
                     if len(ylst2) > 0:
                         if yyl == ylst2[-1]:
                             moveon = True

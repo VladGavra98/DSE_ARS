@@ -71,7 +71,7 @@ def main(refine_factor):
 
     for epsilon_val in epsilon_lst:
         # Interpolate:
-        S = Spline_RBF([gridx,gridy,gridz],data,ndim=3,epsilon= epsilon_val)
+        S = Spline_RBF([gridx,gridy,gridz],data,ndim=3,epsilon=epsilon_val, basis_name="air_quality")
         psi_hat,weights = S.interpolate([xx,yy,zz])
 
         error_lst.append(sum((psi_hat-psi)**2)/len(psi))
@@ -98,10 +98,9 @@ def main(refine_factor):
 
 
 
-
     plt.plot(epsilon_lst,error_lst,label=str(refine_factor))
     plt.xlabel(r'$\epsilon$ [-]')
-    plt.ylabel('MSE [-]')
+    plt.ylabel('MSE [%]')
     plt.title(r'MSE vs. $\epsilon$')
     plt.axvline(0,color=(0,0,0),linewidth=0.8) #comment out for no axes line
     plt.axhline(0,color=(0,0,0),linewidth=0.8) #comment out for no axes line
@@ -117,5 +116,5 @@ def main(refine_factor):
 
 plt.show()
 
-for k in range(2,3):
+for k in range(5,6):
     main(k)

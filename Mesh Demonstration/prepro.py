@@ -1,8 +1,9 @@
+# -*- coding: utf-8 -*-
 '''
 	AE3200 Design Synthesis Exercise
 	Group 09 - Autonomous Environmental Sensing
 
-	Authors: Widmann Sebastian
+	@author: vgavra
 	Created: 12.06.2020
 
 	Project Supervisors:
@@ -62,7 +63,7 @@ for species, stations in schiphol_data.items():
 	pollutant = pd.DataFrame() # initialise dataframe
 
 	for key, station in stations.items():
-		filedir = 'AQ_SchipholData'
+		filedir = r"C:\Users\vladg\OneDrive\Documents\GitHub\DSE_ARS\PlumeModelling\AQ_SchipholData"
 		file = station + '_' + species + '.pickle'
 		path = Path(filedir, file) # merge file direction and file name
 
@@ -76,7 +77,7 @@ for species, stations in schiphol_data.items():
 		except IndexError:
 			pass
 
-		df.timestamp_measured = pd.to_datetime(df.timestamp_measured, format='%Y-%m-%dT%H:%M:%S+00:00')
+		df.timestamp_measured = pd.to_datetime(df.timestamp_measured)
 		df = df[df['timestamp_measured'].dt.time.isin(times)] # remove times between 23:00:00 - 06:00:00
 
 		df = df[(np.abs(zscore(df['value'])) < 3)] # remove outliers from dataset which are below/above 3 std. deviations
@@ -88,57 +89,35 @@ for species, stations in schiphol_data.items():
 
 	pollutants[species] = pollutant
 
+g= open("NO_data.txt",'w')
+
+out = pollutants['NO'].values
+np.savetxt(g, out)
+
+
+g.close()
 # ==============================================================================================
 # Plot Data in Boxplots
 # ==============================================================================================
-concentration = pd.DataFrame(columns=['Species', 'Station', 'Max', 'Unit']) # initialise dataframe for plotting
-index = 0
+# concentration = pd.DataFrame(columns=['Species', 'Station', 'Max', 'Unit']) # initialise dataframe for plotting
+# index = 0
 
-exportfolder = 'AQ_Boxplots'
+# exportfolder = 'AQ_Boxplots'
 
-for key, value in pollutants.items():
-	fig1, ax1 = plt.subplots(nrows=1, ncols=1, squeeze=False, figsize=(8,6)) # create subplots
+# for key, value in pollutants.items():
+#  	fig1, ax1 = plt.subplots(nrows=1, ncols=1, squeeze=False, figsize=(8,6)) # create subplots
 
-	ylabel = 'Concentration ' + (r'particles/$m^3$' if key == 'PS' else r'g/$m^3$')
+#  	ylabel = 'Concentration ' + (r'particles/$m^3$' if key == 'PS' else r'g/$m^3$')
 
-	value.boxplot(ax=ax1[0,0]) # plot boxplots
-	ax1[0,0].set_ylabel(ylabel)
+#  	value.boxplot(ax=ax1[0,0]) # plot boxplots
+#  	ax1[0,0].set_ylabel(ylabel)
 
-	exportname = str(key) + '_boxplot.png'
-	exportpath = Path(exportfolder, exportname)
-	fig1.savefig(exportpath, bbox_inches='tight', dpi=300)
+#  	exportname = str(key) + '_boxplot.png'
+#  	exportpath = Path(exportfolder, exportname)
+#  	fig1.savefig(exportpath, bbox_inches='tight', dpi=300)
 
-	xi_max, pos = value.max(), value.max().idxmax(axis=1)
-	unit = 'p/m^3' if key == 'PS' else 'g/m^3' # print string of unit into dataframe
-	concentration.loc[index] = [key, pos, max(xi_max), unit]
-	index += 1
+#  	xi_max, pos = value.max(), value.max().idxmax(axis=1)
+#  	unit = 'p/m^3' if key == 'PS' else 'g/m^3' # print string of unit into dataframe
+#  	concentration.loc[index] = [key, pos, max(xi_max), unit]
+#  	index += 1
 
-# ==============================================================================================
-# Gaussian Plume Model
-# ==============================================================================================
-func = lambda xi, x, y, z, h, sigma_y, sigma_z, Q: -xi + Q / (2 * pi * sigma_y * sigma_z * V) * exp( - y**2 / (2 * sigma_y**2) - (z - h)**2 / (2 * sigma_z**2)) #[g/m^3] pollutant concentration
-
-V = 12 # [m/s] freestream velocity
-
-x = np.array([1.445E3, 0.4431E3, 1.339E3]) # minimum distance between station and runway
-
-emissionrates = pd.DataFrame(columns=['Species', 'Q', 'Unit'])
-
-for index, key in enumerate(schiphol_data.keys()):
-	unit = 'p/s' if key == 'PS' else 'g/s' # print string of unit into dataframe
-	xi_i = concentration.Max.iloc[index]
-	x_i = x[0] if str(concentration.Station) == 'Badhoevedorp' else x[1] if str(concentration.Station) == 'Hoofddorp' else x[2]
-	sigma_z = 0.06 * x_i * (1 + 0.0015 * x_i)**(-0.5)
-	sigma_y = 0.08 * x_i * (1 + 0.0001 * x_i)**(-0.5)
-	sigma_y = sigma_y if sigma_y > sigma_z else sigma_z
-	Q_i = solve(func(xi_i, x_i, 0, 0, 0, sigma_y, sigma_z, Q), Q) # FIX X INPUT TO MATCH MEASUREMENT STATION
-	emissionrates.loc[index] = [concentration.Species.iloc[index], Q_i[0], unit]
-
-emissionrates['Q'] = emissionrates['Q'].astype('float64') # convert object data type to float
-
-print ('\nMaximum Concentration per Pollutant:')
-print ('............................................')
-print(concentration)
-print ('\nMaximum Estimated Emission Rate per Pollutant:')
-print ('............................................')
-print(emissionrates)
