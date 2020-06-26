@@ -34,20 +34,20 @@ datapnts = 7 #number of datapoints
 tmeas = 5#sec measuring
 
 redo = 3 #redo eachpoint   leave out
-spacescale = 0.994
+dsp = 3
 Fset = 2/7 #per day
-Fminn = 1/20###############################
-
+Fminn = 1/25
 
 nc = 0.9 #navigation contingency
-
+rex = 0.6 #for any manouvering extras and SAA/DAA
+redo = redo + rex
 Vdr = 10
 thov = 7
 ttot = 30*60
 layers = 4
 laymin = 10 #m
 laystep = 20 #m
-tmeaspday = 17 #operational hours per day
+tmeaspday = 18 #operational hours per day
 
 actrwy = 2 #number of active runways whether departing or landing
 radm = 5  # km  (max radius)
@@ -76,8 +76,6 @@ if airportoptime*3600 < sum(acfreq)*LTOtbetween/actrwy:
 
 def points(r,s):
     return int((ttot-2*r/Vdr + s/Vdr)/(thov+s/Vdr))
-
-
 
 
 
@@ -127,7 +125,7 @@ def Flim(space,opdays):
             t.append(2*radd/Vdr) #transfer
             twaste.append(2*radd/Vdr)
             allctemp = allctemp[pnts:]
-            mfrac = sum(tuse) / sum(twaste)
+            mfrac = sum(tuse) / (sum(twaste)+sum(tuse))
             if sum(t)*nc > day*60*60*24*(tmeaspday/24):
                 tuseday.append(sum(tusetemp))
                 mfrac = sum(tuse) / (sum(twaste)+sum(tuse))
@@ -143,6 +141,7 @@ def Flim(space,opdays):
 
     #print('\nSpacing: ',round(space,2),'  mfrac: ',round(100*mfrac,2),'%')
     Flimval = datapnts*tmeas/(LTOtbetween*mfrac)
+    #print(mfrac,sum(tuse),sum(twaste),pnts)
     return Flimval/(optime/3600/24) #returns limiting freq [flights/day]
 
 
@@ -179,7 +178,6 @@ def tm(space):
     return round(redo*layers*sum(t)*nc/3600/24,3)
 
 
-
 space = 300
 opdays = 30 #days
 
@@ -203,7 +201,7 @@ while Flimval > Fminn:
     spacelst.append(space)
     timelst.append(opdays/opfact)
     Flimlst.append(7*Flimval)
-    space = space * spacescale
+    space = space -dsp
 
     #print(space,Fset,Flimval,-(Fset - Flimval)/Fset)
 
@@ -221,13 +219,13 @@ plt.axhline(0,color=(0,0,0),linewidth=0.8)
 plt.minorticks_on() # set minor ticks
 plt.grid(which='major', linestyle='-', linewidth='0.3', color='black') # customise major grid
 plt.grid(which='minor', linestyle=':', linewidth='0.3', color='grey') # customise minor grid
-plt.axvline(7*Fset,color=(0,153/256,76/256),linestyle='--')
+plt.axvline(Fset*7,color=(0,153/256,44/256),linestyle='--')
 
 
-plt.plot(Flimlst,spacelst, color=c1)
+plt.plot(Flimlst, timelst, color=c1)
 
-plt.ylabel('Mesh Spacing [m]')
 plt.xlabel('Limiting A/C Type Freq [1/week]')
+plt.ylabel('Operational Time [Days]')
 
 
 plt.show()

@@ -34,19 +34,22 @@ datapnts = 7 #number of datapoints
 tmeas = 5#sec measuring
 
 redo = 3 #redo eachpoint   leave out
-spacescale = 0.99
+#spacescale = 0.9
+dsp = 3
 Fset = 2/7 #per day
-Fminn = 1/20
+Fminn = 1/25###############################
+
 
 nc = 0.9 #navigation contingency
-
+rex = 0.6 #for any manouvering extras and SAA/DAA
+redo = redo + rex
 Vdr = 10
 thov = 7
 ttot = 30*60
 layers = 4
 laymin = 10 #m
-laystep = 20 #m
-tmeaspday = 17 #operational hours per day
+laystep = 10 #m
+tmeaspday = 18 #operational hours per day  (noncurfew+1hr)
 
 actrwy = 2 #number of active runways whether departing or landing
 radm = 5  # km  (max radius)
@@ -57,6 +60,13 @@ acLTO = 100 #LTO event time     # 87m/s for 100sec = 8.7km
 
 actype = ['A','B','C']
 acfreq = [4,3,55] #freq (per day)
+
+
+
+
+
+
+
 
 
 if airportoptime < tmeaspday:
@@ -78,8 +88,10 @@ def points(r,s):
 
 
 
-def Flim(space,opdays):
 
+
+def Flim(space,opdays):
+    #print(space)
     optime = 24 * opdays * (tmeaspday / 24)  # operational time total hrs (adjusted for tmeaspday)
     optime = optime * 3600  # convert to seconds
     # FINDING POINTS WITHIN CYLINDER RADIUS ----
@@ -98,7 +110,7 @@ def Flim(space,opdays):
     allc = []
     for zzl in zl:
         for i in allc0:
-            allc.append([i[0],i[1],zzl,i[2]])
+            allc.append([i[0],i[1],zzl,(i[0] ** 2 + i[1] ** 2 + (zzl/1000)**2)**0.5])
     #now sorted for each z layer and then decreasing radius within
 
 
@@ -124,7 +136,7 @@ def Flim(space,opdays):
             t.append(2*radd/Vdr) #transfer
             twaste.append(2*radd/Vdr)
             allctemp = allctemp[pnts:]
-            mfrac = sum(tuse) / sum(twaste)
+            mfrac = sum(tuse) / (sum(twaste)+sum(tuse))
             if sum(t)*nc > day*60*60*24*(tmeaspday/24):
                 tuseday.append(sum(tusetemp))
                 mfrac = sum(tuse) / (sum(twaste)+sum(tuse))
@@ -132,7 +144,7 @@ def Flim(space,opdays):
                 tusetemp = []
                 day += 1
 
-
+            #print('radius: ', round(radd, 2), ', points covered: ', round(pnts, 2), ', time taken: ', round(pnts * thov + (pnts - 1) * space / Vdr + 2 * radd / Vdr, 2), ', len left: ', len(allc))
 
         if len(allctemp) <= 0: #restarts while loop
             allctemp = allc
@@ -176,6 +188,7 @@ def tm(space):
     return round(redo*layers*sum(t)*nc/3600/24,3)
 
 
+
 space = 300
 opdays = 30 #days
 
@@ -199,7 +212,7 @@ while Flimval > Fminn:
     spacelst.append(space)
     timelst.append(opdays/opfact)
     Flimlst.append(7*Flimval)
-    space = space * spacescale
+    space = space - dsp
 
     #print(space,Fset,Flimval,-(Fset - Flimval)/Fset)
 
@@ -217,13 +230,13 @@ plt.axhline(0,color=(0,0,0),linewidth=0.8)
 plt.minorticks_on() # set minor ticks
 plt.grid(which='major', linestyle='-', linewidth='0.3', color='black') # customise major grid
 plt.grid(which='minor', linestyle=':', linewidth='0.3', color='grey') # customise minor grid
-plt.axvline(Fset*7,color=(0,153/256,44/256),linestyle='--')
+plt.axvline(7*Fset,color=(0,153/256,76/256),linestyle='--')
 
 
-plt.plot(Flimlst, timelst, color=c1)
+plt.plot(Flimlst,spacelst, color=c1)
 
+plt.ylabel('Mesh Spacing [m]')
 plt.xlabel('Limiting A/C Type Freq [1/week]')
-plt.ylabel('Operational Time [Days]')
 
 
 plt.show()
