@@ -100,7 +100,7 @@ def main(refine_factor):
 
     plt.plot(epsilon_lst,error_lst,label=str(refine_factor))
     plt.xlabel(r'$\epsilon$ [-]')
-    plt.ylabel('MSE [%]')
+    plt.ylabel('MSE [-]')
     plt.title(r'MSE vs. $\epsilon$')
     plt.axvline(0,color=(0,0,0),linewidth=0.8) #comment out for no axes line
     plt.axhline(0,color=(0,0,0),linewidth=0.8) #comment out for no axes line
