@@ -18,7 +18,7 @@ import numpy as np
 import pandas as pd
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-from math import pi, exp
+from math import pi, exp, sqrt
 from pathlib import Path
 from sympy.solvers import solve
 from sympy.abc import xi, Q
@@ -79,7 +79,9 @@ for species, stations in schiphol_data.items():
 		df.timestamp_measured = pd.to_datetime(df.timestamp_measured, format='%Y-%m-%dT%H:%M:%S+00:00')
 		df = df[df['timestamp_measured'].dt.time.isin(times)] # remove times between 23:00:00 - 06:00:00
 
-		df = df[(np.abs(zscore(df['value'])) < 3)] # remove outliers from dataset which are below/above 3 std. deviations
+		# print(df.value.max())
+
+		df = df[(np.abs(zscore(df['value'])) < 4)] # remove outliers from dataset which are below/above 3 std. deviations
 		# df = df[df.value != 0] # remove rows which measured no concentration; negative concentrations are not excluded
 		df = df.reset_index() # reset indices of dataframe
 		df = df.drop(['index', 'formula'], axis=1) # remove unimportant columns
@@ -91,54 +93,63 @@ for species, stations in schiphol_data.items():
 # ==============================================================================================
 # Plot Data in Boxplots
 # ==============================================================================================
-concentration = pd.DataFrame(columns=['Species', 'Station', 'Max', 'Unit']) # initialise dataframe for plotting
-index = 0
-
 exportfolder = 'AQ_Boxplots'
 
 for key, value in pollutants.items():
-	fig1, ax1 = plt.subplots(nrows=1, ncols=1, squeeze=False, figsize=(8,6)) # create subplots
+	# fig1, ax1 = plt.subplots(nrows=1, ncols=1, squeeze=False, figsize=(8,6)) # create subplots
 
-	ylabel = 'Concentration ' + (r'particles/$m^3$' if key == 'PS' else r'g/$m^3$')
+	# ylabel = 'Concentration ' + (r'[particles/$m^3$]' if key == 'PS' else r'[g/$m^3$]')
 
-	value.boxplot(ax=ax1[0,0]) # plot boxplots
-	ax1[0,0].set_ylabel(ylabel)
+	# value.boxplot(ax=ax1[0,0]) # plot boxplots
+	# ax1[0,0].set_ylabel(ylabel)
 
-	exportname = str(key) + '_boxplot.png'
-	exportpath = Path(exportfolder, exportname)
-	fig1.savefig(exportpath, bbox_inches='tight', dpi=300)
+	# exportname = str(key) + '_boxplot.png'
+	# exportpath = Path(exportfolder, exportname)
+	# fig1.savefig(exportpath, bbox_inches='tight', dpi=300)
 
-	xi_max, pos = value.max(), value.max().idxmax(axis=1)
-	unit = 'p/m^3' if key == 'PS' else 'g/m^3' # print string of unit into dataframe
-	concentration.loc[index] = [key, pos, max(xi_max), unit]
-	index += 1
+	print(value.max().max())
 
 # ==============================================================================================
 # Gaussian Plume Model
 # ==============================================================================================
-func = lambda xi, x, y, z, h, sigma_y, sigma_z, Q: -xi + Q / (2 * pi * sigma_y * sigma_z * V) * exp( - y**2 / (2 * sigma_y**2) - (z - h)**2 / (2 * sigma_z**2)) #[g/m^3] pollutant concentration
+Q = pd.Series([24.912, # CH4
+			  27.84, # CO
+			  236.0946, # NO
+			  np.nan,
+			  np.nan, # 03
+			  0.373, #PM2.5
+			  0.746, # PM10
+			  np.nan, # UFP
+			  1.3]) #SO2
+
+unit1 = pd.Series(['g/s','g/s','g/s','g/s','g/s','g/s','g/s','p/s', 'g/s'])
+
+unit2 = pd.Series(['g/m3','g/m3','g/m3','g/m3','g/m3','g/m3','g/m3','p/m3','g/m3'])
+
+emissions = pd.DataFrame()
+emissions['Q'], emissions['Unit of Q'] = Q, unit1
 
 V = 12 # [m/s] freestream velocity
+x = 80 # [m] minimum distance between the aircraft and the drone
+y, z, h = 0, 0, 0
 
-x = np.array([1.445E3, 0.4431E3, 1.339E3]) # minimum distance between station and runway
+sigma_y = 0.08 * x * (1 + 0.0001 * x)**(-0.5) # dispersion coefficient based on literature
+sigma_z = 0.06 * x * (1 + 0.0015 * x)**(-0.5) # dispersion coefficient based on literature
+sigma_y = sigma_y if sigma_y > sigma_z else sigma_z # set sigma_y = sigma_z if sigma_y < sigma_Z
 
-emissionrates = pd.DataFrame(columns=['Species', 'Q', 'Unit'])
+emissions['Xi'] = emissions.Q / (2 * pi * sigma_y * sigma_z * V) * exp( - y**2 / (2 * sigma_y**2) - (z - h)**2 / (2 * sigma_z**2))
+emissions['Xi'].loc[3] = 0.07 * emissions['Xi'].loc[2]
+emissions['Xi'].loc[2] = 0.93 * emissions['Xi'].loc[2]
+emissions['Xi'].loc[4] = float(pollutants['O3'].max())
+emissions['Xi'].loc[7] = max(pollutants['PS'].max())
+emissions['Unit of Xi'] = unit2
 
-for index, key in enumerate(schiphol_data.keys()):
-	unit = 'p/s' if key == 'PS' else 'g/s' # print string of unit into dataframe
-	xi_i = concentration.Max.iloc[index]
-	x_i = x[0] if str(concentration.Station) == 'Badhoevedorp' else x[1] if str(concentration.Station) == 'Hoofddorp' else x[2]
-	sigma_z = 0.06 * x_i * (1 + 0.0015 * x_i)**(-0.5)
-	sigma_y = 0.08 * x_i * (1 + 0.0001 * x_i)**(-0.5)
-	sigma_y = sigma_y if sigma_y > sigma_z else sigma_z
-	Q_i = solve(func(xi_i, x_i, 0, 0, 0, sigma_y, sigma_z, Q), Q) # FIX X INPUT TO MATCH MEASUREMENT STATION
-	emissionrates.loc[index] = [concentration.Species.iloc[index], Q_i[0], unit]
+R = 0.082057366080960 # [L*atm/(K*mol)]
+T = 283 # [K] averaged yearly temperature around Schiphol airport
+p = 1 # [atm] ambient pressure
 
-emissionrates['Q'] = emissionrates['Q'].astype('float64') # convert object data type to float
+molarmasses = pd.Series([16.043, 28.010, 30.006, 46.006, 47.996, np.nan, np.nan, np.nan, 64.064])
 
-print ('\nMaximum Concentration per Pollutant:')
-print ('............................................')
-print(concentration)
-print ('\nMaximum Estimated Emission Rate per Pollutant:')
-print ('............................................')
-print(emissionrates)
+emissions['Xi [ppmM]'] = emissions['Xi'] * R * T * 1E3 / (p * molarmasses) # convert gram/m3 to ppm by weight
+
+print(emissions) # print dataframe

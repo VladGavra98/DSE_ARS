@@ -102,7 +102,7 @@ print('Maximum time in hover flight =', round(t_hover,3), 'min')
 ##### Predefined/Required Specifications
 grav = 9.80665 # [m/s2]
 vel_cruise = 10 # [m/2] - based on autonomous sensor 
-s_2pts = 200 # [m]
+s_2pts = 150 # [m]
 s_2pts_max = sqrt(2 * 200**2) # diagonal dist between 2 pts
 
 

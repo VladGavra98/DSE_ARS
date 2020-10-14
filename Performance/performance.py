@@ -247,22 +247,22 @@ PL_max 		= T_max / P_max
 # PLOT DESIGN POINTS
 # ==============================================================================================
 ax1[0,0].axhline(y=T_nom, xmin=0, xmax=1, linestyle='--', color='black')
-ax1[0,0].text(-1, T_nom, r'T$_\mathrm{nom}$', fontsize=14, horizontalalignment='right', verticalalignment='center')
+ax1[0,0].text(1, T_nom, r'T$_\mathrm{nom}$', fontsize=18, horizontalalignment='left', verticalalignment='bottom')
 ax1[0,0].axhline(y=T_max, xmin=0, xmax=(1), linestyle='--', color='black')
-ax1[0,0].text(-1, T_max, r'T$_\mathrm{max}$', fontsize=14, horizontalalignment='right', verticalalignment='center')
+ax1[0,0].text(1, T_max, r'T$_\mathrm{max}$', fontsize=18, horizontalalignment='left', verticalalignment='bottom')
 
 ax1[0,1].axhline(y=P_nom, xmin=0, xmax=1, linestyle='--', color='black')
-ax1[0,1].text(-1, P_nom, r'P$_\mathrm{nom}$', fontsize=14, horizontalalignment='right', verticalalignment='center')
+ax1[0,1].text(1, P_nom, r'P$_\mathrm{nom}$', fontsize=18, horizontalalignment='left', verticalalignment='bottom')
 ax1[0,1].axhline(y=P_max, xmin=0, xmax=1, linestyle='--', color='black')
-ax1[0,1].text(-1, P_max, r'P$_\mathrm{max}$', fontsize=14, horizontalalignment='right', verticalalignment='center')
+ax1[0,1].text(1, P_max, r'P$_\mathrm{max}$', fontsize=18, horizontalalignment='left', verticalalignment='bottom')
 
 ax1[1,0].axhline(y=torque_nom, xmin=0, xmax=1, linestyle='--', color='black')
-ax1[1,0].text(-1, torque_nom, r'$\tau_\mathrm{nom}$', fontsize=14, horizontalalignment='right', verticalalignment='center')
+ax1[1,0].text(1, torque_nom, r'$\tau_\mathrm{nom}$', fontsize=18, horizontalalignment='left', verticalalignment='bottom')
 ax1[1,0].axhline(y=torque_max, xmin=0, xmax=1, linestyle='--', color='black')
-ax1[1,0].text(-1, torque_max, r'$\tau_\mathrm{max}$', fontsize=14, horizontalalignment='right', verticalalignment='center')
+ax1[1,0].text(1, torque_max, r'$\tau_\mathrm{max}$', fontsize=18, horizontalalignment='left', verticalalignment='bottom')
 
 ax1[1,1].axhline(y=PL_nom, xmin=0, xmax=1, linestyle='--', color='black')
-ax1[1,1].text(-1, PL_nom, r'DL$_\mathrm{nom}$', fontsize=14, horizontalalignment='right', verticalalignment='top')
+ax1[1,1].text(1, PL_nom, r'PL$_\mathrm{nom}$', fontsize=18, horizontalalignment='left', verticalalignment='bottom')
 
 fig1.savefig('performance_propellers.png', bbox_inches='tight', dpi=300)
 
